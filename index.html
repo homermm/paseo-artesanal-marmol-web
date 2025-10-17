@@ -7,136 +7,151 @@
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
-    <!-- Header -->
-    <header>
+    <!-- Header: Encabezado principal del sitio -->
+    <header class="main-header">
       <!-- Logo de paseo -->
-      <img src="https://placehold.co/80x80" alt="Logo del Paseo Artesanal Mármol">
+      <img class="header-logo" src="./assets/logo.png" alt="Logo del Paseo Artesanal Mármol">
 
-      <!-- Nav -->
+      <!-- Nav: Navegación principal -->
       <nav>
-        <ul>
+        <ul class="menu">
           <li>
-            <a href="#">Inicio</a>
+            <a href="#" class="menu-link">Inicio</a>
           </li>
           <li>
-            <a href="./pages/sobre-nosotros.html">Sobre el Paseo</a>
+            <a href="./pages/sobre-nosotros.html" class="menu-link">Sobre el Paseo</a>
           </li>
           <li>
-            <a href="./pages/artesanos.html">Nuestros Artesanos</a>
+            <a href="./pages/artesanos.html" class="menu-link">Nuestros Artesanos</a>
           </li>
           <li>
-            <a href="./pages/participar.html">¿Querés Participar?</a>
+            <a href="./pages/participar.html" class="menu-link">¿Querés Participar?</a>
           </li>
           <li>
-            <a href="./pages/contacto.html">Contacto</a>
+            <a href="./pages/contacto.html" class="menu-link">Contacto</a>
           </li>
         </ul>
       </nav>
     </header>
 
     <!-- Main -->
-    <main>
+    <main class="main-content">
 
       <!-- Seccion principal -->
-      <section>
-        <img src="https://placehold.co/1200x400" alt= "Imagen principal del Paseo Artesanal Mármol">
-        <h1>Paseo Artesanal Mármol</h1>
-        <p>Hecho a mano, hecho con amor</p>
+      <section class="hero-section">
+        <img class="hero-image" src="https://placehold.co/1200x400" alt= "Imagen principal del Paseo Artesanal Mármol">
+        
+        <!-- Por delante de la imagen -->
+        <h1 class="hero-title">Paseo Artesanal Mármol</h1> 
+        <p class="hero-subtitle">Hecho a mano, hecho con amor</p>
       </section>
 
       <!-- Seccion sobre nosotros -->
-      <section>
-        <h2>¡Te esperamos!</h2>
-        <p>Nos reunimos 2 o 3 domingos al mes en la Plaza de Mármol.</p>
-        <p>Horario: 15:30 a 19:30 hs (varía según estación del año).</p>
-        <p>Próxima fecha: [FECHA A CONFIRMAR]</p>
+      <section class="welcome-section">
+        <h2 class="section-title">¡Te esperamos!</h2>
+        <p class="schedule-info">Nos reunimos 2 o 3 domingos al mes en la Plaza de Mármol.</p>
+        <p class="schedule-info">Horario: 15:30 a 19:30 hs (varía según estación del año).</p>
+        <p class="schedule-info">Próxima fecha: [FECHA A CONFIRMAR]</p>
       </section>
 
-      <!-- Seccion rubros -->
-      <section>
-        <div>
+      <!-- Seccion sobre el paseo -->
+      <section class="about-section">
+        <div class="about-image">
             <img src="https://placehold.co/500x350" alt="Imagen representativa del paseo">
         </div>
-        <div>
-            <h2>Sobre el Paseo</h2>
-            <p>El Paseo Artesanal Mármol es un espacio de encuentro donde artesanos locales comparten su trabajo, creatividad y comunidad. Celebramos la producción artesanal y el trabajo hecho a mano en un ambiente familiar y al aire libre.</p>
-            <a href="./pages/sobre-nosotros.html">Leer más</a>
+        <div class="about-content">
+            <h2 class="section-title">Sobre el Paseo</h2>
+            <p class="about-text">El Paseo Artesanal Mármol es un espacio de encuentro donde artesanos locales comparten su trabajo, creatividad y comunidad. Celebramos la producción artesanal y el trabajo hecho a mano en un ambiente familiar y al aire libre.</p>
+            <a href="./pages/sobre-nosotros.html" class="action-link read-more-link">Leer más</a>
         </div>
       </section>
 
 
-      <section>
-        <h2>Nuestros Rubros</h2>
+      <section class="categories-section">
+        <h2 class="section-title">Nuestros Rubros</h2>
         
-        <div>
-            <img src="https://placehold.co/250x200" alt="Icono de Gastronomía">
-            <p>Gastronomía</p>
-        </div>
-        <div>
-            <img src="https://placehold.co/250x200" alt="Icono de Textiles y Tejidos">
-            <p>Textiles y Tejidos</p>
-        </div>
-        <div>
-            <img src="https://placehold.co/250x200" alt="Icono de Decoración y Arte">
-            <p>Decoración y Arte</p>
-        </div>
-        <div>
-            <img src="https://placehold.co/250x200" alt="Icono de Bijouterie y Accesorios">
-            <p>Bijouterie y Accesorios</p>
-        </div>
+        <div class="category-grid">
+            <div class="category-item">
+                <img class="category-icon" src="https://placehold.co/250x200" alt="Icono de Gastronomía">
+                <p class="category-name">Gastronomía</p>
+            </div>
+            <div class="category-item">
+                <img class="category-icon" src="https://placehold.co/250x200" alt="Icono de Textiles y Tejidos">
+                <p class="category-name">Textiles y Tejidos</p>
+            </div>
+            <div class="category-item">
+                <img class="category-icon" src="https://placehold.co/250x200" alt="Icono de Decoración y Arte">
+                <p class="category-name">Decoración y Arte</p>
+            </div>
+            <div class="category-item">
+                <img class="category-icon" src="https://placehold.co/250x200" alt="Icono de Bijouterie y Accesorios">
+                <p class="category-name">Bijouterie y Accesorios</p>
+            </div>
 
-        <div>
-            <img src="https://placehold.co/250x200" alt="Icono de Artesanías y Cerámica">
-            <p>Artesanías y Cerámica</p>
-        </div>
-        <div>
-            <img src="https://placehold.co/250x200" alt="Icono de Bienestar y Aromas">
-            <p>Bienestar y Aromas</p>
-        </div>
-        <div>
-            <img src="https://placehold.co/250x200" alt="Icono de Juguetes y Muñecos">
-            <p>Juguetes y Muñecos</p>
-        </div>
-        <div>
-            <img src="https://placehold.co/250x200" alt="Icono de Jardín y Mascotas">
-            <p>Jardín y Mascotas</p>
+            <div class="category-item">
+                <img class="category-icon" src="https://placehold.co/250x200" alt="Icono de Artesanías y Cerámica">
+                <p class="category-name">Artesanías y Cerámica</p>
+            </div>
+            <div class="category-item">
+                <img class="category-icon" src="https://placehold.co/250x200" alt="Icono de Bienestar y Aromas">
+                <p class="category-name">Bienestar y Aromas</p>
+            </div>
+            <div class="category-item">
+                <img class="category-icon" src="https://placehold.co/250x200" alt="Icono de Juguetes y Muñecos">
+                <p class="category-name">Juguetes y Muñecos</p>
+            </div>
+            <div class="category-item">
+                <img class="category-icon" src="https://placehold.co/250x200" alt="Icono de Jardín y Mascotas">
+                <p class="category-name">Jardín y Mascotas</p>
+            </div>
         </div>
         
-        <a href="./pages/artesanos.html">Ver todas las categorías</a>
+        <a href="./pages/artesanos.html" class="action-link view-all-link">Ver todas las categorías</a>
       </section>
 
     </main>
 
-    <!-- Footer -->
-    <footer>
-      <!-- Footer columna izquierda -->
-      <div>
-        <img src="https://placehold.co/80x80" alt="Logo del Paseo Artesanal Mármol">
-        <p>Feria Autogestiva de producción propia.</p>
+    <!-- Footer: Pie de página principal -->
+    <footer class="main-footer">
+      <!-- Información de la marca -->
+      <div class="footer-brand">
+        <img class="footer-logo" src="./assets/logo.png" alt="Logo del Paseo Artesanal Mármol">
+        <p class="footer-tagline">Feria Autogestiva de producción propia.</p>
       </div>
 
-      <!-- Footer columa medio -->
-      <div>
-        <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="pages/sobre-nosotros.html">Sobre el Paseo</a></li>
-          <li><a href="pages/artesanos.html">Artesanos</a></li>
-          <li><a href="pages/participar.html">Participar</a></li>
-          <li><a href="pages/contacto.html">Contacto</a></li>
+      <!-- Menú del footer -->
+      <div class="footer-nav">
+        <h3 class="footer-title">Enlaces Rápidos</h3>
+        <ul class="footer-menu">
+          <li><a href="#" class="footer-link">Inicio</a></li>
+          <li><a href="pages/sobre-nosotros.html" class="footer-link">Sobre el Paseo</a></li>
+          <li><a href="pages/artesanos.html" class="footer-link">Artesanos</a></li>
+          <li><a href="pages/participar.html" class="footer-link">Participar</a></li>
+          <li><a href="pages/contacto.html" class="footer-link">Contacto</a></li>
         </ul>
       </div>
 
-      <!-- Footer columna derecha -->
-      <div>
-        <ul>
-          <li>Instagram: @paseo_artesanal_marmol</li>
-          <li>Email: paseo.artesanal.marmol@gmail.com</li>
-          <li>Plaza Luján, Bynnón 2932, José Mármol</li>
+      <!-- Información de contacto -->
+      <div class="footer-contact">
+        <h3 class="footer-title">Contacto</h3>
+        <ul class="contact-list">
+          <li class="contact-item">
+            <img class="contact-icon" src="https://placehold.co/24x24" alt="Logo de Instagram">
+            <span>@paseo_artesanal_marmol</span>
+          </li>
+          <li class="contact-item">
+            <img class="contact-icon" src="https://placehold.co/24x24" alt="Icono de Email">
+            <span>paseo.artesanal.marmol@gmail.com</span>
+          </li>
+          <li class="contact-item">
+            <img class="contact-icon" src="https://placehold.co/24x24" alt="Icono de ubicación">
+            <span>Plaza Luján, Bynnón 2932, José Mármol</span>
+          </li>
         </ul>
       </div>
 
-      <!-- Footer fila baja -->
-      <div>
+      <!-- Créditos -->
+      <div class="footer-credits">
         <p>Con el apoyo del Municipio de Alte. Brown</p>
       </div>
     </footer>

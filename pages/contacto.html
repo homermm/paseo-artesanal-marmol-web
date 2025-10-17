@@ -7,105 +7,117 @@
     <link rel="stylesheet" href="../styles/style.css" />
   </head>
   <body>
-    <header>
+    <!-- Header -->
+    <!-- Header: Encabezado principal del sitio -->
+    <header class="main-header">
       <!-- Logo de paseo -->
-      <img
-        src="https://placehold.co/80x80"
-        alt="Logo del Paseo Artesanal Mármol"
-      />
+      <img class="header-logo" src="../assets/logo.png" alt="Logo del Paseo Artesanal Mármol">
 
-      <!-- Nav -->
+      <!-- Nav: Navegación principal -->
       <nav>
-        <ul>
+        <ul class="menu">
           <li>
-            <a href="../index.html">Inicio</a>
+            <a href="../index.html" class="menu-link">Inicio</a>
           </li>
           <li>
-            <a href="./sobre-nosotros.html">Sobre el Paseo</a>
+            <a href="./sobre-nosotros.html" class="menu-link">Sobre el Paseo</a>
           </li>
           <li>
-            <a href="./artesanos.html">Nuestros Artesanos</a>
+            <a href="./artesanos.html" class="menu-link">Nuestros Artesanos</a>
           </li>
           <li>
-            <a href="./participar.html">¿Querés Participar?</a>
+            <a href="./participar.html" class="menu-link">¿Querés Participar?</a>
           </li>
           <li>
-            <a href="#">Contacto</a>
+            <a href="#" class="menu-link">Contacto</a>
           </li>
         </ul>
       </nav>
     </header>
 
-    <main>
-      <h1>Ubicación y Contacto</h1>
+    <main class="main-content">
+      <h1 class="page-title">Ubicación y Contacto</h1>
 
       <!-- Mapa Interactivo de la izquierda  -->
-      <section>
+      <section class="map-section">
           <img
+            class="map-image"
             src="https://placehold.co/600x450"
             alt="Mapa interactivo con la ubicación de la feria"
           />
       </section>
 
       <!-- Texto informativo de la derecha  -->
-      <section>
-        <h2>Vení a visitarnos</h2>
+      <section class="contact-info-section">
+        <h2 class="section-title">Vení a visitarnos</h2>
 
-        <div>
-          <img src="https://placehold.co/40x40" alt="Icono de ubicación">
-          <h3>Dirección</h3>
-          <p>Bynnón 2932, José Mármol - Plaza Nuestra Señora de Luján (Plaza de Mármol)</p>
+        <div class="info-item">
+          <img class="info-icon" src="https://placehold.co/40x40" alt="Icono de ubicación">
+          <h3 class="info-title">Dirección</h3>
+          <p class="info-text">Bynnón 2932, José Mármol - Plaza Nuestra Señora de Luján (Plaza de Mármol)</p>
         </div>
 
-        <div>
-          <img src="https://placehold.co/40x40" alt="Icono de horario">
-          <h3>Horario</h3>
-          <p>2 o 3 domingos al mes - 15:30 a 19:30 hs (varía según estación)</p>
+        <div class="info-item">
+          <img class="info-icon" src="https://placehold.co/40x40" alt="Icono de horario">
+          <h3 class="info-title">Horario</h3>
+          <p class="info-text">2 o 3 domingos al mes - 15:30 a 19:30 hs (varía según estación)</p>
         </div>
 
-        <div>
-          <img src="https://placehold.co/40x40" alt="Icono de email">
-          <h3>Email</h3>
-          <p>paseo.artesanal.marmol@gmail.com</p>
+        <div class="info-item">
+          <img class="info-icon" src="https://placehold.co/40x40" alt="Icono de email">
+          <h3 class="info-title">Email</h3>
+          <p class="info-text">paseo.artesanal.marmol@gmail.com</p>
         </div>
 
-        <div>
-          <img src="https://placehold.co/40x40" alt="Icono de Instagram">
-          <h3>Instagram</h3>
-          <p>@paseo_artesanal_marmol</p>
+        <div class="info-item">
+          <img class="info-icon" src="https://placehold.co/40x40" alt="Icono de Instagram">
+          <h3 class="info-title">Instagram</h3>
+          <p class="info-text">@paseo_artesanal_marmol</p>
         </div>
       </section>
     </main>
 
-    <footer>
-      <!-- Footer columna izquierda -->
-      <div>
-        <img src="https://placehold.co/80x80" alt="Logo del Paseo Artesanal Mármol" />
-        <p>Feria Autogestiva de producción propia.</p>
+    <!-- Footer: Pie de página principal -->
+    <footer class="main-footer">
+      <!-- Información de la marca -->
+      <div class="footer-brand">
+        <img class="footer-logo" src="../assets/logo.png" alt="Logo del Paseo Artesanal Mármol">
+        <p class="footer-tagline">Feria Autogestiva de producción propia.</p>
       </div>
 
-      <!-- Footer columa medio -->
-      <div>
-        <ul>
-          <li><a href="../index.html">Inicio</a></li>
-          <li><a href="./sobre-nosotros.html">Sobre el Paseo</a></li>
-          <li><a href="./artesanos.html">Artesanos</a></li>
-          <li><a href="./participar.html">Participar</a></li>
-          <li><a href="#">Contacto</a></li>
+      <!-- Menú del footer -->
+      <div class="footer-nav">
+        <h3 class="footer-title">Enlaces Rápidos</h3>
+        <ul class="footer-menu">
+          <li><a href="../index.html" class="footer-link">Inicio</a></li>
+          <li><a href="./sobre-nosotros.html" class="footer-link">Sobre el Paseo</a></li>
+          <li><a href="./artesanos.html" class="footer-link">Artesanos</a></li>
+          <li><a href="./participar.html" class="footer-link">Participar</a></li>
+          <li><a href="#" class="footer-link">Contacto</a></li>
         </ul>
       </div>
 
-      <!-- Footer columna derecha -->
-      <div>
-        <ul>
-          <li>Instagram: @paseo_artesanal_marmol</li>
-          <li>Email: paseo.artesanal.marmol@gmail.com</li>
-          <li>Plaza Luján, Bynnón 2932, José Mármol</li>
+      <!-- Información de contacto -->
+      <div class="footer-contact">
+        <h3 class="footer-title">Contacto</h3>
+        <ul class="contact-list">
+          <li class="contact-item">
+            <img class="contact-icon" src="https://placehold.co/24x24" alt="Logo de Instagram">
+            <span>@paseo_artesanal_marmol</span>
+          </li>
+          <li class="contact-item">
+            <img class="contact-icon" src="https://placehold.co/24x24" alt="Icono de Email">
+            <span>paseo.artesanal.marmol@gmail.com</span>
+          </li>
+          <li class="contact-item">
+            <img class="contact-icon" src="https://placehold.co/24x24" alt="Icono de ubicación">
+            <span>Plaza Luján, Bynnón 2932, José Mármol</span>
+          </li>
         </ul>
       </div>
 
-      <!-- Footer fila baja -->
-      <div>
+      <!-- Créditos -->
+      <div class="footer-credits">
         <p>Con el apoyo del Municipio de Alte. Brown</p>
       </div>
     </footer>

@@ -1,0 +1,288 @@
+/* =================================IMPORTACIÓN DE FUENTES================================= */
+/* Montserrat - Para títulos */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* font-family: "Montserrat", sans-serif; */
+
+/* Lato - Para párrafos */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+/* font-family: "Lato", sans-serif; */
+
+
+/* =================================ESTILOS GENERALES================================= */
+body {
+    font-family: "Lato", sans-serif;
+    color: #1C1C17;
+    background-color: #FDFAF6;
+}
+
+
+/* =================================HEADER=================================  */
+
+/* Contenedor principal del encabezado */
+.main-header {
+    background-color: #FAE5D3;
+    text-align: center;
+}
+
+/* Logo en el header */
+.header-logo {
+    width: 80px;
+    height: 80px;
+}
+
+/* Menú de navegación */
+.menu {
+    list-style: none;
+}
+
+/* Enlaces del menú */
+.menu-link {
+    color: #1C1C17;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+.menu-link:hover {
+    color: #C86F43; /* Naranja para mouse encima */
+}
+
+
+/* =================================FOOTER================================= */
+
+/* Contenedor principal del footer */
+.main-footer {
+    background-color: #FAE5D3;
+}
+
+/* Logo en el footer */
+.footer-logo {
+    width: 80px;
+    height: 80px;
+}
+
+/* Eslogan del footer */
+.footer-tagline {
+    font-style: italic;
+    color: #1C1C17;
+}
+
+/* Títulos en el footer */
+.footer-title {
+    font-family: "Montserrat", sans-serif;
+    color: #1C1C17;
+}
+
+/* Listas en el footer */
+.footer-menu,
+.contact-list {
+    list-style: none;
+}
+
+/* Enlaces en el footer */
+.footer-link {
+    color: #1C1C17;
+    text-decoration: none;
+}
+
+/* Elementos de contacto */
+.contact-item {
+    color: #1C1C17;
+}
+
+.contact-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Créditos del footer */
+.footer-credits {
+    text-align: center;
+    color: #1C1C17;
+    font-size: 0.9rem;
+}
+
+
+/* =================================INDEX================================= */
+
+/* Sección Hero */
+.hero-section {
+    text-align: center;
+}
+
+.hero-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.5rem;
+    color: #C86F43;
+}
+
+.hero-subtitle {
+    font-style: italic;
+    color: #1C1C17;
+}
+
+/* Sección de Bienvenida */
+.welcome-section {
+    text-align: center;
+}
+
+.section-title {
+    font-family: "Montserrat", sans-serif;
+    color: #C86F43;
+}
+
+.schedule-info {
+    color: #1C1C17;
+    line-height: 1.6;
+}
+
+/* Sección Sobre Nosotros */
+
+.about-text {
+    color: #1C1C17;
+}
+
+.action-link {
+    color: #C86F43;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.action-link:hover {
+    text-decoration: underline;
+}
+
+/* Sección de Categorías */
+.categories-section {
+    text-align: center;
+}
+
+.category-name {
+    font-family: "Montserrat", sans-serif;
+    color: #1C1C17;
+    font-weight: 500;
+}
+
+.view-all-link {
+    display: inline-block;
+}
+
+
+/* =================================PARTICIPAR================================= */
+/* Sección de filosofía */
+.philosophy-section {
+    text-align: center;
+}
+
+.philosophy-content {
+    text-align: left;
+}
+
+.philosophy-text {
+    color: #1C1C17;
+    font-size: 1.1rem;
+}
+
+/* Sección de pilares */
+.pillars-section {
+    text-align: center;
+}
+
+.pillar-grid {
+    text-align: center;
+}
+
+.pillar-item {
+    text-align: center;
+}
+
+.pillar-icon {
+    max-width: 100px;
+}
+
+.pillar-text {
+    color: #1C1C17;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+
+/* =================================ARTESANOS================================= */
+/* Introducción */
+.page-intro {
+    color: #1C1C17;
+    line-height: 1.6;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Secciones de artesanías */
+.craft-section {
+    text-align: center;
+}
+
+.craft-title {
+    font-family: "Montserrat", sans-serif;
+    color: #C86F43;
+    text-align: center;
+}
+
+.craft-list {
+    text-align: left;
+}
+
+.craft-item {
+    color: #1C1C17;
+}
+
+
+/* =================================PARTICIPAR================================= */
+/* Sección de requisitos */
+.requirements-section {
+    text-align: center;
+}
+
+.requirements-list {
+    text-align: left;
+}
+
+.requirement-item {
+    color: #1C1C17;
+}
+
+/* Sección de postulación */
+.apply-section {
+    text-align: center;
+}
+
+.apply-text {
+    color: #1C1C17;
+    font-size: 1.1rem;
+}
+
+.apply-actions {
+    text-align: center;
+}
+
+.apply-link {
+    font-family: "Montserrat", sans-serif;
+}
+
+
+/* =================================CONTACTO================================= */
+/* Título principal */
+.page-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    color: #C86F43;
+    text-align: center;
+}
+
+.info-title {
+    font-family: "Montserrat", sans-serif;
+    color: #C86F43;
+}
+
+.info-text {
+    color: #1C1C17;
+}
