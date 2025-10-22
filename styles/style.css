@@ -34,6 +34,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 100;
 }
 
 /* Logo en el header */
@@ -58,10 +61,17 @@ body {
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
     padding: 0.5rem;
+    transition: color 0.2s ease-in-out;
 }
 
 .menu-link:hover {
     color: #C86F43; /* Naranja para mouse encima */
+}
+
+.menu-link-active {
+    color: #C86F43;
+    font-weight: 700;
+    border-bottom: 2px solid #C86F43;
 }
 
 
@@ -137,15 +147,24 @@ body {
 /* Elementos de contacto */
 .contact-item {
     color: #1C1C17;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
     margin-bottom: 0.5rem;
 }
 
+.contact-item a {
+    color: #1C1C17;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.2s ease-in-out;
+}
+
+.contact-item a:hover {
+    color: #C86F43; /* Naranja al hacer hover */
+}
+
 .contact-icon {
-    width: 24px;
-    height: 24px;
+    font-size: 24px;
 }
 
 /* Créditos del footer */
