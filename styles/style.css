@@ -310,25 +310,78 @@ body {
     line-height: 1.6;
     text-align: center;
     font-style: italic;
+    margin: 0 1.5rem 2rem 1.5rem;
 }
 
-/* Secciones de artesanías */
-.craft-section {
+/* Contenedor de la Grilla */
+.craft-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 COLUMNA POR DEFECTO  */
+    gap: 2rem;
+    margin: 0 1.5rem 3rem 1.5rem; /* Márgenes para móvil */
+}
+
+/* Tarjeta de Categoría */
+.craft-card {
+    border: 1px solid #E0E0D9;
+    border-radius: 8px;
+    background-color: #FFFFFF;
     text-align: center;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
 }
 
+/* Imagen de la tarjeta */
+.craft-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Título de la tarjeta */
 .craft-title {
     font-family: "Montserrat", sans-serif;
     color: #C86F43;
     text-align: center;
+    margin: 1.5rem 0 1rem 0;
 }
 
+/* Lista de items */
 .craft-list {
     text-align: left;
+    margin: 0 1.5rem 1.5rem 1.5rem;
+    padding-left: 1.2rem;
+    flex-grow: 1;
 }
 
+/* Item de la lista */
 .craft-item {
     color: #1C1C17;
+    margin-bottom: 0.5rem;
+}
+
+/* --- Media Queries para Responsive --- */
+
+/* Tablet: 2 columnas */
+@media (min-width: 768px) {
+    .page-intro {
+        margin: 0 2rem 3rem 2rem; /* Márgenes más grandes para desktop */
+    }
+
+    .craft-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 COLUMNAS */
+        margin: 0 2rem 4rem 2rem; /* Márgenes más grandes */
+    }
+}
+
+/* Desktop: 4 columnas (como el wireframe) */
+@media (min-width: 1024px) {
+    .craft-grid {
+        grid-template-columns: repeat(4, 1fr); /* 4 COLUMNAS */
+    }
 }
 
 
