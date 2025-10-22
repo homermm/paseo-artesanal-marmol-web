@@ -7,6 +7,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 /* font-family: "Lato", sans-serif; */
 
+/* =================================RESET================================= */
+* {
+    margin: 0;
+    padding: 0;
+}
+
 
 /* =================================ESTILOS GENERALES================================= */
 body {
@@ -21,18 +27,26 @@ body {
 /* Contenedor principal del encabezado */
 .main-header {
     background-color: #FAE5D3;
-    text-align: center;
+    padding-inline: 2rem;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* Logo en el header */
 .header-logo {
-    width: 80px;
     height: 80px;
+    width: auto;
 }
 
 /* Menú de navegación */
 .menu {
     list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
 }
 
 /* Enlaces del menú */
@@ -41,6 +55,7 @@ body {
     text-decoration: none;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
+    padding: 0.5rem;
 }
 
 .menu-link:hover {
@@ -53,12 +68,24 @@ body {
 /* Contenedor principal del footer */
 .main-footer {
     background-color: #FAE5D3;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+/* Sección de marca */
+.footer-brand {
+    flex: 1;
+    min-width: 200px;
 }
 
 /* Logo en el footer */
 .footer-logo {
     width: 80px;
     height: 80px;
+    margin-bottom: 1rem;
 }
 
 /* Eslogan del footer */
@@ -71,12 +98,22 @@ body {
 .footer-title {
     font-family: "Montserrat", sans-serif;
     color: #1C1C17;
+    margin-bottom: 1rem;
+}
+
+/* Sección de navegación */
+.footer-nav {
+    flex: 1;
+    min-width: 200px;
 }
 
 /* Listas en el footer */
 .footer-menu,
 .contact-list {
     list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 /* Enlaces en el footer */
@@ -85,9 +122,23 @@ body {
     text-decoration: none;
 }
 
+.footer-link:hover {
+    color: #C86F43;
+}
+
+/* Sección de contacto */
+.footer-contact {
+    flex: 1;
+    min-width: 200px;
+}
+
 /* Elementos de contacto */
 .contact-item {
     color: #1C1C17;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .contact-icon {
@@ -97,9 +148,13 @@ body {
 
 /* Créditos del footer */
 .footer-credits {
+    flex-basis: 100%;
     text-align: center;
     color: #1C1C17;
     font-size: 0.9rem;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(28, 28, 23, 0.1);
 }
 
 
