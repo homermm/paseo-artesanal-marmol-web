@@ -4,35 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Paseo Artesanal Mármol | Feria Autogestiva</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
     <!-- Header: Encabezado principal del sitio -->
-    <header class="main-header">
-      <!-- Logo de paseo -->
-      <a href="#">
-        <img class="header-logo" src="./assets/images/logo.png" alt="Logo del Paseo Artesanal Mármol">
-      </a>
-
-      <!-- Nav: Navegación principal -->
-      <nav>
-        <ul class="menu">
-          <li>
-            <a href="#" class="menu-link menu-link-active">Inicio</a>
-          </li>
-          <li>
-            <a href="./pages/sobre-nosotros.html" class="menu-link">Sobre el Paseo</a>
-          </li>
-          <li>
-            <a href="./pages/artesanos.html" class="menu-link">Nuestros Artesanos</a>
-          </li>
-          <li>
-            <a href="./pages/participar.html" class="menu-link">¿Querés Participar?</a>
-          </li>
-          <li>
-            <a href="./pages/contacto.html" class="menu-link">Contacto</a>
-          </li>
-        </ul>
+    <header>
+      <nav class="navbar navbar-expand-lg" style="background-color: #FAE5D3;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="./assets/images/logo.png" alt="Logo del Paseo Artesanal Mármol" style="height: 80px; width: auto;">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/sobre-nosotros.html">Sobre el Paseo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/artesanos.html">Nuestros Artesanos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/participar.html">¿Querés Participar?</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
 
@@ -170,4 +175,5 @@
       </div>
     </footer>
   </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </html>
