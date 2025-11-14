@@ -1,4 +1,5 @@
 /* =================================IMPORTACIÓN DE FUENTES================================= */
+
 /* Montserrat - Para títulos */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 /* font-family: "Montserrat", sans-serif; */
@@ -9,20 +10,43 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0');
 
+/* =================================COLORES================================= */
+
+:root {
+    --color-primary: #C86F43;
+    --color-primary-light: #D97F52;
+    --color-primary-dark: #B85C35;
+    --color-header-bg: #FAE5D3;
+    --color-text-dark: #1C1C17;
+    --color-text-light: #FDFAF6;
+    --color-border: #F0E6DB;
+    --color-border-subtle: #E0E0D9;
+    --transition-base: all 0.3s ease;
+}
+
 /* =================================RESET================================= */
+
 * {
     margin: 0;
     padding: 0;
 }
 
-
 /* =================================ESTILOS GENERALES================================= */
+
 body {
     font-family: "Lato", sans-serif;
-    color: #1C1C17;
-    background-color: #FDFAF6;
+    color: var(--color-text-dark);
+    background-color: var(--color-text-light);
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+}
+
+a {
+    transition: var(--transition-base);
+}
 
 /* =================================HEADER=================================  */
 
@@ -31,50 +55,93 @@ header {
 }
 
 header .navbar {
-    padding: 1rem 2rem;
+    padding: 0.5rem 2rem;
 }
 
 header .nav-link {
-    color: #1C1C17 !important;
+    color: var(--color-text-dark) !important;
     font-family: "Montserrat", sans-serif;
     font-weight: 500;
-    transition: color 0.2s ease-in-out;
     margin-left: 1rem;
 }
 
-header .nav-link:hover {
-    color: #C86F43 !important;
+header .nav-link:hover,
+header .nav-link.active {
+    color: var(--color-primary) !important;
 }
 
 header .nav-link.active {
-    color: #C86F43 !important;
     font-weight: 700;
-    border-bottom: 2px solid #C86F43;
+    border-bottom: 2px solid var(--color-primary);
 }
 
 header .navbar-toggler {
-    border-color: #C86F43;
+    border-color: var(--color-primary);
 }
 
 header .navbar-toggler:focus {
     box-shadow: 0 0 0 0.25rem rgba(200, 111, 67, 0.25);
 }
 
+/* =================================COMPONENTES REUTILIZABLES================================= */
+
+.icon-base {
+    color: var(--color-primary);
+    font-size: 24px;
+}
+
+.box-base {
+    border: 1px solid var(--color-border-subtle);
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.box-premium {
+    border-left: 8px solid var(--color-primary);
+    border-radius: 12px;
+    background: #FFFFFF;
+    box-shadow: 0 8px 24px rgba(200, 111, 67, 0.12);
+}
+
+.btn-custom {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+    color: white !important;
+    padding: 0.75rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: var(--transition-base);
+}
+
+.btn-custom:hover {
+    background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary));
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(200, 111, 67, 0.3);
+}
 
 /* =================================FOOTER================================= */
 
-footer {
-    background-color: #FAE5D3;
-    padding: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 2rem;
+footer.main-footer {
+    background-color: var(--color-header-bg);
 }
 
-.footer-brand {
-    flex: 1;
-    min-width: 200px;
+.footer-title {
+    font-family: "Montserrat", sans-serif;
+    color: var(--color-text-dark);
+    margin-bottom: 1rem;
+}
+
+.footer-link,
+.footer-nav a {
+    color: var(--color-text-dark);
+    text-decoration: none;
+}
+
+.footer-link:hover,
+.footer-nav a:hover {
+    color: var(--color-primary);
 }
 
 .footer-logo {
@@ -85,125 +152,121 @@ footer {
 
 .footer-tagline {
     font-style: italic;
-    color: #1C1C17;
+    color: var(--color-text-dark);
 }
 
-.footer-title {
-    font-family: "Montserrat", sans-serif;
-    color: #1C1C17;
-    margin-bottom: 1rem;
-}
-
-.footer-nav {
-    flex: 1;
-    min-width: 200px;
-}
-
-
-.footer-nav ul {
-    list-style: none;
+.footer-nav ul,
+.contact-list {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-}
-
-.footer-contact ul {
     list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
 }
 
-.footer-nav a {
-    color: #1C1C17;
-    text-decoration: none;
-}
-
-.footer-nav a:hover {
-    color: #C86F43;
-}
-
-/* Sección de contacto */
-.footer-contact {
-    flex: 1;
-    min-width: 200px;
-}
-
-.footer-contact li {
-    color: #1C1C17;
-    margin-bottom: 0.5rem;
-}
-
-.footer-contact li a {
-    color: #1C1C17;
+.contact-item a {
+    color: var(--color-text-dark);
     text-decoration: none;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    transition: color 0.2s ease-in-out;
 }
 
-.footer-contact li a:hover {
-    color: #C86F43; /* Naranja al hacer hover */
+.contact-item a:hover {
+    color: var(--color-primary);
 }
 
 .contact-icon {
     font-size: 24px;
+    color: var(--color-primary);
 }
 
-/* Créditos del footer  */
 .footer-credits {
-    flex-basis: 100%;
-    text-align: center;
-    color: #1C1C17;
+    color: var(--color-text-dark);
     font-size: 0.9rem;
-    margin-top: 2rem;
-    padding-top: 1rem;
     border-top: 1px solid rgba(28, 28, 23, 0.1);
 }
 
+/* =================================INDEX - HERO SECTION ================================= */
 
-/* =================================INDEX================================= */
-
-/* Sección Hero */
 .hero-section {
-    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.hero-section .card {
+    height: 500px;
+    overflow: hidden;
+    border: none;
+}
+
+.hero-image {
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-img-overlay .hero-title,
+.card-img-overlay .hero-subtitle {
+    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
 }
 
 .hero-title {
-    font-family: "Montserrat", sans-serif;
-    font-size: 2.5rem;
-    color: #C86F43;
+    font-size: 4rem;
+    font-weight: 800;
+    color: var(--color-header-bg);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
 }
 
 .hero-subtitle {
+    font-size: 2rem;
     font-style: italic;
-    color: #1C1C17;
+    color: #FFF;
+    font-weight: 300;
 }
 
-/* Sección de Bienvenida  */
+/* =================================INDEX - WELCOME SECTION ================================= */
+
 .welcome-section {
-    text-align: center;
+    background: linear-gradient(135deg, var(--color-header-bg) 0%, #F5D8B8 100%);
+    padding: 2rem 0 !important;
 }
+
+.welcome-box {
+    padding: 3rem 2.5rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.welcome-box .section-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.welcome-box .schedule-info {
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem !important;
+}
+
+.welcome-box .schedule-info:last-of-type {
+    color: var(--color-primary);
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 2px solid var(--color-border);
+}
+
+/* =================================INDEX - SECTION TITLES ================================= */
 
 .section-title {
-    font-family: "Montserrat", sans-serif;
-    color: #C86F43;
+    color: var(--color-primary);
+    margin-bottom: 1.5rem;
 }
-
-.schedule-info {
-    color: #1C1C17;
-    line-height: 1.6;
-}
-
-/* Sección Sobre Nosotros */
 
 .about-text {
-    color: #1C1C17;
+    color: var(--color-text-dark);
 }
 
 .action-link {
-    color: #C86F43;
+    color: var(--color-primary);
     text-decoration: none;
     font-weight: 500;
 }
@@ -212,37 +275,58 @@ footer {
     text-decoration: underline;
 }
 
-/* Sección de Categorías */
+/* =================================INDEX - CATEGORIES SECTION ================================= */
+
 .categories-section {
-    text-align: center;
+    background: linear-gradient(135deg, var(--color-text-light) 0%, #F5F2ED 100%);
+}
+
+.category-item {
+    transition: var(--transition-base);
+}
+
+.category-item:hover {
+    transform: translateY(-8px);
+    filter: drop-shadow(0 12px 20px rgba(200, 111, 67, 0.15));
+}
+
+.category-icon {
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid var(--color-border);
+    border-radius: 8px;
+    transition: var(--transition-base);
+}
+
+.category-item:hover .category-icon {
+    border-color: var(--color-primary);
 }
 
 .category-name {
-    font-family: "Montserrat", sans-serif;
-    color: #1C1C17;
-    font-weight: 500;
+    color: var(--color-text-dark);
+    font-weight: 600;
+    font-size: 1.1rem;
 }
 
 .view-all-link {
-    display: inline-block;
+    margin-top: 2rem;
 }
 
+/* =================================SOBRE EL PASEO ================================= */
 
-/* =================================SOBRE EL PASEO================================= */
-/* Sección de filosofía */
-.philosophy-section {
-    text-align: center;
-    display: flex;
-    margin: 60px;
-    gap: 3rem;
-}
-
-.page-title{
+.page-title {
     margin: 2rem;
     font-family: "Montserrat", sans-serif;
     font-size: 2rem;
     color: #C86F43;
     text-align: center;
+}
+
+.philosophy-section {
+    text-align: center;
+    display: flex;
+    margin: 60px;
+    gap: 3rem;
 }
 
 .philosophy-content {
@@ -260,13 +344,12 @@ footer {
     border-radius: 8px;
 }
 
-/* Sección de pilares */
 .pillars-section {
     text-align: center;
     margin-bottom: 4rem;
 }
 
-.section-title{
+.section-title {
     margin-bottom: 1.5rem;
 }
 
@@ -284,16 +367,11 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     flex-basis: 200px;
-
-    /* Estilos caja */
-
     border: 1px solid #E0E0D9;
     border-radius: 8px;
     padding: 2rem 4rem;
     min-height: 180px;
-    text-align: center;
 }
 
 .pillar-icon {
@@ -309,9 +387,8 @@ footer {
     font-size: 1.1rem;
 }
 
+/* =================================ARTESANOS ================================= */
 
-/* =================================ARTESANOS================================= */
-/* Introducción */
 .page-intro {
     color: #1C1C17;
     line-height: 1.6;
@@ -320,15 +397,13 @@ footer {
     margin: 0 1.5rem 2rem 1.5rem;
 }
 
-/* Contenedor de la Grilla */
 .craft-grid {
     display: grid;
-    grid-template-columns: 1fr; /* 1 COLUMNA POR DEFECTO  */
+    grid-template-columns: 1fr;
     gap: 2rem;
-    margin: 0 1.5rem 3rem 1.5rem; /* Márgenes para móvil */
+    margin: 0 1.5rem 3rem 1.5rem;
 }
 
-/* Tarjeta de Categoría */
 .craft-card {
     border: 1px solid #E0E0D9;
     border-radius: 8px;
@@ -340,7 +415,6 @@ footer {
     flex-direction: column;
 }
 
-/* Imagen de la tarjeta */
 .craft-image {
     width: 100%;
     height: 250px;
@@ -348,7 +422,6 @@ footer {
     display: block;
 }
 
-/* Título de la tarjeta */
 .craft-title {
     font-family: "Montserrat", sans-serif;
     color: #C86F43;
@@ -356,7 +429,6 @@ footer {
     margin: 1.5rem 0 1rem 0;
 }
 
-/* Lista de items */
 .craft-list {
     text-align: left;
     margin: 0 1.5rem 1.5rem 1.5rem;
@@ -364,36 +436,30 @@ footer {
     flex-grow: 1;
 }
 
-/* Item de la lista */
 .craft-item {
     color: #1C1C17;
     margin-bottom: 0.5rem;
 }
 
-/* --- Media Queries para Responsive --- */
-
-/* Tablet: 2 columnas */
 @media (min-width: 768px) {
     .page-intro {
-        margin: 0 2rem 3rem 2rem; /* Márgenes más grandes para desktop */
+        margin: 0 2rem 3rem 2rem;
     }
 
     .craft-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 COLUMNAS */
-        margin: 0 2rem 4rem 2rem; /* Márgenes más grandes */
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 2rem 4rem 2rem;
     }
 }
 
-/* Desktop: 4 columnas */
 @media (min-width: 1024px) {
     .craft-grid {
-        grid-template-columns: repeat(4, 1fr); /* 4 COLUMNAS */
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
+/* =================================PARTICIPAR ================================= */
 
-/* =================================PARTICIPAR================================= */
-/* Sección de requisitos */
 .requirements-section {
     text-align: center;
 }
@@ -406,7 +472,6 @@ footer {
     color: #1C1C17;
 }
 
-/* Sección de postulación */
 .apply-section {
     text-align: center;
 }
@@ -424,102 +489,88 @@ footer {
     font-family: "Montserrat", sans-serif;
 }
 
+/* =================================CONTACTO ================================= */
 
-/* =================================CONTACTO================================= */
-
-/* 1. Layout principal */
 .contact-container {
-  display: flex;
-  flex-direction: column; 
-  gap: 2rem;
-  padding: 0 2rem 3rem 2rem; 
-  max-width: 1200px;
-  margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 2rem 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-/* 2. Reordenamiento para Móvil */
 .map-section {
-  order: 2; /* El mapa va segundo */
+    order: 2;
 }
 
 .contact-info-section {
-  order: 1; /* La info va primero */
-}
-
-/* 3. Estilos de la tarjeta de info y el mapa */
-.contact-info-section {
-  border: 1px solid #E0E0D9; 
-  border-radius: 8px;
-  padding: 2rem;
-  background-color: #FFFFFF; 
+    order: 1;
+    border: 1px solid #E0E0D9;
+    border-radius: 8px;
+    padding: 2rem;
+    background-color: #FFFFFF;
 }
 
 .map-image {
-  width: 100%;
-  height: 450px;
-  object-fit: cover; 
-  border-radius: 8px;
-  border: 1px solid #E0E0D9;
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #E0E0D9;
 }
 
-
-/* 4. Layout interno de cada item  */
 .info-item {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  grid-template-rows: auto auto; 
-  gap: 0.25rem 1rem; 
-  align-items: center; 
-  margin-bottom: 1.5rem;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    gap: 0.25rem 1rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
 }
 
 .info-item:last-child {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
 
-/* Estilos para el icono (SPAN) */
 .info-icon {
-  grid-row: 1 / 3; 
-  grid-column: 1 / 2; 
-  font-size: 40px;  
-  color: #C86F43; 
-  justify-self: center; 
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+    font-size: 40px;
+    color: #C86F43;
+    justify-self: center;
 }
 
-/* Títulos y textos dentro de los items de info */
 .info-title {
-  grid-row: 1 / 2; 
-  grid-column: 2 / 3; 
-  margin: 0; 
-  font-family: "Montserrat", sans-serif;
-  color: #C86F43;
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    color: #C86F43;
 }
 
 .info-text {
-  grid-row: 2 / 3; 
-  grid-column: 2 / 3; 
-  margin: 0; 
-  color: #1C1C17;
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+    margin: 0;
+    color: #1C1C17;
 }
 
-/* 5. Media Query para Desktop */
 @media (min-width: 992px) {
+    .contact-container {
+        flex-direction: row;
+    }
 
-  .contact-container {
-    flex-direction: row;
-  }
+    .map-section {
+        order: 1;
+        flex: 1.5;
+    }
 
-  /* Reseteamos el orden para desktop (mapa a la izq) */
-  .map-section {
-    order: 1;
-    flex: 1.5; 
-  }
-
-  .contact-info-section {
-    order: 2;
-    flex: 1; 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
+    .contact-info-section {
+        order: 2;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
 }
