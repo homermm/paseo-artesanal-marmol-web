@@ -85,40 +85,56 @@ header .navbar-toggler:focus {
 
 /* =================================COMPONENTES REUTILIZABLES================================= */
 
-.icon-base {
-    color: var(--color-primary);
-    font-size: 24px;
-}
-
-.box-base {
+.card-item {
     border: 1px solid var(--color-border-subtle);
-    border-radius: 8px;
-    background-color: #FFFFFF;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-}
-
-.box-premium {
-    border-left: 8px solid var(--color-primary);
     border-radius: 12px;
-    background: #FFFFFF;
-    box-shadow: 0 8px 24px rgba(200, 111, 67, 0.12);
-}
-
-.btn-custom {
-    display: inline-block;
-    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
-    color: white !important;
-    padding: 0.75rem 2rem;
-    border-radius: 50px;
-    text-decoration: none;
+    background-color: #FFFFFF;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(200, 111, 67, 0.1);
     transition: var(--transition-base);
+    display: flex;
+    flex-direction: column;
 }
 
-.btn-custom:hover {
-    background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary));
-    text-decoration: none;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(200, 111, 67, 0.3);
+.card-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(200, 111, 67, 0.2);
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: 0;
+}
+
+/* Custom Bootstrap Overrides */
+.btn-primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+}
+
+.btn-outline-primary {
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.text-primary {
+    color: var(--color-primary) !important;
+}
+
+.bg-light {
+    background-color: var(--color-text-light) !important;
 }
 
 /* =================================FOOTER================================= */
@@ -228,29 +244,10 @@ footer.main-footer {
 
 .welcome-section {
     background: linear-gradient(135deg, var(--color-header-bg) 0%, #F5D8B8 100%);
-    padding: 2rem 0 !important;
-}
-
-.welcome-box {
-    padding: 3rem 2.5rem;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.welcome-box .section-title {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-}
-
-.welcome-box .schedule-info {
-    margin-bottom: 0.75rem;
-    font-size: 1.1rem !important;
 }
 
 .welcome-box .schedule-info:last-of-type {
     color: var(--color-primary);
-    margin-top: 1.5rem;
-    padding-top: 1rem;
     border-top: 2px solid var(--color-border);
 }
 
@@ -259,20 +256,11 @@ footer.main-footer {
 .section-title {
     color: var(--color-primary);
     margin-bottom: 1.5rem;
+    font-size: 2rem;
 }
 
 .about-text {
     color: var(--color-text-dark);
-}
-
-.action-link {
-    color: var(--color-primary);
-    text-decoration: none;
-    font-weight: 500;
-}
-
-.action-link:hover {
-    text-decoration: underline;
 }
 
 /* =================================INDEX - CATEGORIES SECTION ================================= */
@@ -306,10 +294,6 @@ footer.main-footer {
     color: var(--color-text-dark);
     font-weight: 600;
     font-size: 1.1rem;
-}
-
-.view-all-link {
-    margin-top: 2rem;
 }
 
 /* =================================SOBRE EL PASEO ================================= */
@@ -351,16 +335,7 @@ footer.main-footer {
     justify-content: center;
     text-align: center;
     padding: 2rem;
-    background: #FFFFFF;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(200, 111, 67, 0.1);
-    transition: var(--transition-base);
     min-height: 220px;
-}
-
-.pillar-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(200, 111, 67, 0.2);
 }
 
 .pillar-icon {
@@ -384,22 +359,6 @@ footer.main-footer {
     line-height: 1.8;
 }
 
-.craft-card {
-    border: 1px solid #E0E0D9;
-    border-radius: 12px;
-    background-color: #FFFFFF;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(200, 111, 67, 0.1);
-    transition: var(--transition-base);
-    display: flex;
-    flex-direction: column;
-}
-
-.craft-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(200, 111, 67, 0.2);
-}
-
 .craft-image {
     width: 100%;
     height: 220px;
@@ -409,13 +368,6 @@ footer.main-footer {
 
 .craft-title {
     font-size: 1.3rem;
-    font-weight: 700;
-    color: var(--color-primary);
-    margin: 0;
-}
-
-.craft-list {
-    margin: 0;
 }
 
 .craft-item {
@@ -427,117 +379,35 @@ footer.main-footer {
 
 /* =================================PARTICIPAR ================================= */
 
-.requirements-section {
-    text-align: center;
-}
-
-.requirements-list {
-    text-align: left;
-}
-
-.requirement-item {
-    color: #1C1C17;
-}
-
-.apply-section {
-    text-align: center;
-}
-
-.apply-text {
-    color: #1C1C17;
-    font-size: 1.1rem;
-}
-
-.apply-actions {
-    text-align: center;
-}
-
-.apply-link {
-    font-family: "Montserrat", sans-serif;
-}
 
 /* =================================CONTACTO ================================= */
 
-.contact-container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding: 0 2rem 3rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.map-section {
-    order: 2;
-}
-
-.contact-info-section {
-    order: 1;
-    border: 1px solid #E0E0D9;
-    border-radius: 8px;
-    padding: 2rem;
-    background-color: #FFFFFF;
-}
-
 .map-image {
     width: 100%;
-    height: 450px;
+    height: 400px;
     object-fit: cover;
-    border-radius: 8px;
-    border: 1px solid #E0E0D9;
+    border: 1px solid var(--color-border-subtle);
 }
 
-.info-item {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    grid-template-rows: auto auto;
-    gap: 0.25rem 1rem;
-    align-items: center;
-    margin-bottom: 1.5rem;
-}
-
-.info-item:last-child {
-    margin-bottom: 0;
+.contact-info-card {
+    background-color: #FFFFFF;
+    border: 1px solid var(--color-border-subtle);
 }
 
 .info-icon {
-    grid-row: 1 / 3;
-    grid-column: 1 / 2;
     font-size: 40px;
-    color: #C86F43;
-    justify-self: center;
+    flex-shrink: 0;
+    margin-top: 0.25rem;
 }
 
 .info-title {
-    grid-row: 1 / 2;
-    grid-column: 2 / 3;
-    margin: 0;
-    font-family: "Montserrat", sans-serif;
-    color: #C86F43;
+    font-size: 1.1rem;
+    margin: 0 0 0.5rem 0;
 }
 
 .info-text {
-    grid-row: 2 / 3;
-    grid-column: 2 / 3;
     margin: 0;
-    color: #1C1C17;
-}
-
-@media (min-width: 992px) {
-    .contact-container {
-        flex-direction: row;
-    }
-
-    .map-section {
-        order: 1;
-        flex: 1.5;
-    }
-
-    .contact-info-section {
-        order: 2;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
+    color: var(--color-text-dark);
+    font-size: 0.95rem;
+    line-height: 1.6;
 }
