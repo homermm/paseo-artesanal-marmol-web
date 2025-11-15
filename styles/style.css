@@ -314,77 +314,66 @@ footer.main-footer {
 
 /* =================================SOBRE EL PASEO ================================= */
 
+.page-header {
+    background: linear-gradient(135deg, var(--color-header-bg) 0%, #F5D8B8 100%);
+}
+
 .page-title {
-    margin: 2rem;
-    font-family: "Montserrat", sans-serif;
-    font-size: 2rem;
-    color: #C86F43;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--color-primary);
     text-align: center;
 }
 
 .philosophy-section {
-    text-align: center;
-    display: flex;
-    margin: 60px;
-    gap: 3rem;
-}
-
-.philosophy-content {
-    text-align: left;
+    background-color: #FFFFFF;
 }
 
 .philosophy-text {
-    color: #1C1C17;
+    color: var(--color-text-dark);
     font-size: 1.1rem;
-    margin-bottom: 2rem;
-}
-
-.philosophy-image img {
-    max-width: 100%;
-    border-radius: 8px;
-}
-
-.pillars-section {
-    text-align: center;
-    margin-bottom: 4rem;
-}
-
-.section-title {
+    line-height: 1.8;
     margin-bottom: 1.5rem;
 }
 
-.pillar-grid {
-    text-align: center;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 1.5rem;
+.philosophy-text:last-of-type {
+    margin-bottom: 0;
+}
+
+.pillars-section {
+    background: linear-gradient(135deg, var(--color-text-light) 0%, #F5F2ED 100%);
 }
 
 .pillar-item {
-    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-basis: 200px;
-    border: 1px solid #E0E0D9;
-    border-radius: 8px;
-    padding: 2rem 4rem;
-    min-height: 180px;
+    text-align: center;
+    padding: 2rem;
+    background: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(200, 111, 67, 0.1);
+    transition: var(--transition-base);
+    min-height: 220px;
+}
+
+.pillar-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(200, 111, 67, 0.2);
 }
 
 .pillar-icon {
+    font-size: 60px;
+    color: var(--color-primary);
     margin-bottom: 1rem;
-    font-size: 70px;
-    color: #1C1C17;
 }
 
 .pillar-text {
-    color: #1C1C17;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
     font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    margin: 0;
 }
 
 /* =================================ARTESANOS ================================= */
