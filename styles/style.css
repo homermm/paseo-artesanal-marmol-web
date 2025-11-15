@@ -58,6 +58,15 @@ header .navbar {
     padding: 0.5rem 2rem;
 }
 
+.navbar-custom {
+    background-color: var(--color-header-bg) !important;
+}
+
+.navbar-logo {
+    height: 80px;
+    width: auto;
+}
+
 header .nav-link {
     color: var(--color-text-dark) !important;
     font-family: "Montserrat", sans-serif;
@@ -244,6 +253,12 @@ footer.main-footer {
 
 .welcome-section {
     background: linear-gradient(135deg, var(--color-header-bg) 0%, #F5D8B8 100%);
+}
+
+.welcome-highlight {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 2px solid var(--color-border);
 }
 
 .welcome-box .schedule-info:last-of-type {
