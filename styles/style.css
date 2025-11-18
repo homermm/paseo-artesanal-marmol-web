@@ -368,17 +368,6 @@ footer.main-footer {
 
 /* =================================SOBRE EL PASEO ================================= */
 
-.page-header {
-    background: linear-gradient(135deg, var(--color-header-bg) 0%, var(--color-header-bg) 100%);
-}
-
-.page-title {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: var(--color-primary);
-    text-align: center;
-}
-
 .philosophy-section {
     background-color: var(--color-text-light);
 }
