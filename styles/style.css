@@ -13,6 +13,7 @@
 /* =================================COLORES================================= */
 
 :root {
+    /* Colores */
     --color-primary: #C86F43;
     --color-primary-light: #D97F52;
     --color-primary-dark: #B85C35;
@@ -21,7 +22,14 @@
     --color-text-light: #FDFAF6;
     --color-border: #F0E6DB;
     --color-border-subtle: #E0E0D9;
+    
+    /* Fuentes */
+    --font-primary: "Montserrat", sans-serif;
+    --font-secondary: "Lato", sans-serif;
+    
+    /* Transiciones */
     --transition-base: all 0.3s ease;
+    --transition-fast: all 0.2s ease;
 }
 
 /* =================================RESET================================= */
@@ -34,13 +42,13 @@
 /* =================================ESTILOS GENERALES================================= */
 
 body {
-    font-family: "Lato", sans-serif;
+    font-family: var(--font-secondary);
     color: var(--color-text-dark);
     background-color: var(--color-text-light);
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--font-primary);
     font-weight: 600;
 }
 
@@ -68,7 +76,7 @@ header .navbar {
 }
 
 .navbar-brand {
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: var(--transition-base);
 }
 
 .navbar-brand:hover {
@@ -78,10 +86,10 @@ header .navbar {
 
 header .nav-link {
     color: var(--color-text-dark) !important;
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--font-primary);
     font-weight: 500;
     margin-left: 1rem;
-    transition: all 0.2s ease;
+    transition: var(--transition-fast);
 }
 
 header .nav-link:hover,
@@ -144,7 +152,7 @@ header .navbar-toggler:focus {
     color: var(--color-primary);
     border-color: var(--color-primary);
     background-color: rgba(200, 111, 67, 0.05);
-    transition: all 0.3s ease;
+    transition: var(--transition-base);
 }
 
 .btn-outline-primary:hover {
@@ -172,7 +180,7 @@ footer.main-footer {
 }
 
 .footer-title {
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--font-primary);
     color: var(--color-primary);
     margin-bottom: 1.5rem;
     font-weight: 700;
@@ -198,7 +206,7 @@ footer.main-footer {
     width: 80px;
     height: 80px;
     margin-bottom: 1rem;
-    transition: transform 0.3s ease;
+    transition: var(--transition-base);
 }
 
 .footer-logo:hover {
@@ -218,7 +226,7 @@ footer.main-footer {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    transition: all 0.2s ease;
+    transition: var(--transition-fast);
     font-size: 0.95rem;
 }
 
