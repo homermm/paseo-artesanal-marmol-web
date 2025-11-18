@@ -109,7 +109,7 @@ header .navbar-toggler:focus {
 .card-item {
     border: 1px solid var(--color-border-subtle);
     border-radius: 16px;
-    background-color: #FFFFFF;
+    background-color: var(--color-text-light);
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(200, 111, 67, 0.08);
     transition: var(--transition-base);
@@ -150,7 +150,7 @@ header .navbar-toggler:focus {
 .btn-outline-primary:hover {
     background-color: var(--color-primary);
     border-color: var(--color-primary);
-    color: #FFFFFF;
+    color: var(--color-text-light);
 }
 
 .text-primary {
@@ -212,14 +212,6 @@ footer.main-footer {
     line-height: 1.6;
 }
 
-.footer-nav ul,
-.contact-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    list-style: none;
-}
-
 .contact-item a {
     color: var(--color-text-dark);
     text-decoration: none;
@@ -247,6 +239,10 @@ footer.main-footer {
     margin-top: 2rem;
     padding-top: 1.5rem;
     font-weight: 500;
+}
+
+.welcome-content {
+    max-width: 700px;
 }
 
 /* =================================INDEX - HERO SECTION ================================= */
@@ -285,14 +281,14 @@ footer.main-footer {
 .hero-subtitle {
     font-size: clamp(1rem, 4vw, 2rem);
     font-style: italic;
-    color: #FFF;
+    color: var(--color-text-light);
     font-weight: 300;
 }
 
 /* =================================INDEX - WELCOME SECTION ================================= */
 
 .welcome-section {
-    background: linear-gradient(135deg, var(--color-header-bg) 0%, #F5D8B8 100%);
+    background: linear-gradient(135deg, var(--color-header-bg) 0%, var(--color-header-bg) 100%);
     padding: 6rem 0;
 }
 
@@ -331,7 +327,7 @@ footer.main-footer {
 /* =================================INDEX - CATEGORIES SECTION ================================= */
 
 .categories-section {
-    background: linear-gradient(135deg, var(--color-text-light) 0%, #F5F2ED 100%);
+    background: linear-gradient(135deg, var(--color-text-light) 0%, var(--color-text-light) 100%);
     padding: 6rem 0;
 }
 
@@ -365,7 +361,7 @@ footer.main-footer {
 /* =================================SOBRE EL PASEO ================================= */
 
 .page-header {
-    background: linear-gradient(135deg, var(--color-header-bg) 0%, #F5D8B8 100%);
+    background: linear-gradient(135deg, var(--color-header-bg) 0%, var(--color-header-bg) 100%);
 }
 
 .page-title {
@@ -376,7 +372,7 @@ footer.main-footer {
 }
 
 .philosophy-section {
-    background-color: #FFFFFF;
+    background-color: var(--color-text-light);
 }
 
 .philosophy-text {
@@ -391,16 +387,10 @@ footer.main-footer {
 }
 
 .pillars-section {
-    background: linear-gradient(135deg, var(--color-text-light) 0%, #F5F2ED 100%);
+    background: linear-gradient(135deg, var(--color-text-light) 0%, var(--color-text-light) 100%);
 }
 
 .pillar-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 2rem;
     min-height: 220px;
 }
 
@@ -471,14 +461,13 @@ footer.main-footer {
 }
 
 .contact-info-card {
-    background-color: #FFFFFF;
+    background-color: var(--color-text-light);
     border: 1px solid var(--color-border-subtle);
 }
 
-.info-icon {
+.icon-base {
     font-size: 40px;
     flex-shrink: 0;
-    margin-top: 0.25rem;
 }
 
 .info-title {
