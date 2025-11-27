@@ -39,6 +39,21 @@
    2. RESET Y BASE
    ================================= */
 
+/* Scroll suave y selección personalizada */
+html {
+    scroll-behavior: smooth;
+}
+
+::selection {
+    background-color: var(--color-primary);
+    color: #FFFFFF;
+}
+
+::-moz-selection {
+    background-color: var(--color-primary);
+    color: #FFFFFF;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -62,27 +77,65 @@ a {
     text-decoration: none;
 }
 
+/* Scrollbar personalizado (Webkit) */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary-dark);
+}
+
 /* Bootstrap Overrides */
 .btn-primary {
     background-color: var(--color-primary);
     border-color: var(--color-primary);
+    border-radius: 50px;
+    padding: 0.6rem 2rem;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(181, 93, 48, 0.2);
+    transition: var(--transition-base);
 }
 
 .btn-primary:hover {
     background-color: var(--color-primary-dark);
     border-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(181, 93, 48, 0.3);
 }
 
 .btn-outline-primary {
     color: var(--color-primary);
     border-color: var(--color-primary);
     background-color: rgba(181, 93, 48, 0.05);
+    border-radius: 50px;
+    padding: 0.6rem 2rem;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(181, 93, 48, 0.15);
+    transition: var(--transition-base);
 }
 
 .btn-outline-primary:hover {
     background-color: var(--color-primary);
     border-color: var(--color-primary);
     color: var(--color-text-light);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(181, 93, 48, 0.3);
 }
 
 .text-primary {
@@ -135,7 +188,9 @@ header .nav-link.active {
 
 header .nav-link.active {
     font-weight: 700;
-    border-bottom: 2px solid var(--color-primary);
+    background-color: rgba(181, 93, 48, 0.1);
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
 }
 
 header .navbar-toggler {
