@@ -330,6 +330,12 @@ header .navbar-toggler:focus {
     margin-bottom: 1.25rem;
 }
 
+.artisan-card__content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 .artisan-card__content ul li {
     font-size: 0.95rem;
     padding-left: 1.25rem;
@@ -567,6 +573,12 @@ footer.main-footer {
 .fade-in-up-delay-2 { opacity: 0; animation: fadeInUp 0.8s ease-out 0.4s forwards; }
 
 /* Mapas */
+.map-container {
+    width: 100%;
+    height: 450px;
+    box-shadow: 0 4px 12px rgba(181, 93, 48, 0.15);
+}
+
 .map-container iframe {
     width: 100%;
     height: 100%;
