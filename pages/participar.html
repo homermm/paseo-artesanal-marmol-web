@@ -44,100 +44,53 @@
     <main class="main-content">
       <section class="py-5">
         <div class="container">
-          <div class="row">
-            <div class="col-lg-9 mx-auto">
-              <div class="postulate-box p-4 p-md-5 rounded-3 shadow-sm">
-                <div class="mb-4">
-                  <h2 class="section-title mb-3 text-center">Formulario de Postulación</h2>
-                  <p class="mb-3">
-                    ¿Sos del Partido de Alte. Brown y tenés un emprendimiento de producción propia? ¡Queremos conocerte! Completá este formulario y nos pondremos en contacto con vos para brindarte toda la información necesaria.
-                  </p>
-                  <div class="alert alert-warning" role="alert">
-                    <strong><span class="material-symbols-outlined align-middle me-1">warning</span>Importante para emprendimientos gastronómicos:</strong><br>
-                    Si elaborás productos alimenticios (panadería, pastelería, conservas, mermeladas, comida casera, etc.), es requisito obligatorio contar con el <strong>Carnet de Manipulación de Alimentos vigente</strong> emitido por el Municipio de Alte. Brown.
+          <div class="row justify-content-center">
+            <div class="col-lg-8 col-xl-7">
+              <div class="text-center mb-5">
+                <h1 class="section-title mb-3">¿Querés Participar?</h1>
+                <p class="lead text-muted">Completá el formulario y formá parte del Paseo Artesanal Mármol</p>
+              </div>
+              
+              <div class="postulate-box p-5 rounded-3 shadow-sm" style="background-color: #ffffff; border: 1px solid #F0E6DB;">
+                <div class="text-center mb-5">
+                  <div class="mb-4">
+                    <div class="d-inline-flex align-items-center justify-content-center rounded-circle mb-3" style="width: 80px; height: 80px; background-color: #FAE5D3;">
+                      <span class="material-symbols-outlined" style="font-size: 2.5rem; color: #C86F43;">edit_square</span>
+                    </div>
+                    <h2 class="h3 mb-3" style="color: #1C1C17; font-weight: 700;">Formulario de Postulación</h2>
+                    <p class="mb-0" style="color: #6B6B6B;">Completá el formulario y formá parte del Paseo Artesanal Mármol</p>
                   </div>
                 </div>
                 
-                <form id="postulation-form" action="#" method="POST">
-                  <div class="row g-3">
-                    <div class="col-md-6">
-                      <label for="name" class="form-label">Nombre y Apellido *</label>
-                      <input type="text" class="form-control" id="name" name="name" required>
-                    </div>
-                    
-                    <div class="col-md-6">
-                      <label for="dni" class="form-label">DNI *</label>
-                      <input type="text" class="form-control" id="dni" name="dni" pattern="[0-9]{7,8}" required>
-                    </div>
-                    
-                    <div class="col-md-6">
-                      <label for="locality" class="form-label">Localidad *</label>
-                      <input type="text" class="form-control" id="locality" name="locality" required>
-                    </div>
-                    
-                    <div class="col-md-6">
-                      <label for="phone" class="form-label">Celular *</label>
-                      <input type="tel" class="form-control" id="phone" name="phone" required>
-                    </div>
-                    
-                    <div class="col-md-6">
-                      <label for="business-name" class="form-label">Emprendimiento (nombre o marca) *</label>
-                      <input type="text" class="form-control" id="business-name" name="business-name" required>
-                    </div>
-                    
-                    <div class="col-md-6">
-                      <label for="instagram" class="form-label">Instagram *</label>
-                      <div class="input-group">
-                        <span class="input-group-text">@</span>
-                        <input type="text" class="form-control" id="instagram" name="instagram" placeholder="usuario" required>
-                      </div>
-                    </div>
-                    
-                    <div class="col-12">
-                      <label for="craft-type" class="form-label">Rubro *</label>
-                      <select class="form-select" id="craft-type" name="craft-type" required>
-                        <option value="" selected disabled>Seleccioná tu rubro</option>
-                        <option value="accesorios">Accesorios</option>
-                        <option value="artesanias">Artesanías</option>
-                        <option value="artesanias-madera">Artesanías en Madera</option>
-                        <option value="ceramica">Cerámica</option>
-                        <option value="cosmetica">Cosmética / Perfumería</option>
-                        <option value="lenceria">Lencería</option>
-                        <option value="decoracion">Decoración</option>
-                        <option value="encuadernacion">Encuadernación / Librería</option>
-                        <option value="herreria">Herrería</option>
-                        <option value="indumentaria">Indumentaria</option>
-                        <option value="jugueteria">Juguetería</option>
-                        <option value="marroquineria">Marroquinería / Calzado</option>
-                        <option value="pasteleria">Pastelería y Panadería Dulce o Salada</option>
-                        <option value="personalizados">Productos Personalizados</option>
-                        <option value="textil">Textil</option>
-                        <option value="vivero">Vivero</option>
-                        <option value="sublimados">Sublimados</option>
-                        <option value="tejidos">Tejidos / Crochet</option>
-                        <option value="art-3d">Art. 3D</option>
-                      </select>
-                    </div>
-                    
-                    <div class="col-12">
-                      <label for="observations" class="form-label">Observaciones: Cualquier información adicional relevante *</label>
-                      <textarea class="form-control" id="observations" name="observations" rows="4" placeholder="Contanos sobre tu emprendimiento..." required></textarea>
-                    </div>
-                    
-                    <div class="col-12 mt-4">
-                      <div class="d-grid gap-2">
-                        <button type="submit" class="btn btn-primary btn-lg">Enviar Postulación</button>
-                      </div>
-                    </div>
+                <div class="mb-4 p-3 rounded" style="background-color: #FAE5D3; border-left: 4px solid #C86F43;">
+                  <div class="d-flex align-items-start">
+                    <span class="material-symbols-outlined me-2 flex-shrink-0" style="font-size: 1.25rem; color: #C86F43;">info</span>
+                    <small style="color: #1C1C17; line-height: 1.6;"><strong>Requisito gastronómico:</strong> Si elaborás alimentos, necesitás el Carnet de Manipulación de Alimentos vigente del Municipio de Alte. Brown.</small>
                   </div>
-                </form>
+                </div>
                 
-                <div class="text-center mt-4 pt-4 border-top">
-                  <p class="text-muted mb-3">Gracias por querer ser parte del Paseo Artesanal Mármol</p>
-                  <p class="mb-2">¿Preferís contactarnos por otros medios?</p>
-                  <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
-                    <a href="mailto:paseo.artesanal.marmol@gmail.com?subject=Quiero%20participar%20en%20el%20Paseo%20Artesanal" class="btn btn-outline-primary">Enviar Email</a>
-                    <a href="https://www.instagram.com/paseo_artesanal_marmol/" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary">Instagram</a>
+                <div class="d-grid gap-3 mb-4">
+                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSfzCJ5iQEf-fsqokAhCe08YprKnRLiOPzu2WXhe5DkmrlcB8A/viewform" 
+                     target="_blank" 
+                     rel="noopener noreferrer" 
+                     class="btn btn-lg py-3 shadow" 
+                     style="background-color: #C86F43; border: none; color: #FDFAF6; font-weight: 600; transition: all 0.3s ease;">
+                    <span class="material-symbols-outlined align-middle me-2">open_in_new</span>
+                    Completar Formulario
+                  </a>
+                </div>
+                
+                <div class="text-center mt-5 pt-4" style="border-top: 2px solid #F0E6DB;">
+                  <p class="small mb-3" style="color: #6B6B6B;">¿Preferís contactarnos directamente?</p>
+                  <div class="d-flex flex-column flex-sm-row gap-2 justify-content-center">
+                    <a href="mailto:paseo.artesanal.marmol@gmail.com" class="btn btn-sm px-4 py-2" style="border: 2px solid #C86F43; color: #C86F43; background-color: transparent; font-weight: 500; transition: all 0.3s ease;">
+                      <span class="material-symbols-outlined align-middle me-1" style="font-size: 1rem;">mail</span>
+                      Email
+                    </a>
+                    <a href="https://www.instagram.com/paseo_artesanal_marmol/" target="_blank" rel="noopener noreferrer" class="btn btn-sm px-4 py-2" style="border: 2px solid #C86F43; color: #C86F43; background-color: transparent; font-weight: 500; transition: all 0.3s ease;">
+                      <span class="material-symbols-outlined align-middle me-1" style="font-size: 1rem;">alternate_email</span>
+                      Instagram
+                    </a>
                   </div>
                 </div>
               </div>
