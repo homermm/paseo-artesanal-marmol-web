@@ -2,10 +2,7 @@
    1. CONFIGURACIÓN Y VARIABLES
    ================================= */
 
-/* Fuentes */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0");
+/* Fuentes — cargadas via <link> en el HTML para evitar bloqueo de render */
 
 :root {
   /* Paleta de Colores */
@@ -413,15 +410,6 @@ header .navbar-toggler:focus {
   transform: scale(1.1);
 }
 
-/* Compatibilidad Legacy */
-.card-item {
-  border: 1px solid var(--color-border-subtle);
-  border-radius: 16px;
-  background-color: var(--color-text-light);
-  box-shadow: var(--shadow-soft);
-  transition: var(--transition-base);
-}
-
 /* =================================
    6. LAYOUT: FOOTER
    ================================= */
@@ -455,7 +443,6 @@ footer.main-footer {
 .contact-item a:hover {
   color: var(--color-primary);
   transform: translateX(4px);
-  display: inline-block;
 }
 
 .footer-logo {
@@ -608,77 +595,77 @@ footer.main-footer {
    ================================= */
 
 .postulate-box {
-    background-color: #ffffff;
-    border: 1px solid var(--color-border);
+  background-color: #ffffff;
+  border: 1px solid var(--color-border);
 }
 
 .postulate-icon-wrapper {
-    width: 80px;
-    height: 80px;
-    background-color: var(--color-header-bg);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    margin-bottom: 1rem;
+  width: 80px;
+  height: 80px;
+  background-color: var(--color-header-bg);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-bottom: 1rem;
 }
 
 .postulate-icon-wrapper .material-symbols-outlined {
-    font-size: 2.5rem;
-    color: var(--color-primary-light);
+  font-size: 2.5rem;
+  color: var(--color-primary-light);
 }
 
 .postulate-box h2 {
-    color: var(--color-text-dark);
-    font-weight: 700;
+  color: var(--color-text-dark);
+  font-weight: 700;
 }
 
 .postulate-info-box {
-    background-color: var(--color-header-bg);
-    border-left: 4px solid var(--color-primary-light);
-    padding: 1rem;
-    border-radius: 0.25rem;
+  background-color: var(--color-header-bg);
+  border-left: 4px solid var(--color-primary-light);
+  padding: 1rem;
+  border-radius: 0.25rem;
 }
 
 .postulate-info-box .material-symbols-outlined {
-    font-size: 1.25rem;
-    color: var(--color-primary-light);
+  font-size: 1.25rem;
+  color: var(--color-primary-light);
 }
 
 .postulate-info-box small {
-    color: var(--color-text-dark);
-    line-height: 1.6;
+  color: var(--color-text-dark);
+  line-height: 1.6;
 }
 
 .btn-postulate {
-    background-color: var(--color-primary-light);
-    border: none;
-    color: var(--color-text-light);
-    font-weight: 600;
-    transition: var(--transition-base);
+  background-color: var(--color-primary-light);
+  border: none;
+  color: var(--color-text-light);
+  font-weight: 600;
+  transition: var(--transition-base);
 }
 
 .btn-postulate:hover {
-    background-color: var(--color-primary);
-    color: var(--color-text-light);
-    transform: translateY(-2px);
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+  transform: translateY(-2px);
 }
 
 .postulate-divider {
-    border-top: 2px solid var(--color-border);
-    margin-top: 2rem;
-    padding-top: 1.5rem;
+  border-top: 2px solid var(--color-border);
+  margin-top: 2rem;
+  padding-top: 1.5rem;
 }
 
 .btn-contact-alt {
-    border: 2px solid var(--color-primary-light);
-    color: var(--color-primary-light);
-    background-color: transparent;
-    font-weight: 500;
-    transition: var(--transition-base);
+  border: 2px solid var(--color-primary-light);
+  color: var(--color-primary-light);
+  background-color: transparent;
+  font-weight: 500;
+  transition: var(--transition-base);
 }
 
 .btn-contact-alt:hover {
-    background-color: var(--color-primary-light);
-    color: var(--color-text-light);
+  background-color: var(--color-primary-light);
+  color: var(--color-text-light);
 }
