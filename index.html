@@ -28,7 +28,28 @@
       property="og:description"
       content="Feria artesanal en José Mármol. Productos únicos hechos a mano por artesanos locales. 2do y 3er domingo de cada mes en Plaza de Mármol."
     />
-    <meta property="og:image" content="./assets/images/hero-main.jpg" />
+    <meta
+      property="og:image"
+      content="https://paseoartesanalmarmol.com/assets/images/logo.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Logo del Paseo Artesanal Mármol" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta
+      name="twitter:title"
+      content="Paseo Artesanal Mármol | Feria Autogestiva"
+    />
+    <meta
+      name="twitter:description"
+      content="Feria artesanal en José Mármol. Productos únicos hechos a mano por artesanos locales. 2do y 3er domingo de cada mes en Plaza de Mármol."
+    />
+    <meta
+      name="twitter:image"
+      content="https://paseoartesanalmarmol.com/assets/images/logo.png"
+    />
 
     <!-- Favicon -->
     <link
@@ -51,6 +72,26 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles/style.css" />
+
+    <!-- Datos estructurados para Google -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Paseo Artesanal Mármol",
+        "url": "https://paseoartesanalmarmol.com",
+        "logo": "https://paseoartesanalmarmol.com/assets/images/logo.png",
+        "description": "Feria artesanal autogestiva en José Mármol, Almirante Brown. Productos únicos hechos a mano por artesanos locales.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Bynnón 2932",
+          "addressLocality": "José Mármol",
+          "addressRegion": "Buenos Aires",
+          "addressCountry": "AR"
+        },
+        "sameAs": ["https://www.instagram.com/paseo_artesanal_marmol/"]
+      }
+    </script>
   </head>
   <body>
     <header>
