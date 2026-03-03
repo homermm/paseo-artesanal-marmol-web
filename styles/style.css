@@ -8,7 +8,7 @@
   /* Paleta de Colores */
   --color-primary: #b55d30;
   --color-primary-light: #d97f52;
-  --color-primary-dark: #b85c35;
+  --color-primary-dark: #7a3d1e;
 
   /* Fondos y Textos */
   --color-header-bg: #fae5d3;
@@ -590,6 +590,47 @@ footer.main-footer {
   border: 1px solid var(--color-border-subtle);
 }
 
+.info-item {
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.info-item:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.info-item .info-icon {
+  font-size: 28px;
+  color: var(--color-primary);
+  margin-top: 2px;
+}
+
+.info-title {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-primary);
+  margin-bottom: 0.2rem;
+}
+
+.info-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.info-text a {
+  color: var(--color-text-dark);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.info-text a:hover {
+  color: var(--color-primary);
+}
+
+
 /* =================================
    8. PÁGINA PARTICIPAR
    ================================= */
@@ -668,4 +709,45 @@ footer.main-footer {
 .btn-contact-alt:hover {
   background-color: var(--color-primary-light);
   color: var(--color-text-light);
+}
+
+/* =================================
+   9. BACK TO TOP BUTTON
+   ================================= */
+
+#back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 999;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(181, 93, 48, 0.35);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.2s ease;
+}
+
+#back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+#back-to-top:hover {
+  background-color: var(--color-primary-dark);
+}
+
+#back-to-top .material-symbols-outlined {
+  font-size: 24px;
+  pointer-events: none;
 }

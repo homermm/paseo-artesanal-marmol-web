@@ -23,13 +23,11 @@
       .then(function (html) {
         // Ajustar rutas relativas dentro del componente según la profundidad
         if (!isRoot) {
-          // En /pages/, reemplazar /assets/ y /pages/ por rutas relativas
           html = html
             .replace(/href="\/index\.html"/g, 'href="../index.html"')
             .replace(/href="\/pages\//g, 'href="./')
             .replace(/src="\/assets\//g, 'src="../assets/');
         } else {
-          // En raíz, quitar el slash inicial
           html = html
             .replace(/href="\/index\.html"/g, 'href="./index.html"')
             .replace(/href="\/pages\//g, 'href="./pages/')
@@ -58,12 +56,10 @@
     else if (path.includes("participar")) currentPage = "participar";
     else if (path.includes("contacto")) currentPage = "contacto";
 
-    // Navbar links
     document.querySelectorAll("[data-nav]").forEach(function (link) {
       if (link.dataset.nav === currentPage) {
         link.classList.add("active");
         link.setAttribute("aria-current", "page");
-        // El link activo apunta a # para evitar recarga
         link.setAttribute("href", "#");
       } else {
         link.classList.remove("active");
@@ -72,13 +68,93 @@
     });
   }
 
-  // Cargar header → marcar nav activo
+  /**
+   * Cierra el menú mobile de Bootstrap al hacer click en un nav-link.
+   * Punto #19
+   */
+  function initMobileMenuClose() {
+    document.addEventListener("click", function (e) {
+      const navLink = e.target.closest(".navbar-collapse .nav-link");
+      if (!navLink) return;
+
+      const navbarCollapse = document.querySelector(".navbar-collapse");
+      if (navbarCollapse && navbarCollapse.classList.contains("show")) {
+        const bsCollapse =
+          window.bootstrap &&
+          window.bootstrap.Collapse.getInstance(navbarCollapse);
+        if (bsCollapse) {
+          bsCollapse.hide();
+        }
+      }
+    });
+  }
+
+  /**
+   * Back to Top button.
+   * Punto #6
+   */
+  function initBackToTop() {
+    const btn = document.getElementById("back-to-top");
+    if (!btn) return;
+
+    window.addEventListener(
+      "scroll",
+      function () {
+        if (window.scrollY > 400) {
+          btn.classList.add("visible");
+        } else {
+          btn.classList.remove("visible");
+        }
+      },
+      { passive: true }
+    );
+
+    btn.addEventListener("click", function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
+  /**
+   * Lazy-load del mapa con IntersectionObserver.
+   * El iframe debe tener data-src en lugar de src.
+   * Punto #22
+   */
+  function initLazyMap() {
+    const mapIframes = document.querySelectorAll("iframe[data-src]");
+    if (!mapIframes.length) return;
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              const iframe = entry.target;
+              iframe.src = iframe.dataset.src;
+              observer.unobserve(iframe);
+            }
+          });
+        },
+        { rootMargin: "200px" }
+      );
+      mapIframes.forEach(function (iframe) {
+        observer.observe(iframe);
+      });
+    } else {
+      // Fallback: cargar directamente
+      mapIframes.forEach(function (iframe) {
+        iframe.src = iframe.dataset.src;
+      });
+    }
+  }
+
+  // Cargar header → marcar nav activo → cerrar menú mobile
   loadComponent(
     "header-placeholder",
     "assets/components/header.html",
     function () {
       markActiveNav();
-    },
+      initMobileMenuClose();
+    }
   );
 
   // Cargar footer → marcar link activo en footer también
@@ -87,6 +163,12 @@
     "assets/components/footer.html",
     function () {
       markActiveNav();
-    },
+    }
   );
+
+  // Inicializar funciones globales al cargar la página
+  document.addEventListener("DOMContentLoaded", function () {
+    initBackToTop();
+    initLazyMap();
+  });
 })();
