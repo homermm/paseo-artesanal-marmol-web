@@ -77,42 +77,79 @@
   <body>
     <div id="header-placeholder"></div>
 
-    <main class="main-content fade-in-up">
-      <section class="py-5">
+    <main class="main-content">
+
+      <!-- PAGE HERO -->
+      <section class="page-hero" aria-label="Encabezado">
+        <img
+          class="page-hero__bg"
+          src="../assets/images/hero-main.jpg"
+          alt=""
+          aria-hidden="true"
+        />
+        <div class="page-hero__overlay">
+          <div class="container">
+            <span class="page-hero__eyebrow">Sumate al Paseo</span>
+            <h1 class="page-hero__title">¿Querés Participar?</h1>
+          </div>
+        </div>
+      </section>
+
+      <!-- PASOS -->
+      <section class="steps-section py-5">
+        <div class="container">
+          <div class="text-center mb-5 reveal">
+            <span class="section-eyebrow">Cómo sumarte</span>
+            <h2 class="section-title mb-0">El proceso es simple</h2>
+          </div>
+          <div class="row g-4 justify-content-center">
+            <div class="col-sm-4 reveal reveal-d1">
+              <div class="step-card glass-card p-4 text-center h-100">
+                <div class="step-number">1</div>
+                <span class="material-symbols-outlined step-icon" aria-hidden="true">edit_square</span>
+                <p class="step-title">Completá el formulario</p>
+                <p class="step-desc">Envianos tus datos y tu rubro artesanal.</p>
+              </div>
+            </div>
+            <div class="col-sm-4 reveal reveal-d2">
+              <div class="step-card glass-card p-4 text-center h-100">
+                <div class="step-number">2</div>
+                <span class="material-symbols-outlined step-icon" aria-hidden="true">mark_email_read</span>
+                <p class="step-title">Revisamos tu postulación</p>
+                <p class="step-desc">Evaluamos que cumpla los requisitos de la feria.</p>
+              </div>
+            </div>
+            <div class="col-sm-4 reveal reveal-d3">
+              <div class="step-card glass-card p-4 text-center h-100">
+                <div class="step-number">3</div>
+                <span class="material-symbols-outlined step-icon" aria-hidden="true">handshake</span>
+                <p class="step-title">Te contactamos</p>
+                <p class="step-desc">Te avisamos y coordinamos tu ingreso al Paseo.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FORMULARIO -->
+      <section class="py-5 bg-light">
         <div class="container">
           <div class="row justify-content-center">
-            <div class="col-lg-8 col-xl-7">
-              <div class="text-center mb-5">
-                <h1 class="section-title mb-3">¿Querés Participar?</h1>
-                <p class="lead text-muted">
-                  Completá el formulario y formá parte del Paseo Artesanal
-                  Mármol
-                </p>
-              </div>
-
-              <div class="postulate-box p-5 rounded-3 shadow-sm">
-                <div class="text-center mb-5">
-                  <div class="mb-4">
-                    <div class="postulate-icon-wrapper">
-                      <span class="material-symbols-outlined">edit_square</span>
-                    </div>
-                    <h2 class="h3 mb-3">Formulario de Postulación</h2>
-                    <p class="lead mb-0">
-                      Envíanos tus datos y rubro artesanal para evaluar tu
-                      participación en la feria.
-                    </p>
+            <div class="col-lg-7 col-xl-6">
+              <div class="postulate-box glass-card p-5 reveal">
+                <div class="text-center mb-4">
+                  <div class="postulate-icon-wrapper mb-3">
+                    <span class="material-symbols-outlined">edit_square</span>
                   </div>
+                  <h2 class="h3 mb-2">Formulario de Postulación</h2>
+                  <p class="text-muted mb-0">
+                    Envíanos tus datos y rubro artesanal para evaluar tu participación en la feria.
+                  </p>
                 </div>
 
                 <div class="postulate-info-box mb-4 d-flex align-items-start">
-                  <span class="material-symbols-outlined me-2 flex-shrink-0"
-                    >info</span
-                  >
-                  <small
-                    ><strong>Requisito gastronómico:</strong> Si elaborás
-                    alimentos, necesitás el Carnet de Manipulación de Alimentos
-                    vigente del Municipio de Alte. Brown.</small
-                  >
+                  <span class="material-symbols-outlined me-2 flex-shrink-0">info</span>
+                  <small><strong>Requisito gastronómico:</strong> Si elaborás alimentos, necesitás el Carnet de Manipulación de Alimentos vigente del Municipio de Alte. Brown.</small>
                 </div>
 
                 <div class="d-grid gap-3 mb-4">
@@ -122,42 +159,20 @@
                     rel="noopener noreferrer"
                     class="btn btn-lg btn-postulate py-3 shadow"
                   >
-                    <span class="material-symbols-outlined align-middle me-2"
-                      >open_in_new</span
-                    >
+                    <span class="material-symbols-outlined align-middle me-2">open_in_new</span>
                     Completar Formulario
                   </a>
                 </div>
 
                 <div class="text-center postulate-divider">
-                  <p class="small mb-3 text-muted">
-                    ¿Preferís contactarnos directamente?
-                  </p>
-                  <div
-                    class="d-flex flex-column flex-sm-row gap-2 justify-content-center"
-                  >
-                    <a
-                      href="mailto:paseo.artesanal.marmol@gmail.com"
-                      class="btn btn-sm btn-contact-alt px-4 py-2"
-                    >
-                      <span
-                        class="material-symbols-outlined align-middle me-1"
-                        style="font-size: 1rem"
-                        >mail</span
-                      >
+                  <p class="small mb-3 text-muted">¿Preferís contactarnos directamente?</p>
+                  <div class="d-flex flex-column flex-sm-row gap-2 justify-content-center">
+                    <a href="mailto:paseo.artesanal.marmol@gmail.com" class="btn btn-sm btn-contact-alt px-4 py-2">
+                      <span class="material-symbols-outlined align-middle me-1" style="font-size: 1rem">mail</span>
                       Email
                     </a>
-                    <a
-                      href="https://www.instagram.com/paseo_artesanal_marmol/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="btn btn-sm btn-contact-alt px-4 py-2"
-                    >
-                      <span
-                        class="material-symbols-outlined align-middle me-1"
-                        style="font-size: 1rem"
-                        >alternate_email</span
-                      >
+                    <a href="https://www.instagram.com/paseo_artesanal_marmol/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-contact-alt px-4 py-2">
+                      <span class="material-symbols-outlined align-middle me-1" style="font-size: 1rem">alternate_email</span>
                       Instagram
                     </a>
                   </div>
@@ -167,9 +182,9 @@
           </div>
         </div>
       </section>
-    </main>
 
     <div id="footer-placeholder"></div>
+
 
     <!-- Botón Volver Arriba -->
     <button

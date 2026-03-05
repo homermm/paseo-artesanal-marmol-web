@@ -97,201 +97,91 @@
     <div id="header-placeholder"></div>
 
     <main class="main-content fade-in-up">
-      <section class="hero-section">
-        <div class="card text-center border-0">
+      <!-- HERO -->
+      <section class="hero-section" aria-label="Bienvenida">
+        <div class="hero-inner">
           <img
-            class="hero-image img-fluid w-100"
+            class="hero-image"
             src="./assets/images/hero-main.jpg"
             alt="Vista del Paseo Artesanal Mármol con artesanos y visitantes en la Plaza de Mármol"
             loading="eager"
           />
-
-          <div
-            class="card-img-overlay d-flex flex-column justify-content-center align-items-center"
-          >
-            <h1 class="hero-title">Paseo Artesanal Mármol</h1>
-
-            <p class="hero-subtitle">Hecho a mano, hecho con amor</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="welcome-section text-center py-5">
-        <div class="container">
-          <div class="mx-auto welcome-content">
-            <h2 class="section-title">¡Te esperamos!</h2>
-            <p class="fs-5 mb-2">
-              Nos reunimos el segundo y tercer domingo de cada mes en la Plaza
-              de Mármol.
-            </p>
-            <p class="fs-5 mb-3">
-              Horario: 15:30 a 19:30 hs (varía según estación del año).
-            </p>
-            <p
-              class="fs-5 fw-bold text-uppercase text-primary welcome-highlight"
-            >
-              Próxima fecha: A confirmar en nuestras redes
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="about-section py-5">
-        <div class="container">
-          <div class="row align-items-center g-5">
-            <div class="col-lg-6 order-lg-2">
-              <h2 class="section-title">Sobre el Paseo</h2>
-              <p class="about-text">
-                El Paseo Artesanal Mármol es un espacio de encuentro donde
-                artesanos locales comparten su trabajo, creatividad y comunidad.
-                Celebramos la producción artesanal y el trabajo hecho a mano en
-                un ambiente familiar y al aire libre.
-              </p>
-              <a href="./pages/sobre.html" class="btn btn-primary">Leer más</a>
-            </div>
-
-            <div class="col-lg-6 order-lg-1">
-              <img
-                src="./assets/images/philosophy-image.jpg"
-                alt="Artesanos de la feria exhibiendo sus productos en un ambiente al aire libre"
-                class="img-fluid rounded shadow-sm"
-                loading="lazy"
-              />
+          <div class="hero-overlay">
+            <div class="container h-100">
+              <div class="hero-content">
+                <span class="hero-eyebrow"
+                  >Feria Artesanal &middot; José Mármol &middot; Buenos
+                  Aires</span
+                >
+                <h1 class="hero-title">Paseo<br />Artesanal<br />Mármol</h1>
+                <p class="hero-subtitle">Hecho a mano, hecho con amor</p>
+                <div class="hero-cta-group">
+                  <a href="./pages/artesanos.html" class="btn btn-hero-cta">
+                    Ver artesanos
+                  </a>
+                  <a
+                    href="./pages/participar.html"
+                    class="btn btn-hero-secondary"
+                  >
+                    ¿Querés participar?
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="categories-section py-5 text-center">
+      <!-- INFO BAR -->
+      <section class="info-bar" aria-label="Información de la feria">
         <div class="container">
-          <h2 class="section-title">Nuestros Rubros</h2>
-
-          <div class="row g-4 mt-4">
-            <div class="col-6 col-md-4 col-lg-3">
-              <div class="category-card">
-                <div class="category-card__image-wrapper">
-                  <img
-                    class="category-card__img"
-                    src="./assets/images/craft-gastronomy.jpg"
-                    alt="Gastronomía"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="category-card__content">
-                  <p class="category-card__title">Gastronomía</p>
-                </div>
+          <div class="row g-0">
+            <div class="col-md-4 info-bar__item">
+              <span
+                class="material-symbols-outlined info-bar__icon"
+                aria-hidden="true"
+                >location_on</span
+              >
+              <div>
+                <p class="info-bar__label">Dónde</p>
+                <p class="info-bar__value">Plaza de Mármol, José Mármol</p>
+                <p class="info-bar__note">Bynnón 2932, Almirante Brown</p>
               </div>
             </div>
-            <div class="col-6 col-md-4 col-lg-3">
-              <div class="category-card">
-                <div class="category-card__image-wrapper">
-                  <img
-                    class="category-card__img"
-                    src="./assets/images/craft-textiles.jpg"
-                    alt="Textiles y Tejidos"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="category-card__content">
-                  <p class="category-card__title">Textiles y Tejidos</p>
-                </div>
+            <div class="col-md-4 info-bar__item">
+              <span
+                class="material-symbols-outlined info-bar__icon"
+                aria-hidden="true"
+                >calendar_month</span
+              >
+              <div>
+                <p class="info-bar__label">Cuándo</p>
+                <p class="info-bar__value">2do y 3er domingo de cada mes</p>
+                <p class="info-bar__note">
+                  Próxima fecha:
+                  <a
+                    href="https://www.instagram.com/paseo_artesanal_marmol/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="info-bar__link"
+                    >consultar en redes</a
+                  >
+                </p>
               </div>
             </div>
-            <div class="col-6 col-md-4 col-lg-3">
-              <div class="category-card">
-                <div class="category-card__image-wrapper">
-                  <img
-                    class="category-card__img"
-                    src="./assets/images/craft-decor-art.jpg"
-                    alt="Decoración y Arte"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="category-card__content">
-                  <p class="category-card__title">Decoración y Arte</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3">
-              <div class="category-card">
-                <div class="category-card__image-wrapper">
-                  <img
-                    class="category-card__img"
-                    src="./assets/images/craft-accessories.jpg"
-                    alt="Bijouterie y Accesorios"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="category-card__content">
-                  <p class="category-card__title">Bijouterie y Accesorios</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3">
-              <div class="category-card">
-                <div class="category-card__image-wrapper">
-                  <img
-                    class="category-card__img"
-                    src="./assets/images/craft-ceramics.jpg"
-                    alt="Artesanías y Cerámica"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="category-card__content">
-                  <p class="category-card__title">Artesanías y Cerámica</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3">
-              <div class="category-card">
-                <div class="category-card__image-wrapper">
-                  <img
-                    class="category-card__img"
-                    src="./assets/images/craft-wellness.jpg"
-                    alt="Bienestar y Aromas"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="category-card__content">
-                  <p class="category-card__title">Bienestar y Aromas</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3">
-              <div class="category-card">
-                <div class="category-card__image-wrapper">
-                  <img
-                    class="category-card__img"
-                    src="./assets/images/craft-toys.jpg"
-                    alt="Juguetes y Muñecos"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="category-card__content">
-                  <p class="category-card__title">Juguetes y Muñecos</p>
-                </div>
-              </div>
-            </div>
-            <div class="col-6 col-md-4 col-lg-3">
-              <div class="category-card">
-                <div class="category-card__image-wrapper">
-                  <img
-                    class="category-card__img"
-                    src="./assets/images/craft-garden.jpg"
-                    alt="Jardín y Mascotas"
-                    loading="lazy"
-                  />
-                </div>
-                <div class="category-card__content">
-                  <p class="category-card__title">Jardín y Mascotas</p>
-                </div>
+            <div class="col-md-4 info-bar__item">
+              <span
+                class="material-symbols-outlined info-bar__icon"
+                aria-hidden="true"
+                >schedule</span
+              >
+              <div>
+                <p class="info-bar__label">Horario</p>
+                <p class="info-bar__value">15:30 a 19:30 hs</p>
+                <p class="info-bar__note">Varía según estación del año</p>
               </div>
             </div>
           </div>
-
-          <a href="./pages/artesanos.html" class="btn btn-primary mt-5"
-            >Ver todas las categorías</a
-          >
         </div>
       </section>
     </main>

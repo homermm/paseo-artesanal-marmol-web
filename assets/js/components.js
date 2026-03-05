@@ -106,7 +106,7 @@
           btn.classList.remove("visible");
         }
       },
-      { passive: true }
+      { passive: true },
     );
 
     btn.addEventListener("click", function () {
@@ -134,7 +134,7 @@
             }
           });
         },
-        { rootMargin: "200px" }
+        { rootMargin: "200px" },
       );
       mapIframes.forEach(function (iframe) {
         observer.observe(iframe);
@@ -154,7 +154,7 @@
     function () {
       markActiveNav();
       initMobileMenuClose();
-    }
+    },
   );
 
   // Cargar footer → marcar link activo en footer también
@@ -163,12 +163,43 @@
     "assets/components/footer.html",
     function () {
       markActiveNav();
-    }
+    },
   );
 
   // Inicializar funciones globales al cargar la página
   document.addEventListener("DOMContentLoaded", function () {
     initBackToTop();
     initLazyMap();
+    initScrollReveal();
   });
+
+  /**
+   * Scroll Reveal — anima elementos .reveal al entrar en el viewport.
+   */
+  function initScrollReveal() {
+    const reveals = document.querySelectorAll(".reveal");
+    if (!reveals.length) return;
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12 },
+      );
+      reveals.forEach(function (el) {
+        observer.observe(el);
+      });
+    } else {
+      // Fallback: mostrar todo directamente
+      reveals.forEach(function (el) {
+        el.classList.add("is-visible");
+      });
+    }
+  }
 })();

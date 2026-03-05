@@ -77,27 +77,40 @@
   <body>
     <div id="header-placeholder"></div>
 
-    <main class="main-content fade-in-up">
+    <main class="main-content">
+
+      <!-- PAGE HERO -->
+      <section class="page-hero" aria-label="Encabezado">
+        <img
+          class="page-hero__bg"
+          src="../assets/images/hero-main.jpg"
+          alt=""
+          aria-hidden="true"
+        />
+        <div class="page-hero__overlay">
+          <div class="container">
+            <span class="page-hero__eyebrow">Lo que encontrás</span>
+            <h1 class="page-hero__title">Nuestros Artesanos</h1>
+          </div>
+        </div>
+      </section>
+
+      <!-- ARTESANOS -->
       <section class="artisans-section py-5">
         <div class="container">
-          <h1 class="section-title text-center mb-4">Nuestros Artesanos</h1>
-          <p class="page-intro text-center mb-5">
-            En el Paseo Artesanal Mármol encontrarás una amplia variedad de
-            rubros artesanales. Todos nuestros productos son de producción
-            propia, elaborados con dedicación y pasión por artesanos de nuestra
-            comunidad local.
-          </p>
+          <div class="text-center mb-5 reveal">
+            <span class="section-eyebrow">Producción 100% propia</span>
+            <h2 class="section-title mb-2">Nuestros Rubros</h2>
+            <p class="page-intro mb-0">
+              Todos los productos son elaborados con dedicación por artesanos de nuestra comunidad local.
+            </p>
+          </div>
 
           <div class="row g-4">
-            <div class="col-sm-6 col-lg-3">
-              <article class="artisan-card">
+            <div class="col-sm-6 col-lg-3 reveal reveal-d1">
+              <article class="artisan-card glass-card">
                 <div class="artisan-card__image-wrapper">
-                  <img
-                    src="../assets/images/craft-gastronomy.jpg"
-                    alt="Stand de gastronomía con tortas, conservas y productos artesanales"
-                    loading="lazy"
-                    class="artisan-card__img"
-                  />
+                  <img src="../assets/images/craft-gastronomy.jpg" alt="Stand de gastronomía con tortas, conservas y productos artesanales" loading="lazy" class="artisan-card__img" />
                 </div>
                 <div class="artisan-card__content">
                   <h2>Gastronomía</h2>
@@ -105,30 +118,24 @@
                     <li>Pastelería</li>
                     <li>Comida casera</li>
                     <li>Productos Gourmet</li>
-                    <li>Conservas - Mermeladas</li>
-                    <li>Blended - Mezclas de yuyos para el mate o té</li>
+                    <li>Conservas · Mermeladas</li>
+                    <li>Blended · Mezclas de yuyos</li>
                   </ul>
                 </div>
               </article>
             </div>
 
-            <div class="col-sm-6 col-lg-3">
-              <article class="artisan-card">
+            <div class="col-sm-6 col-lg-3 reveal reveal-d2">
+              <article class="artisan-card glass-card">
                 <div class="artisan-card__image-wrapper">
-                  <img
-                    src="../assets/images/craft-textiles.jpg"
-                    alt="Tejidos, amigurumis y textiles hechos a mano"
-                    loading="lazy"
-                    class="artisan-card__img"
-                  />
+                  <img src="../assets/images/craft-textiles.jpg" alt="Tejidos, amigurumis y textiles hechos a mano" loading="lazy" class="artisan-card__img" />
                 </div>
                 <div class="artisan-card__content">
                   <h2>Textiles y Tejidos</h2>
                   <ul>
                     <li>Tejidos</li>
                     <li>Amigurumis</li>
-                    <li>Textil cartucheras</li>
-                    <li>Textil almohadones</li>
+                    <li>Cartucheras · Almohadones</li>
                     <li>Ropa interior</li>
                     <li>Macramé</li>
                   </ul>
@@ -136,39 +143,28 @@
               </article>
             </div>
 
-            <div class="col-sm-6 col-lg-3">
-              <article class="artisan-card">
+            <div class="col-sm-6 col-lg-3 reveal reveal-d3">
+              <article class="artisan-card glass-card">
                 <div class="artisan-card__image-wrapper">
-                  <img
-                    src="../assets/images/craft-decor-art.jpg"
-                    alt="Pinturas, cuadros y objetos de decoración artesanal"
-                    loading="lazy"
-                    class="artisan-card__img"
-                  />
+                  <img src="../assets/images/craft-decor-art.jpg" alt="Pinturas, cuadros y objetos de decoración artesanal" loading="lazy" class="artisan-card__img" />
                 </div>
                 <div class="artisan-card__content">
                   <h2>Decoración y Arte</h2>
                   <ul>
-                    <li>Cuadros</li>
-                    <li>Puntillismo</li>
-                    <li>Mosaquismo</li>
+                    <li>Cuadros · Puntillismo</li>
+                    <li>Mosaiquismo</li>
                     <li>Pirograbados</li>
                     <li>Decoupage</li>
-                    <li>Vitrofusión apliques en vidrio</li>
+                    <li>Vitrofusión</li>
                   </ul>
                 </div>
               </article>
             </div>
 
-            <div class="col-sm-6 col-lg-3">
-              <article class="artisan-card">
+            <div class="col-sm-6 col-lg-3 reveal reveal-d4">
+              <article class="artisan-card glass-card">
                 <div class="artisan-card__image-wrapper">
-                  <img
-                    src="../assets/images/craft-accessories.jpg"
-                    alt="Bijouterie y accesorios artesanales: collares, pulseras y carteras"
-                    loading="lazy"
-                    class="artisan-card__img"
-                  />
+                  <img src="../assets/images/craft-accessories.jpg" alt="Bijouterie y accesorios artesanales: collares, pulseras y carteras" loading="lazy" class="artisan-card__img" />
                 </div>
                 <div class="artisan-card__content">
                   <h2>Bijouterie y Accesorios</h2>
@@ -183,15 +179,10 @@
               </article>
             </div>
 
-            <div class="col-sm-6 col-lg-3">
-              <article class="artisan-card">
+            <div class="col-sm-6 col-lg-3 reveal reveal-d1">
+              <article class="artisan-card glass-card">
                 <div class="artisan-card__image-wrapper">
-                  <img
-                    src="../assets/images/craft-ceramics.jpg"
-                    alt="Cerámica artesanal, macetas y objetos de porcelana fría"
-                    loading="lazy"
-                    class="artisan-card__img"
-                  />
+                  <img src="../assets/images/craft-ceramics.jpg" alt="Cerámica artesanal, macetas y objetos de porcelana fría" loading="lazy" class="artisan-card__img" />
                 </div>
                 <div class="artisan-card__content">
                   <h2>Artesanías y Cerámica</h2>
@@ -200,43 +191,33 @@
                     <li>Porcelana fría</li>
                     <li>Macetas artesanales</li>
                     <li>Objetos de madera</li>
-                    <li>Artículos de hierro para el jardín</li>
+                    <li>Artículos de hierro</li>
                   </ul>
                 </div>
               </article>
             </div>
 
-            <div class="col-sm-6 col-lg-3">
-              <article class="artisan-card">
+            <div class="col-sm-6 col-lg-3 reveal reveal-d2">
+              <article class="artisan-card glass-card">
                 <div class="artisan-card__image-wrapper">
-                  <img
-                    src="../assets/images/craft-wellness.jpg"
-                    alt="Velas, jabones y difusores artesanales de aromas naturales"
-                    loading="lazy"
-                    class="artisan-card__img"
-                  />
+                  <img src="../assets/images/craft-wellness.jpg" alt="Velas, jabones y difusores artesanales de aromas naturales" loading="lazy" class="artisan-card__img" />
                 </div>
                 <div class="artisan-card__content">
                   <h2>Bienestar y Aromas</h2>
                   <ul>
                     <li>Velas artesanales</li>
                     <li>Jabones artesanales</li>
-                    <li>Sahumerios artesanales</li>
-                    <li>Difusores - Perfumería</li>
+                    <li>Sahumerios</li>
+                    <li>Difusores · Perfumería</li>
                   </ul>
                 </div>
               </article>
             </div>
 
-            <div class="col-sm-6 col-lg-3">
-              <article class="artisan-card">
+            <div class="col-sm-6 col-lg-3 reveal reveal-d3">
+              <article class="artisan-card glass-card">
                 <div class="artisan-card__image-wrapper">
-                  <img
-                    src="../assets/images/craft-toys.jpg"
-                    alt="Juguetes de madera y muñecos artesanales"
-                    loading="lazy"
-                    class="artisan-card__img"
-                  />
+                  <img src="../assets/images/craft-toys.jpg" alt="Juguetes de madera y muñecos artesanales" loading="lazy" class="artisan-card__img" />
                 </div>
                 <div class="artisan-card__content">
                   <h2>Juguetes y Muñecos</h2>
@@ -248,20 +229,15 @@
               </article>
             </div>
 
-            <div class="col-sm-6 col-lg-3">
-              <article class="artisan-card">
+            <div class="col-sm-6 col-lg-3 reveal reveal-d4">
+              <article class="artisan-card glass-card">
                 <div class="artisan-card__image-wrapper">
-                  <img
-                    src="../assets/images/craft-garden.jpg"
-                    alt="Plantas suculentas y accesorios artesanales para mascotas"
-                    loading="lazy"
-                    class="artisan-card__img"
-                  />
+                  <img src="../assets/images/craft-garden.jpg" alt="Plantas suculentas y accesorios artesanales para mascotas" loading="lazy" class="artisan-card__img" />
                 </div>
                 <div class="artisan-card__content">
                   <h2>Jardín y Mascotas</h2>
                   <ul>
-                    <li>Vivero plantas cactáceas suculentas</li>
+                    <li>Cactáceas · Suculentas</li>
                     <li>Accesorios para Mascotas</li>
                   </ul>
                 </div>
@@ -270,9 +246,9 @@
           </div>
         </div>
       </section>
-    </main>
 
     <div id="footer-placeholder"></div>
+
 
     <!-- Botón Volver Arriba -->
     <button

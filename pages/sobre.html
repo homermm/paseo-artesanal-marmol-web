@@ -77,12 +77,30 @@
   <body>
     <div id="header-placeholder"></div>
 
-    <main class="main-content fade-in-up">
+    <main class="main-content">
+      <!-- PAGE HERO -->
+      <section class="page-hero" aria-label="Encabezado">
+        <img
+          class="page-hero__bg"
+          src="../assets/images/hero-main.jpg"
+          alt=""
+          aria-hidden="true"
+        />
+        <div class="page-hero__overlay">
+          <div class="container">
+            <span class="page-hero__eyebrow">Quiénes somos</span>
+            <h1 class="page-hero__title">Nuestra Filosofía</h1>
+          </div>
+        </div>
+      </section>
+
+      <!-- FILOSOFÍA -->
       <section class="philosophy-section py-5">
         <div class="container">
           <div class="row align-items-center g-5">
-            <div class="col-lg-6 order-lg-2">
-              <h1 class="section-title">Nuestra Filosofía</h1>
+            <div class="col-lg-6 order-lg-2 reveal">
+              <span class="section-eyebrow">El Paseo</span>
+              <h2 class="section-title">Sobre el Paseo</h2>
               <p class="philosophy-text">
                 El Paseo Artesanal Mármol es un espacio de encuentro donde
                 artesanos locales comparten su trabajo, creatividad y comunidad.
@@ -97,13 +115,8 @@
                 Artesanos del Partido de Alte. Brown que funciona con el apoyo
                 del Municipio.
               </p>
-              <p class="philosophy-text">
-                En el Paseo Artesanal Mármol encontrarás una amplia variedad de
-                propuestas artesanales únicas, todas creadas con dedicación y
-                pasión por artesanos de nuestra comunidad local.
-              </p>
             </div>
-            <div class="col-lg-6 order-lg-1">
+            <div class="col-lg-6 order-lg-1 reveal reveal-d1">
               <img
                 src="../assets/images/philosophy-image.jpg"
                 alt="Mesa de artesano con productos locales exhibidos en el Paseo Artesanal Mármol"
@@ -115,47 +128,72 @@
         </div>
       </section>
 
+      <!-- PILARES -->
       <section class="pillars-section py-5">
         <div class="container">
+          <div class="text-center mb-5 reveal">
+            <span class="section-eyebrow">Nuestros valores</span>
+            <h2 class="section-title mb-0">Cómo funcionamos</h2>
+          </div>
           <div class="row g-4">
-            <div class="col-sm-6 col-lg-3">
-              <div class="pillar-card">
-                <span
-                  class="pillar-icon material-symbols-outlined"
-                  aria-hidden="true"
-                  >lightbulb</span
-                >
+            <div class="col-sm-6 col-lg-3 reveal reveal-d1">
+              <div class="pillar-card glass-card p-4 h-100">
+                <div class="pillar-icon-wrapper mb-3">
+                  <span
+                    class="pillar-icon material-symbols-outlined"
+                    aria-hidden="true"
+                    >lightbulb</span
+                  >
+                </div>
                 <p class="pillar-text">Producción Propia</p>
+                <p class="pillar-desc">
+                  Cada producto es elaborado por su propio creador, a mano.
+                </p>
               </div>
             </div>
-            <div class="col-sm-6 col-lg-3">
-              <div class="pillar-card">
-                <span
-                  class="pillar-icon material-symbols-outlined"
-                  aria-hidden="true"
-                  >block</span
-                >
+            <div class="col-sm-6 col-lg-3 reveal reveal-d2">
+              <div class="pillar-card glass-card p-4 h-100">
+                <div class="pillar-icon-wrapper mb-3">
+                  <span
+                    class="pillar-icon material-symbols-outlined"
+                    aria-hidden="true"
+                    >block</span
+                  >
+                </div>
                 <p class="pillar-text">No Reventa</p>
+                <p class="pillar-desc">
+                  Solo artesanos, sin productos comprados para revender.
+                </p>
               </div>
             </div>
-            <div class="col-sm-6 col-lg-3">
-              <div class="pillar-card">
-                <span
-                  class="pillar-icon material-symbols-outlined"
-                  aria-hidden="true"
-                  >groups</span
-                >
+            <div class="col-sm-6 col-lg-3 reveal reveal-d3">
+              <div class="pillar-card glass-card p-4 h-100">
+                <div class="pillar-icon-wrapper mb-3">
+                  <span
+                    class="pillar-icon material-symbols-outlined"
+                    aria-hidden="true"
+                    >groups</span
+                  >
+                </div>
                 <p class="pillar-text">Feria Autogestiva</p>
+                <p class="pillar-desc">
+                  Organizada y gestionada por los propios artesanos.
+                </p>
               </div>
             </div>
-            <div class="col-sm-6 col-lg-3">
-              <div class="pillar-card">
-                <span
-                  class="pillar-icon material-symbols-outlined"
-                  aria-hidden="true"
-                  >verified</span
-                >
+            <div class="col-sm-6 col-lg-3 reveal reveal-d4">
+              <div class="pillar-card glass-card p-4 h-100">
+                <div class="pillar-icon-wrapper mb-3">
+                  <span
+                    class="pillar-icon material-symbols-outlined"
+                    aria-hidden="true"
+                    >verified</span
+                  >
+                </div>
                 <p class="pillar-text">Sin Marcas Comerciales</p>
+                <p class="pillar-desc">
+                  Espacio exclusivo para la producción artesanal local.
+                </p>
               </div>
             </div>
           </div>

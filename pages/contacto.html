@@ -71,10 +71,25 @@
   <body>
     <div id="header-placeholder"></div>
 
-    <main class="main-content fade-in-up">
+    <main class="main-content">
+      <!-- PAGE HERO -->
+      <section class="page-hero" aria-label="Encabezado">
+        <img
+          class="page-hero__bg"
+          src="../assets/images/hero-main.jpg"
+          alt=""
+          aria-hidden="true"
+        />
+        <div class="page-hero__overlay">
+          <div class="container">
+            <span class="page-hero__eyebrow">Encóntranos</span>
+            <h1 class="page-hero__title">Contacto</h1>
+          </div>
+        </div>
+      </section>
+
       <section class="contact-section py-5">
         <div class="container">
-          <h1 class="section-title text-center mb-5">Contacto</h1>
           <div class="row g-4 align-items-lg-stretch">
             <div class="col-lg-7">
               <div class="map-container rounded overflow-hidden">
@@ -92,7 +107,8 @@
             </div>
 
             <div class="col-lg-5">
-              <div class="contact-info-card p-4 rounded">
+              <div class="contact-info-card glass-card p-4 reveal">
+                <span class="section-eyebrow">Info</span>
                 <h2 class="section-title mb-4">Vení a visitarnos</h2>
 
                 <div class="info-item d-flex align-items-start mb-4">
