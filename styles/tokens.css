@@ -1,18 +1,20 @@
 :root {
-  --color-primary: #b55d30;
-  --color-primary-light: #d97f52;
-  --color-primary-dark: #7a3d1e;
-  --color-header-bg: #fae5d3;
-  --color-text-dark: #1c1c17;
+  --color-primary: #FF7043;
+  --color-primary-light: #FFB74D;
+  --color-primary-dark: #D84315;
+  --color-bg: #FFFBF5;
+  --color-text-dark: #2D3436;
   --color-text-light: #fdfaf6;
-  --color-footer-bg: #2c2a29;
-  --color-footer-text: #e0e0e0;
-  --color-border: #f0e6db;
-  --color-border-subtle: #e0e0d9;
-  --font-heading: "Montserrat", sans-serif;
-  --font-body: "Lora", serif;
+  --color-accent-green: #81C784;
+  --color-accent-blue: #4FC3F7;
+  --color-accent-yellow: #FFD54F;
+  --font-heading: 'Bricolage Grotesque', sans-serif;
+  --font-body: 'Outfit', sans-serif;
   --transition-base: all 0.3s ease;
   --transition-fast: all 0.2s ease;
-  --shadow-soft: 0 4px 12px rgba(181, 93, 48, 0.08);
-  --shadow-hover: 0 12px 24px rgba(181, 93, 48, 0.15);
+  --shadow-vibrant: 0 10px 30px rgba(255, 112, 67, 0.15);
+  --border-radius-lg: 32px;
+  --border-radius-md: 16px;
+  --section-spacing: clamp(4rem, 8vw, 7rem);
+  --header-height: 100px;
 }
