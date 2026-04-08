@@ -1,19 +1,12 @@
 (function () {
   var STATE_KEY = "__paseoUiInitialized__";
-  var backToTopInitialized = false;
-  var lazyMapInitialized = false;
-  var scrollRevealInitialized = false;
 
   if (window[STATE_KEY]) return;
   window[STATE_KEY] = true;
 
   function initBackToTop() {
-    if (backToTopInitialized) return;
-
     var button = document.getElementById("back-to-top");
     if (!button) return;
-
-    backToTopInitialized = true;
 
     function updateVisibility() {
       if (window.scrollY > 400) {
@@ -31,12 +24,8 @@
   }
 
   function initLazyMap() {
-    if (lazyMapInitialized) return;
-
     var mapIframes = document.querySelectorAll("iframe[data-src]");
     if (!mapIframes.length) return;
-
-    lazyMapInitialized = true;
 
     if ("IntersectionObserver" in window) {
       var observer = new IntersectionObserver(
@@ -63,12 +52,8 @@
   }
 
   function initScrollReveal() {
-    if (scrollRevealInitialized) return;
-
     var reveals = document.querySelectorAll(".reveal");
     if (!reveals.length) return;
-
-    scrollRevealInitialized = true;
 
     if ("IntersectionObserver" in window) {
       var observer = new IntersectionObserver(

@@ -63,55 +63,64 @@
 .s-3 { background-color: var(--color-accent-green); transform: rotate(-1.5deg); }
 
 /* ═══════════════════════════════════════════
-   SEALS (IDENTIDAD V2)
+   STAMPED LABELS (IDENTIDAD FINAL)
    ═══════════════════════════════════════════ */
 
-.seals-grid {
+.identity-labels-container {
   display: flex;
   justify-content: center;
   gap: 3rem;
   flex-wrap: wrap;
-  padding: 2rem 0;
+  padding: 4rem 0;
 }
 
-.seal-v2 {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  border: 4px double var(--color-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.stamped-label {
+  background: white;
+  width: 240px;
+  padding: 50px 20px 30px;
   text-align: center;
-  padding: 1rem;
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  background-color: white;
-  box-shadow: 0 10px 20px rgba(255, 112, 67, 0.1);
+  border: 1px solid #ddd;
+  position: relative;
+  box-shadow: 8px 8px 0px #eee;
+  transition: transform 0.3s ease;
 }
 
-.seal-v2:hover {
-  transform: rotate(10deg) scale(1.1);
-  background-color: var(--color-bg);
+.stamped-label:hover {
+  transform: translateY(-5px) !important;
 }
 
-.seal-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
+.stamped-label::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  background: var(--color-bg);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  border: 1px solid #ccc;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.seal-inner span {
-  font-size: 2.5rem;
-  color: var(--color-primary);
+.label-emoji {
+  font-size: 4.5rem;
+  display: block;
+  margin-bottom: 1.5rem;
 }
 
-.seal-inner strong {
-  font-family: var(--font-heading);
-  font-size: 0.95rem;
-  line-height: 1.2;
-  text-transform: uppercase;
+.label-text {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.6rem;
+  font-weight: 600;
   color: var(--color-text-dark);
+}
+
+@media (max-width: 768px) {
+  .identity-labels-container { gap: 4rem; }
+  .stamped-label { width: 200px; }
+  .label-emoji { font-size: 3.5rem; }
 }
 
 /* ═══════════════════════════════════════════

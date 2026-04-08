@@ -57,7 +57,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;600;800&family=Outfit:wght@300;400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@300;600;800&family=Outfit:wght@300;400;600&family=Instrument+Serif:ital@0;1&display=swap"
     />
     <link
       rel="stylesheet"
@@ -163,48 +163,33 @@
             <img src="nueva info/WhatsApp Image 2026-04-06 at 20.43.34.jpeg" alt="" />
           </div>
         </div>
-        <div class="container">
+
+        <div class="container position-relative">
           <div class="hero-content-v2">
-            <h1>Paseo<br />Artesanal<br /><span>Mármol</span></h1>
-            <p>Hecho a mano, con amor y en comunidad.</p>
+            <div class="hero-main-flex">
+              <h1 class="hero-title-main">Paseo<br />Artesanal<br /><span>Mármol</span></h1>
+              
+              <!-- NOTA DE PAPEL AL LADO DEL TÍTULO -->
+              <div class="note-paper-hero integrated">
+                <div class="washi-tape"></div>
+                <h3 class="note-title">📌 ¿Cuándo y Dónde?</h3>
+                <ul class="note-list">
+                  <li><strong>Plaza Mármol</strong> (Bynnón 2932)</li>
+                  <li><strong>2do y 3er Domingo</strong></li>
+                  <li><strong>15:30 a 19:30 hs</strong></li>
+                </ul>
+              </div>
+            </div>
+
             <div class="hero-actions">
-              <a href="#rubros" class="btn-vibrant">Explorar Rubros</a>
-              <a href="#participar" class="btn-vibrant-secondary">¿Querés participar?</a>
+              <a href="#rubros" class="btn-handcrafted">Ver Rubros</a>
+              <a href="#participar" class="btn-handcrafted-alt">Quiero participar</a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ═══════════════════════════════════════════ -->
-      <!-- INFO BAR (STICKERS)                         -->
-      <!-- ═══════════════════════════════════════════ -->
-      <section class="floating-info" aria-label="Información clave">
-        <div class="container">
-          <div class="sticker-group">
-            <div class="sticker s-1">
-              <span class="material-symbols-outlined">location_on</span>
-              <div class="sticker-text">
-                <strong>Plaza Mármol</strong>
-                <span>Bynnón 2932</span>
-              </div>
-            </div>
-            <div class="sticker s-2">
-              <span class="material-symbols-outlined">calendar_month</span>
-              <div class="sticker-text">
-                <strong>2do y 3er Domingo</strong>
-                <span>Próxima fecha en redes</span>
-              </div>
-            </div>
-            <div class="sticker s-3">
-              <span class="material-symbols-outlined">schedule</span>
-              <div class="sticker-text">
-                <strong>15:30 a 19:30 hs</strong>
-                <span>Varía según estación</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <!-- Eliminamos la antigua floating-info que estaba afuera -->
 
       <!-- ═══════════════════════════════════════════ -->
       <!-- SOBRE EL PASEO                              -->
@@ -253,30 +238,24 @@
             <span class="section-eyebrow">Nuestra Esencia</span>
             <h2 class="section-title mb-0">Lo que nos define</h2>
           </div>
-          <div class="seals-grid reveal reveal-d1">
-            <div class="seal-v2">
-              <div class="seal-inner">
-                <span class="material-symbols-outlined">verified</span>
-                <strong>Producción Propia</strong>
-              </div>
+          
+          <div class="identity-labels-container">
+            <!-- Etiqueta 1 -->
+            <div class="stamped-label reveal reveal-d1">
+              <span class="label-emoji">✨</span>
+              <span class="label-text">Hecho a Mano</span>
             </div>
-            <div class="seal-v2">
-              <div class="seal-inner">
-                <span class="material-symbols-outlined">block</span>
-                <strong>No Reventa</strong>
-              </div>
+            
+            <!-- Etiqueta 2 -->
+            <div class="stamped-label reveal reveal-d2" style="transform: rotate(2deg);">
+              <span class="label-emoji">🤝</span>
+              <span class="label-text">Feria Autogestiva</span>
             </div>
-            <div class="seal-v2">
-              <div class="seal-inner">
-                <span class="material-symbols-outlined">groups</span>
-                <strong>Feria Autogestiva</strong>
-              </div>
-            </div>
-            <div class="seal-v2">
-              <div class="seal-inner">
-                <span class="material-symbols-outlined">local_mall</span>
-                <strong>Sin Marcas</strong>
-              </div>
+            
+            <!-- Etiqueta 3 -->
+            <div class="stamped-label reveal reveal-d3" style="transform: rotate(-1deg);">
+              <span class="label-emoji">🚫</span>
+              <span class="label-text">Sin Reventa</span>
             </div>
           </div>
         </div>

@@ -1,20 +1,18 @@
 :root {
   --color-primary: #FF7043;
   --color-primary-light: #FFB74D;
-  --color-primary-dark: #D84315;
-  --color-bg: #FFFBF5;
+  --color-header-bg: #fdebd5;
+  --color-bg: #f4eee8; /* Tono más oscuro y cálido */
   --color-text-dark: #2D3436;
-  --color-text-light: #fdfaf6;
-  --color-accent-green: #81C784;
-  --color-accent-blue: #4FC3F7;
   --color-accent-yellow: #FFD54F;
+  --color-accent-blue: #4FC3F7;
+  --color-accent-green: #81C784;
   --font-heading: 'Bricolage Grotesque', sans-serif;
   --font-body: 'Outfit', sans-serif;
+  --font-serif: 'Instrument Serif', serif;
   --transition-base: all 0.3s ease;
-  --transition-fast: all 0.2s ease;
-  --shadow-vibrant: 0 10px 30px rgba(255, 112, 67, 0.15);
-  --border-radius-lg: 32px;
-  --border-radius-md: 16px;
-  --section-spacing: clamp(4rem, 8vw, 7rem);
-  --header-height: 100px;
+  --border-radius-lg: 40px;
+  --border-radius-md: 20px;
+  --shadow-hand: 8px 8px 25px rgba(0,0,0,0.1);
+  --section-spacing: clamp(4rem, 10vw, 8rem);
 }

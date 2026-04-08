@@ -4,22 +4,23 @@
   if (window[STATE_KEY]) return;
   window[STATE_KEY] = true;
 
-  function getCurrentPage() {
-    var path = window.location.pathname.toLowerCase();
+  var SECTIONS = ["inicio", "sobre", "artesanos", "participar", "contacto"];
+  var HEADER_OFFSET = 110;
 
-    if (path.indexOf("sobre") !== -1) return "sobre";
-    if (path.indexOf("artesanos") !== -1) return "artesanos";
-    if (path.indexOf("participar") !== -1) return "participar";
-    if (path.indexOf("contacto") !== -1) return "contacto";
+  function markActiveSection() {
+    var scrollY = window.scrollY + HEADER_OFFSET + 1;
+    var currentSection = "inicio";
 
-    return "index";
-  }
-
-  function markActiveNav() {
-    var currentPage = getCurrentPage();
+    for (var i = SECTIONS.length - 1; i >= 0; i--) {
+      var section = document.getElementById(SECTIONS[i]);
+      if (section && section.offsetTop <= scrollY) {
+        currentSection = SECTIONS[i];
+        break;
+      }
+    }
 
     document.querySelectorAll("[data-nav]").forEach(function (link) {
-      if (link.dataset.nav === currentPage) {
+      if (link.dataset.nav === currentSection) {
         link.classList.add("active");
         link.setAttribute("aria-current", "page");
       } else {
@@ -29,20 +30,26 @@
     });
   }
 
-  function initMobileMenuClose() {
-    if (document.__paseoMobileMenuCloseBound) return;
-    document.__paseoMobileMenuCloseBound = true;
-
+  function initSmoothScroll() {
     document.addEventListener("click", function (event) {
-      var navLink = event.target.closest(".navbar-collapse .nav-link");
-      if (!navLink) return;
+      var anchor = event.target.closest('a[href^="#"]');
+      if (!anchor) return;
 
+      var targetId = anchor.getAttribute("href").slice(1);
+      var target = document.getElementById(targetId);
+      if (!target) return;
+
+      event.preventDefault();
+
+      var targetPos = target.offsetTop - HEADER_OFFSET + 1;
+      window.scrollTo({ top: targetPos, behavior: "smooth" });
+
+      // Close mobile menu if open
       var navbarCollapse = document.querySelector(".navbar-collapse");
       if (navbarCollapse && navbarCollapse.classList.contains("show")) {
         var bootstrapCollapse =
           window.bootstrap &&
           window.bootstrap.Collapse.getInstance(navbarCollapse);
-
         if (bootstrapCollapse) {
           bootstrapCollapse.hide();
         }
@@ -50,12 +57,15 @@
     });
   }
 
-  function syncNavigation() {
-    markActiveNav();
-    initMobileMenuClose();
+  function init() {
+    initSmoothScroll();
+    markActiveSection();
+    window.addEventListener("scroll", markActiveSection, { passive: true });
   }
 
-  document.addEventListener("DOMContentLoaded", syncNavigation);
-  document.addEventListener("paseo:layout-updated", syncNavigation);
-  syncNavigation();
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init, { once: true });
+  } else {
+    init();
+  }
 })();
