@@ -164,34 +164,44 @@
    ═══════════════════════════════════════════ */
 
 .section-eyebrow {
-  display: block;
+  display: inline-block;
   font-family: var(--font-heading);
-  font-size: 0.75rem;
-  font-weight: 700;
+  font-size: 0.85rem;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: var(--color-primary-light);
-  margin-bottom: 0.5rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  padding: 4px 16px;
+  background-color: rgba(255, 112, 67, 0.1);
+  border-radius: 100px;
 }
 
 .section-title {
-  color: var(--color-primary);
+  font-family: var(--font-heading);
+  color: var(--color-text-dark);
   margin-bottom: 1.5rem;
-  font-size: 2rem;
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -2px;
 }
 
 .section-text {
-  font-size: 1.1rem;
-  line-height: 1.8;
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.7;
+  color: #444;
   margin-bottom: 1.5rem;
+  font-weight: 500;
 }
 
 .section-subtitle {
-  max-width: 600px;
-  margin: 0 auto 0.5rem;
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto 1rem;
+  font-size: 1.1rem;
+  color: #666;
+  font-weight: 500;
 }
 
 /* ═══════════════════════════════════════════
