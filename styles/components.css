@@ -63,6 +63,58 @@
 .s-3 { background-color: var(--color-accent-green); transform: rotate(-1.5deg); }
 
 /* ═══════════════════════════════════════════
+   SEALS (IDENTIDAD V2)
+   ═══════════════════════════════════════════ */
+
+.seals-grid {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  padding: 2rem 0;
+}
+
+.seal-v2 {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 4px double var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background-color: white;
+  box-shadow: 0 10px 20px rgba(255, 112, 67, 0.1);
+}
+
+.seal-v2:hover {
+  transform: rotate(10deg) scale(1.1);
+  background-color: var(--color-bg);
+}
+
+.seal-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.seal-inner span {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+}
+
+.seal-inner strong {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--color-text-dark);
+}
+
+/* ═══════════════════════════════════════════
    GLASS CARDS
    ═══════════════════════════════════════════ */
 
