@@ -60,8 +60,19 @@
         function (entries) {
           entries.forEach(function (entry) {
             if (entry.isIntersecting) {
-              entry.target.classList.add("is-visible");
-              observer.unobserve(entry.target);
+              var target = entry.target;
+              var children = target.querySelectorAll('.reveal-item');
+              
+              if (children.length > 0) {
+                children.forEach(function(child, index) {
+                  setTimeout(function() {
+                    child.classList.add("is-visible");
+                  }, index * 120); // Escalonado de 120ms
+                });
+              }
+              
+              target.classList.add("is-visible");
+              observer.unobserve(target);
             }
           });
         },
@@ -74,6 +85,10 @@
     } else {
       reveals.forEach(function (element) {
         element.classList.add("is-visible");
+        var children = element.querySelectorAll('.reveal-item');
+        children.forEach(function(child) {
+          child.classList.add("is-visible");
+        });
       });
     }
   }
