@@ -73,6 +73,13 @@ a {
   background: var(--color-primary-dark);
 }
 
+:focus-visible {
+    outline: 3px solid var(--color-terracota);
+    outline-offset: 4px;
+    border-radius: 4px;
+    box-shadow: 0 0 0 8px rgba(181, 93, 48, 0.1);
+}
+
 /* Anchor offset for sticky header */
 [id] {
   scroll-margin-top: var(--header-height);
