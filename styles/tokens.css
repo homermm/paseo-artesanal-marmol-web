@@ -1,6 +1,8 @@
 :root {
   --color-primary: #FF7043;
   --color-primary-light: #FFB74D;
+  --color-terracota: #B55D30;
+  --color-terracota-dark: #8E4926;
   --color-header-bg: #fdebd5;
   --color-bg: #f4eee8; /* Tono más oscuro y cálido */
   --color-text-dark: #2D3436;

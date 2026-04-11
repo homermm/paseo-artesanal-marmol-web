@@ -26,13 +26,29 @@ body {
 }
 
 h1,
-h2,
 h3,
 h4,
 h5,
 h6 {
   font-family: var(--font-heading);
   font-weight: 600;
+}
+
+h2, .section-title {
+  font-family: 'Instrument Serif', serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 3rem;
+  color: var(--color-terracota);
+}
+
+.section-eyebrow {
+  font-family: 'Outfit', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+  font-size: 0.85rem;
+  opacity: 0.8;
 }
 
 a {
