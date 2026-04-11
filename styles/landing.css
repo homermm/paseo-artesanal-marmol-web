@@ -48,13 +48,13 @@
 
 .rubros-grid-v2 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(240px, 45vw, 320px), 1fr));
+  gap: clamp(1rem, 3vw, 2rem);
 }
 
 .rubro-card-v2 {
   position: relative;
-  padding: 3rem 2rem;
+  padding: var(--card-padding);
   border-radius: var(--border-radius-lg);
   color: var(--color-text-dark);
   text-align: center;
@@ -68,14 +68,14 @@
 }
 
 .rubro-emoji {
-  font-size: 3.5rem;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
   display: block;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .rubro-image-container {
-  width: 120px;
-  height: 120px;
+  width: clamp(100px, 15vw, 120px);
+  height: clamp(100px, 15vw, 120px);
   margin: 0 auto 1.5rem;
   border-radius: 50%;
   overflow: hidden;
@@ -97,15 +97,15 @@
 
 .rubro-card-v2 h3 {
   font-family: var(--font-heading);
-  font-size: 1.8rem;
+  font-size: clamp(1.4rem, 4vw, 1.8rem);
   font-weight: 800;
   line-height: 1.1;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .rubro-card-v2 p {
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
   font-weight: 500;
   opacity: 0.9;
   margin: 0;

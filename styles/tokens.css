@@ -11,8 +11,9 @@
   --font-body: 'Outfit', sans-serif;
   --font-serif: 'Instrument Serif', serif;
   --transition-base: all 0.3s ease;
-  --border-radius-lg: 40px;
-  --border-radius-md: 20px;
+  --border-radius-lg: clamp(20px, 5vw, 40px);
+  --border-radius-md: clamp(12px, 3vw, 20px);
   --shadow-hand: 8px 8px 25px rgba(0,0,0,0.1);
-  --section-spacing: clamp(4rem, 10vw, 8rem);
+  --section-spacing: clamp(3rem, 8vw, 8rem);
+  --card-padding: clamp(1.5rem, 4vw, 3rem);
 }
