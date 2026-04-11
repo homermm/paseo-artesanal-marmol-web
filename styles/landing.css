@@ -283,49 +283,51 @@
     height: auto;
   }
 }
-ackground-color: transparent;
-  font-weight: 500;
-  transition: var(--transition-base);
+
+/* Instagram Hero Button */
+.btn-instagram-hero {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 22px;
+    border-radius: 50px;
+    background: white;
+    color: var(--color-text-dark, #333);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 1.5px solid #eee;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
 }
 
-.btn-contact-alt:hover {
-  background-color: var(--color-primary-light);
-  color: var(--color-text-light);
+.btn-instagram-hero:hover {
+    border-color: transparent;
+    color: white;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(230, 104, 60, 0.3);
 }
 
-/* ═══════════════════════════════════════════
-   ANIMATIONS
-   ═══════════════════════════════════════════ */
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.insta-icon {
+    font-size: 1.2rem;
 }
 
-.fade-in-up {
-  animation: fadeInUp 0.8s ease-out forwards;
+.badge-live {
+    background: #ff4757;
+    color: white;
+    font-size: 0.65rem;
+    padding: 2px 8px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    animation: pulse-live 2s infinite;
 }
 
-/* ═══════════════════════════════════════════
-   RESPONSIVE
-   ═══════════════════════════════════════════ */
-
-@media (max-width: 767px) {
-  .landing-section {
-    padding: 3rem 0;
-  }
-
-  .map-container {
-    height: 300px;
-  }
-
-  .contact-info-card {
-    height: auto;
-  }
+@keyframes pulse-live {
+    0% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.05); }
+    100% { opacity: 1; transform: scale(1); }
 }
