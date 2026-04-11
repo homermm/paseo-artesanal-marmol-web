@@ -1,4 +1,31 @@
 /* ═══════════════════════════════════════════
+   SCROLL REVEAL (BASE UTILITY)
+   ═══════════════════════════════════════════ */
+
+.reveal {
+  opacity: 0;
+  --reveal-translate: 28px;
+  transform: rotate(var(--rotation, 0deg)) translateY(var(--reveal-translate));
+  transition: opacity 0.65s cubic-bezier(0.165, 0.84, 0.44, 1), 
+              transform 0.65s cubic-bezier(0.165, 0.84, 0.44, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  --reveal-translate: 0px;
+}
+
+.reveal-d1 { transition-delay: 0.08s; }
+.reveal-d2 { transition-delay: 0.18s; }
+.reveal-d3 { transition-delay: 0.28s; }
+.reveal-d4 { transition-delay: 0.38s; }
+.reveal-d5 { transition-delay: 0.48s; }
+.reveal-d6 { transition-delay: 0.58s; }
+.reveal-d7 { transition-delay: 0.68s; }
+.reveal-d8 { transition-delay: 0.78s; }
+
+/* ═══════════════════════════════════════════
    STICKERS (INFO BAR V2)
    ═══════════════════════════════════════════ */
 
@@ -58,10 +85,6 @@
   font-weight: 500;
 }
 
-.s-1 { background-color: var(--color-accent-yellow); transform: rotate(-2deg); }
-.s-2 { background-color: var(--color-accent-blue); transform: rotate(1.5deg); }
-.s-3 { background-color: var(--color-accent-green); transform: rotate(-1.5deg); }
-
 /* ═══════════════════════════════════════════
    STAMPED LABELS (IDENTIDAD FINAL)
    ═══════════════════════════════════════════ */
@@ -82,11 +105,14 @@
   border: 1px solid #ddd;
   position: relative;
   box-shadow: 8px 8px 0px #eee;
-  transition: transform 0.3s ease;
+  --rotation: 0deg;
+  transform: rotate(var(--rotation)) translateY(0);
+  transition: transform 0.4s cubic-bezier(0.2, 0, 0.2, 1);
+  will-change: transform;
 }
 
 .stamped-label:hover {
-  transform: translateY(-5px) !important;
+  transform: rotate(var(--rotation)) translateY(-8px) !important;
 }
 
 .stamped-label::after {
@@ -143,30 +169,6 @@
   border: 1px solid rgba(181, 93, 48, 0.2);
   border-radius: 14px;
 }
-
-/* ═══════════════════════════════════════════
-   SCROLL REVEAL
-   ═══════════════════════════════════════════ */
-
-.reveal {
-  opacity: 0;
-  transform: translateY(28px);
-  transition: opacity 0.65s ease, transform 0.65s ease;
-}
-
-.reveal.is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.reveal-d1 { transition-delay: 0.08s; }
-.reveal-d2 { transition-delay: 0.18s; }
-.reveal-d3 { transition-delay: 0.28s; }
-.reveal-d4 { transition-delay: 0.38s; }
-.reveal-d5 { transition-delay: 0.48s; }
-.reveal-d6 { transition-delay: 0.58s; }
-.reveal-d7 { transition-delay: 0.68s; }
-.reveal-d8 { transition-delay: 0.78s; }
 
 /* ═══════════════════════════════════════════
    SECTION TYPOGRAPHY
