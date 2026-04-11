@@ -77,10 +77,11 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Organization",
+        "@type": "LocalBusiness",
         "name": "Paseo Artesanal Mármol",
         "url": "https://paseoartesanalmarmol.com",
         "logo": "https://paseoartesanalmarmol.com/assets/images/brand/logo.png",
+        "image": "https://paseoartesanalmarmol.com/assets/images/about/feria-general.jpg",
         "description": "Feria artesanal autogestiva en José Mármol, Almirante Brown. Productos únicos hechos a mano por artesanos locales.",
         "address": {
           "@type": "PostalAddress",
@@ -89,6 +90,12 @@
           "addressRegion": "Buenos Aires",
           "addressCountry": "AR"
         },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -34.7933,
+          "longitude": -58.3761
+        },
+        "openingHours": "Su 15:30-19:30",
         "sameAs": ["https://www.instagram.com/paseo_artesanal_marmol/"]
       }
     </script>
@@ -105,6 +112,8 @@
               src="assets/images/brand/logo.png"
               alt="Logo del Paseo Artesanal Mármol"
               class="navbar-logo"
+              width="150"
+              height="60"
             />
           </a>
           <button
@@ -151,16 +160,16 @@
       <section id="inicio" class="hero-v2" aria-label="Bienvenida">
         <div class="hero-collage">
           <div class="collage-item item-1">
-            <img src="assets/images/hero/hero-1.jpg" alt="Feria artesanal en la plaza" loading="eager" />
+            <img src="assets/images/hero/hero-1.jpg" alt="Feria artesanal en la plaza" width="500" height="700" loading="eager" />
           </div>
           <div class="collage-item item-2">
-            <img src="assets/images/hero/hero-2.jpg" alt="Puesto de artesanos locales" />
+            <img src="assets/images/hero/hero-2.jpg" alt="Puesto de artesanos locales" width="500" height="700" />
           </div>
           <div class="collage-item item-3">
-            <img src="assets/images/hero/hero-3.jpg" alt="Artesanías hechas a mano" />
+            <img src="assets/images/hero/hero-3.jpg" alt="Artesanías hechas a mano" width="500" height="700" />
           </div>
           <div class="collage-item item-4">
-            <img src="assets/images/hero/hero-4.jpg" alt="Ambiente familiar en el paseo" />
+            <img src="assets/images/hero/hero-4.jpg" alt="Ambiente familiar en el paseo" width="500" height="700" />
           </div>
         </div>
 
@@ -228,6 +237,8 @@
                   src="assets/images/about/feria-general.jpg"
                   alt="Mesa de artesano con productos locales exhibidos en el Paseo Artesanal Mármol"
                   class="about-image"
+                  width="600"
+                  height="400"
                   loading="lazy"
                 />
               </div>
@@ -285,7 +296,7 @@
             <!-- 1. Gastronomía -->
             <div class="rubro-card-v2 rc-gastronomia reveal reveal-d1">
               <div class="rubro-image-container">
-                <img src="assets/images/categories/gastronomia.jpg" alt="Gastronomía" class="rubro-img" />
+                <img src="assets/images/categories/gastronomia.jpg" alt="Gastronomía" class="rubro-img" width="120" height="120" />
               </div>
               <h3>Gastronomía</h3>
               <p>Pastelería, comida casera, productos gourmet, conservas, mermeladas y blended (mezclas de yuyos).</p>
@@ -294,7 +305,7 @@
             <!-- 2. Textiles y Tejidos -->
             <div class="rubro-card-v2 rc-textil reveal reveal-d2">
               <div class="rubro-image-container">
-                <img src="assets/images/categories/textiles.jpg" alt="Textiles y Tejidos" class="rubro-img" />
+                <img src="assets/images/categories/textiles.jpg" alt="Textiles y Tejidos" class="rubro-img" width="120" height="120" />
               </div>
               <h3>Textiles y Tejidos</h3>
               <p>Tejidos a mano, amigurumis, cartucheras, almohadones, ropa interior y macramé.</p>
@@ -303,7 +314,7 @@
             <!-- 3. Decoración y Arte -->
             <div class="rubro-card-v2 rc-arte reveal reveal-d3">
               <div class="rubro-image-container">
-                <img src="assets/images/categories/arte-decoracion.jpg" alt="Decoración y Arte" class="rubro-img" />
+                <img src="assets/images/categories/arte-decoracion.jpg" alt="Decoración y Arte" class="rubro-img" width="120" height="120" />
               </div>
               <h3>Decoración y Arte</h3>
               <p>Pinturas, cuadros, puntillismo, mosaiquismo, pirograbados, decoupage y vitrofusión.</p>
@@ -312,7 +323,7 @@
             <!-- 4. Bijouterie y Accesorios -->
             <div class="rubro-card-v2 rc-bijou reveal reveal-d4">
               <div class="rubro-image-container">
-                <img src="assets/images/categories/mascotas.jpg" alt="Bijouterie y Accesorios" class="rubro-img" />
+                <img src="assets/images/categories/mascotas.jpg" alt="Bijouterie y Accesorios" class="rubro-img" width="120" height="120" />
               </div>
               <h3>Bijouterie y Accesorios</h3>
               <p>Collares, pulseras, carteras, marroquinería, sublimados, papelería creativa y cuadernos artesanales.</p>
@@ -321,7 +332,7 @@
             <!-- 5. Artesanías y Cerámica -->
             <div class="rubro-card-v2 rc-ceramica reveal reveal-d1">
               <div class="rubro-image-container">
-                <img src="assets/images/categories/ceramica.jpg" alt="Artesanías y Cerámica" class="rubro-img" />
+                <img src="assets/images/categories/ceramica.jpg" alt="Artesanías y Cerámica" class="rubro-img" width="120" height="120" />
               </div>
               <h3>Artesanías y Cerámica</h3>
               <p>Cerámica artesanal, porcelana fría, macetas, objetos de madera y artículos de hierro.</p>
@@ -330,7 +341,7 @@
             <!-- 6. Bienestar y Aromas -->
             <div class="rubro-card-v2 rc-bienestar reveal reveal-d2">
               <div class="rubro-image-container">
-                <img src="assets/images/categories/bienestar.jpg" alt="Bienestar y Aromas" class="rubro-img" />
+                <img src="assets/images/categories/bienestar.jpg" alt="Bienestar y Aromas" class="rubro-img" width="120" height="120" />
               </div>
               <h3>Bienestar y Aromas</h3>
               <p>Velas, jabones artesanales, sahumerios, difusores y perfumería de aromas naturales.</p>
@@ -339,7 +350,7 @@
             <!-- 7. Juguetes y Muñecos -->
             <div class="rubro-card-v2 rc-juguetes reveal reveal-d3">
               <div class="rubro-image-container">
-                <img src="assets/images/categories/juegos-juguetes.jpg" alt="Juguetes y Muñecos" class="rubro-img" />
+                <img src="assets/images/categories/juegos-juguetes.jpg" alt="Juguetes y Muñecos" class="rubro-img" width="120" height="120" />
               </div>
               <h3>Juguetes y Muñecos</h3>
               <p>Juguetes de madera, muñecos artesanales y muñequería.</p>
@@ -348,7 +359,7 @@
             <!-- 8. Jardín y Mascotas -->
             <div class="rubro-card-v2 rc-jardin reveal reveal-d4">
               <div class="rubro-image-container">
-                <img src="assets/images/categories/vivero-jardin.jpg" alt="Jardín y Mascotas" class="rubro-img" />
+                <img src="assets/images/categories/vivero-jardin.jpg" alt="Jardín y Mascotas" class="rubro-img" width="120" height="120" />
               </div>
               <h3>Jardín y Mascotas</h3>
               <p>Plantas suculentas, cactáceas y accesorios artesanales para mascotas.</p>
@@ -485,6 +496,8 @@
                   class="footer-logo"
                   src="assets/images/brand/logo.png"
                   alt="Logo del Paseo Artesanal Mármol"
+                  width="120"
+                  height="60"
                 />
               </a>
               <p class="footer-tagline">Feria Autogestiva de producción propia.</p>
