@@ -126,14 +126,14 @@
 }
 
 /* Colores de tarjetas */
-.rc-3d { background-color: var(--color-primary-light); }
-.rc-yuyos { background-color: var(--color-accent-green); }
+.rc-gastronomia { background-color: #FFCCBC; } /* Deep Orange 50 */
 .rc-textil { background-color: var(--color-accent-blue); }
 .rc-arte { background-color: var(--color-accent-yellow); }
-.rc-bienestar { background-color: #E1BEE7; } /* Lavender */
-.rc-vivero { background-color: #C8E6C9; } /* Pale Green */
-.rc-juegos { background-color: #FFCCBC; } /* Deep Orange 50 */
-.rc-mascotas { background-color: #B2EBF2; } /* Cyan 50 */
+.rc-bijou { background-color: #E1BEE7; } /* Lavender */
+.rc-ceramica { background-color: #B2EBF2; } /* Cyan 50 */
+.rc-bienestar { background-color: var(--color-accent-green); }
+.rc-juguetes { background-color: #FFE0B2; } /* Orange 50 */
+.rc-jardin { background-color: #C8E6C9; } /* Pale Green */
 
 /* ═══════════════════════════════════════════
    SOBRE EL PASEO — IMAGE
