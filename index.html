@@ -26,7 +26,7 @@
     />
     <meta
       property="og:image"
-      content="https://paseoartesanalmarmol.com/assets/images/logo.png"
+      content="https://paseoartesanalmarmol.com/assets/images/brand/logo.png"
     />
     <meta property="og:image:alt" content="Logo del Paseo Artesanal Mármol" />
 
@@ -42,12 +42,12 @@
     />
     <meta
       name="twitter:image"
-      content="https://paseoartesanalmarmol.com/assets/images/logo.png"
+      content="https://paseoartesanalmarmol.com/assets/images/brand/logo.png"
     />
 
     <!-- Favicon -->
-    <link rel="icon" href="assets/images/favicon.png" type="image/png" />
-    <link rel="apple-touch-icon" href="assets/images/favicon.png" />
+    <link rel="icon" href="assets/images/brand/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="assets/images/brand/favicon.png" />
 
     <!-- Theme Color para navegadores móviles -->
     <meta name="theme-color" content="#B55D30" />
@@ -80,7 +80,7 @@
         "@type": "Organization",
         "name": "Paseo Artesanal Mármol",
         "url": "https://paseoartesanalmarmol.com",
-        "logo": "https://paseoartesanalmarmol.com/assets/images/logo.png",
+        "logo": "https://paseoartesanalmarmol.com/assets/images/brand/logo.png",
         "description": "Feria artesanal autogestiva en José Mármol, Almirante Brown. Productos únicos hechos a mano por artesanos locales.",
         "address": {
           "@type": "PostalAddress",
@@ -102,7 +102,7 @@
         <div class="container-fluid">
           <a class="navbar-brand" href="#inicio">
             <img
-              src="assets/images/logo.png"
+              src="assets/images/brand/logo.png"
               alt="Logo del Paseo Artesanal Mármol"
               class="navbar-logo"
             />
@@ -151,16 +151,16 @@
       <section id="inicio" class="hero-v2" aria-label="Bienvenida">
         <div class="hero-collage">
           <div class="collage-item item-1">
-            <img src="nueva info/WhatsApp Image 2026-04-06 at 20.43.32 (1).jpeg" alt="" loading="eager" />
+            <img src="assets/images/hero/hero-1.jpg" alt="Feria artesanal en la plaza" loading="eager" />
           </div>
           <div class="collage-item item-2">
-            <img src="nueva info/WhatsApp Image 2026-04-06 at 20.43.32 (2).jpeg" alt="" />
+            <img src="assets/images/hero/hero-2.jpg" alt="Puesto de artesanos locales" />
           </div>
           <div class="collage-item item-3">
-            <img src="nueva info/WhatsApp Image 2026-04-06 at 20.43.33.jpeg" alt="" />
+            <img src="assets/images/hero/hero-3.jpg" alt="Artesanías hechas a mano" />
           </div>
           <div class="collage-item item-4">
-            <img src="nueva info/WhatsApp Image 2026-04-06 at 20.43.34.jpeg" alt="" />
+            <img src="assets/images/hero/hero-4.jpg" alt="Ambiente familiar en el paseo" />
           </div>
         </div>
 
@@ -182,7 +182,7 @@
             </div>
 
             <div class="hero-actions">
-              <a href="#rubros" class="btn-handcrafted">Ver Rubros</a>
+              <a href="#artesanos" class="btn-handcrafted">Ver Rubros</a>
               <a href="#participar" class="btn-handcrafted-alt">Quiero participar</a>
             </div>
           </div>
@@ -218,7 +218,7 @@
             <div class="col-lg-6 order-lg-1 reveal reveal-d1">
               <div class="about-image-wrapper">
                 <img
-                  src="assets/images/philosophy-image.jpg"
+                  src="assets/images/about/feria-general.jpg"
                   alt="Mesa de artesano con productos locales exhibidos en el Paseo Artesanal Mármol"
                   class="about-image"
                   loading="lazy"
@@ -278,7 +278,9 @@
             <!-- Rubro Nuevo -->
             <div class="rubro-card-v2 rc-3d reveal reveal-d1">
               <span class="rubro-badge">¡NUEVO!</span>
-              <span class="rubro-emoji">🤖</span>
+              <div class="rubro-image-container">
+                <img src="assets/images/categories/ceramica.jpg" alt="Artículos 3D y Vidrio" class="rubro-img" />
+              </div>
               <h3>Artículos 3D & Vidrio</h3>
               <p>Juguetes articulados, accesorios, Vitrofusión y apliques en vidrio.</p>
             </div>
@@ -286,43 +288,57 @@
             <!-- Rubro Nuevo -->
             <div class="rubro-card-v2 rc-yuyos reveal reveal-d2">
               <span class="rubro-badge">¡NUEVO!</span>
-              <span class="rubro-emoji">🌿</span>
+              <div class="rubro-image-container">
+                <img src="assets/images/categories/gastronomia.jpg" alt="Gastronomía y Sabores" class="rubro-img" />
+              </div>
               <h3>Sores & Sabores</h3>
               <p>Blended de yuyos, pastelería casera y productos gourmet.</p>
             </div>
 
             <div class="rubro-card-v2 rc-textil reveal reveal-d3">
-              <span class="rubro-emoji">🧶</span>
+              <div class="rubro-image-container">
+                <img src="assets/images/categories/textiles.jpg" alt="Textiles y Tejidos" class="rubro-img" />
+              </div>
               <h3>Textiles & Tejidos</h3>
               <p>Amigurumis, tejidos, marroquinería y ropa interior artesanal.</p>
             </div>
 
             <div class="rubro-card-v2 rc-arte reveal reveal-d4">
-              <span class="rubro-emoji">🎨</span>
+              <div class="rubro-image-container">
+                <img src="assets/images/categories/arte-decoracion.jpg" alt="Arte y Decoración" class="rubro-img" />
+              </div>
               <h3>Arte & Decoración</h3>
               <p>Cuadros, puntillismo, mosaiquismo y pirograbados.</p>
             </div>
 
             <div class="rubro-card-v2 rc-bienestar reveal reveal-d1">
-              <span class="rubro-emoji">🕯️</span>
+              <div class="rubro-image-container">
+                <img src="assets/images/categories/bienestar.jpg" alt="Bienestar y Aromas" class="rubro-img" />
+              </div>
               <h3>Bienestar</h3>
               <p>Velas, jabones, sahumerios y aromas naturales.</p>
             </div>
 
             <div class="rubro-card-v2 rc-vivero reveal reveal-d2">
-              <span class="rubro-emoji">🌵</span>
+              <div class="rubro-image-container">
+                <img src="assets/images/categories/vivero-jardin.jpg" alt="Vivero y Jardín" class="rubro-img" />
+              </div>
               <h3>Vivero & Jardín</h3>
               <p>Cactus, suculentas, macetas y artículos de hierro.</p>
             </div>
 
             <div class="rubro-card-v2 rc-juegos reveal reveal-d3">
-              <span class="rubro-emoji">🧸</span>
+              <div class="rubro-image-container">
+                <img src="assets/images/categories/juegos-juguetes.jpg" alt="Juegos y Papelería" class="rubro-img" />
+              </div>
               <h3>Juegos & Papelería</h3>
               <p>Juguetes artesanales, cuadernos y papelería creativa.</p>
             </div>
 
             <div class="rubro-card-v2 rc-mascotas reveal reveal-d4">
-              <span class="rubro-emoji">🐶</span>
+              <div class="rubro-image-container">
+                <img src="assets/images/categories/mascotas.jpg" alt="Accesorios para Mascotas" class="rubro-img" />
+              </div>
               <h3>Mascotas</h3>
               <p>Accesorios exclusivos para tus amigos de cuatro patas.</p>
             </div>
@@ -466,7 +482,7 @@
               <a href="#inicio">
                 <img
                   class="footer-logo"
-                  src="assets/images/logo.png"
+                  src="assets/images/brand/logo.png"
                   alt="Logo del Paseo Artesanal Mármol"
                 />
               </a>
