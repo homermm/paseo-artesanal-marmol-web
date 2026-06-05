@@ -10,7 +10,7 @@
     <!-- SEO Meta Tags -->
     <meta
       name="description"
-      content="Feria artesanal autogestiva en José Mármol, Almirante Brown. Encontrá productos únicos hechos a mano por artesanos locales. Gastronomía, textiles, cerámica, bijouterie y más. Nos reunimos el 2do y 3er domingo de cada mes en Plaza de Mármol."
+      content="Feria artesanal autogestiva en José Mármol, Almirante Brown. Encontrá productos únicos hechos a mano por artesanos locales. Gastronomía, textiles, cerámica, bijouterie y más. Las fechas de cada edición se confirman por Instagram."
     />
 
     <!-- Open Graph / Facebook -->
@@ -22,7 +22,7 @@
     />
     <meta
       property="og:description"
-      content="Feria artesanal en José Mármol. Productos únicos hechos a mano por artesanos locales. 2do y 3er domingo de cada mes en Plaza de Mármol."
+      content="Feria artesanal en José Mármol. Productos únicos hechos a mano por artesanos locales. Fechas y novedades confirmadas por Instagram."
     />
     <meta
       property="og:image"
@@ -38,7 +38,7 @@
     />
     <meta
       name="twitter:description"
-      content="Feria artesanal en José Mármol. Productos únicos hechos a mano por artesanos locales. 2do y 3er domingo de cada mes en Plaza de Mármol."
+      content="Feria artesanal en José Mármol. Productos únicos hechos a mano por artesanos locales. Fechas y novedades confirmadas por Instagram."
     />
     <meta
       name="twitter:image"
@@ -95,15 +95,12 @@
           "latitude": -34.7933,
           "longitude": -58.3761
         },
-        "openingHours": "Su 15:30-19:30",
         "sameAs": ["https://www.instagram.com/paseo_artesanal_marmol/"]
       }
     </script>
   </head>
   <body>
-    <!-- ═══════════════════════════════════════════ -->
-    <!-- HEADER                                      -->
-    <!-- ═══════════════════════════════════════════ -->
+    <!-- Header -->
     <header>
       <nav class="navbar navbar-expand-lg navbar-custom">
         <div class="container-fluid">
@@ -130,7 +127,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" href="#inicio" data-nav="inicio">Inicio</a>
+                <a class="nav-link active" href="#inicio" data-nav="inicio" aria-current="page">Inicio</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#sobre" data-nav="sobre">Sobre el Paseo</a>
@@ -154,11 +151,9 @@
     <div class="grain-overlay" aria-hidden="true"></div>
 
     <main>
-      <!-- ═══════════════════════════════════════════ -->
-      <!-- HERO                                        -->
-      <!-- ═══════════════════════════════════════════ -->
+      <!-- Hero -->
       <section id="inicio" class="hero-v2" aria-label="Bienvenida">
-        <div class="hero-collage">
+        <div class="hero-collage" aria-hidden="true">
           <div class="collage-item item-1">
             <img src="assets/images/hero/hero-1.jpg" alt="Feria artesanal en la plaza" width="500" height="700" loading="eager" />
           </div>
@@ -180,36 +175,28 @@
               
               <!-- NOTA DE PAPEL AL LADO DEL TÍTULO -->
               <div class="note-paper-hero integrated">
-                <div class="washi-tape"></div>
+                <div class="washi-tape" aria-hidden="true"></div>
                 <h3 class="note-title">📌 Próxima Feria</h3>
                 <ul class="note-list">
                   <li><strong>Plaza Mármol</strong> (Bynnón 2932)</li>
-                  <li><strong>2do y 3er Domingo</strong> de cada mes</li>
-                  <li><strong>15:30 a 19:30 hs</strong> <br><small>(Varía según estación)</small></li>
-                  <li><hr style="margin: 0.5rem 0; opacity: 0.1;"></li>
-                  <li><small>✨ Próxima fecha: Consultar en redes</small></li>
+                  <li><strong>Fechas variables</strong> según organización y clima</li>
+                  <li><strong>Horario habitual:</strong> 15:30 a 19:30 hs <br><small>(puede variar según estación)</small></li>
+                  <li><hr class="note-separator"></li>
+                  <li><small>✨ Confirmamos cada edición por Instagram.</small></li>
                 </ul>
               </div>
             </div>
 
             <div class="hero-actions">
-              <a href="#artesanos" class="btn-handcrafted">Ver Rubros</a>
-              <a href="https://www.instagram.com/paseo_artesanal_marmol/" target="_blank" rel="noopener noreferrer" class="btn-instagram-hero" aria-label="Seguinos en Instagram para ver novedades en vivo (abre en pestaña nueva)">
-                <span class="insta-icon">📸</span>
-                <span>Instagram</span>
-                <span class="badge-live">En vivo</span>
-              </a>
-              <a href="#participar" class="btn-handcrafted-alt">Quiero participar</a>
+              <a href="https://www.instagram.com/paseo_artesanal_marmol/" target="_blank" rel="noopener noreferrer" class="btn-paseo btn-paseo--hero btn-paseo--dark" aria-label="Ver fechas y novedades en Instagram (abre en pestaña nueva)">Ver fechas</a>
+              <a href="#contacto" class="btn-paseo btn-paseo--hero btn-paseo--outline-dark">Cómo llegar</a>
+              <a href="#participar" class="btn-paseo btn-paseo--hero btn-paseo--outline-dark">Quiero participar</a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Eliminamos la antigua floating-info que estaba afuera -->
-
-      <!-- ═══════════════════════════════════════════ -->
-      <!-- SOBRE EL PASEO                              -->
-      <!-- ═══════════════════════════════════════════ -->
+      <!-- Sobre el Paseo -->
       <section id="sobre" class="landing-section section-sobre" aria-label="Sobre el Paseo">
         <div class="container">
           <div class="row align-items-center g-5">
@@ -247,9 +234,7 @@
         </div>
       </section>
 
-      <!-- ═══════════════════════════════════════════ -->
-      <!-- NUESTROS VALORES                            -->
-      <!-- ═══════════════════════════════════════════ -->
+      <!-- Nuestros Valores -->
       <section class="landing-section section-identidad" aria-label="Identidad del Paseo">
         <div class="container">
           <div class="text-center mb-5 reveal">
@@ -259,19 +244,19 @@
           
           <div class="identity-labels-container reveal">
             <!-- Etiqueta 1 -->
-            <div class="stamped-label reveal-item" style="--rotation: -1deg;">
+            <div class="stamped-label reveal-item rotation-neg-1">
               <span class="label-emoji">✨</span>
               <span class="label-text">Hecho a Mano</span>
             </div>
 
             <!-- Etiqueta 2 -->
-            <div class="stamped-label reveal-item" style="--rotation: 2deg;">
+            <div class="stamped-label reveal-item rotation-pos-2">
               <span class="label-emoji">🌿</span>
               <span class="label-text">Sustentable</span>
             </div>
 
             <!-- Etiqueta 3 -->
-            <div class="stamped-label reveal-item" style="--rotation: -1.5deg;">
+            <div class="stamped-label reveal-item rotation-neg-1-5">
               <span class="label-emoji">🚫</span>
               <span class="label-text">Sin Reventa</span>
             </div>
@@ -279,9 +264,7 @@
         </div>
       </section>
 
-      <!-- ═══════════════════════════════════════════ -->
-      <!-- NUESTROS RUBROS (MAPA DE RUBROS V2)         -->
-      <!-- ═══════════════════════════════════════════ -->
+      <!-- Nuestros Rubros -->
       <section id="artesanos" class="landing-section section-rubros-v2" aria-label="Nuestros Rubros">
         <div class="container">
           <div class="text-center mb-5 reveal">
@@ -368,9 +351,7 @@
         </div>
       </section>
 
-      <!-- ═══════════════════════════════════════════ -->
-      <!-- PARTICIPAR                                  -->
-      <!-- ═══════════════════════════════════════════ -->
+      <!-- Participar -->
       <section id="participar" class="landing-section section-participar" aria-label="Cómo participar">
         <div class="container">
           <!-- PASOS -->
@@ -411,8 +392,8 @@
             <div class="col-lg-7 col-xl-6">
               <div class="postulate-box glass-card p-5 reveal">
                 <div class="text-center mb-4">
-                  <div class="postulate-icon-wrapper mb-3">
-                    <span class="material-symbols-outlined">edit_square</span>
+                  <div class="postulate-icon-wrapper mb-3" aria-hidden="true">
+                    <span class="material-symbols-outlined" aria-hidden="true">edit_square</span>
                   </div>
                   <h3 class="h3 mb-2">Formulario de Postulación</h3>
                   <p class="text-muted mb-0">
@@ -421,7 +402,7 @@
                 </div>
 
                 <div class="postulate-info-box mb-4 d-flex align-items-start">
-                  <span class="material-symbols-outlined me-2 flex-shrink-0">info</span>
+                  <span class="material-symbols-outlined me-2 flex-shrink-0" aria-hidden="true">info</span>
                   <small><strong>Requisito gastronómico:</strong> Si elaborás alimentos, necesitás el Carnet de Manipulación de Alimentos vigente del Municipio de Alte. Brown.</small>
                 </div>
 
@@ -430,9 +411,9 @@
                     href="https://docs.google.com/forms/d/e/1FAIpQLSfzCJ5iQEf-fsqokAhCe08YprKnRLiOPzu2WXhe5DkmrlcB8A/viewform"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="btn btn-lg btn-postulate py-3 shadow"
+                    class="btn btn-lg btn-paseo btn-paseo--accent py-3 shadow"
                   >
-                    <span class="material-symbols-outlined align-middle me-2">open_in_new</span>
+                    <span class="material-symbols-outlined align-middle me-2" aria-hidden="true">open_in_new</span>
                     Completar Formulario
                   </a>
                 </div>
@@ -440,12 +421,12 @@
                 <div class="text-center postulate-divider">
                   <p class="small mb-3 text-muted">¿Preferís contactarnos directamente?</p>
                   <div class="d-flex flex-column flex-sm-row gap-2 justify-content-center">
-                    <a href="mailto:paseo.artesanal.marmol@gmail.com" class="btn btn-sm btn-contact-alt px-4 py-2">
-                      <span class="material-symbols-outlined align-middle me-1" style="font-size: 1rem">mail</span>
+                    <a href="mailto:paseo.artesanal.marmol@gmail.com" class="btn btn-sm btn-paseo btn-paseo--contact px-4 py-2">
+                      <span class="material-symbols-outlined align-middle me-1 icon-inline-sm" aria-hidden="true">mail</span>
                       Email
                     </a>
-                    <a href="https://www.instagram.com/paseo_artesanal_marmol/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-contact-alt px-4 py-2">
-                      <span class="material-symbols-outlined align-middle me-1" style="font-size: 1rem">alternate_email</span>
+                    <a href="https://www.instagram.com/paseo_artesanal_marmol/" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-paseo btn-paseo--contact px-4 py-2">
+                      <span class="material-symbols-outlined align-middle me-1 icon-inline-sm" aria-hidden="true">alternate_email</span>
                       Instagram
                     </a>
                   </div>
@@ -456,9 +437,7 @@
         </div>
       </section>
 
-      <!-- ═══════════════════════════════════════════ -->
-      <!-- UBICACIÓN (MAPA MEJORADO)                   -->
-      <!-- ═══════════════════════════════════════════ -->
+      <!-- Ubicacion -->
       <section id="contacto" class="landing-section section-contacto-v2" aria-label="Contacto">
         <div class="container">
           <div class="text-center mb-5 reveal">
@@ -468,10 +447,11 @@
           <div class="map-wrapper-v2 reveal">
             <div class="map-container-v2">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3276.780097044933!2d-58.37243862350294!3d-34.786310867165575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32ccc951cf007%3A0x92ccbcb2f0b124d3!2sPlaza%20Ntra.%20Sra.%20de%20Luj%C3%A1n%20(Plaza%20de%20M%C3%A1rmol)!5e0!3m2!1ses-419!2sar!4v1763251016647!5m2!1ses-419!2sar"
+                src="about:blank"
+                data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3276.780097044933!2d-58.37243862350294!3d-34.786310867165575!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32ccc951cf007%3A0x92ccbcb2f0b124d3!2sPlaza%20Ntra.%20Sra.%20de%20Luj%C3%A1n%20(Plaza%20de%20M%C3%A1rmol)!5e0!3m2!1ses-419!2sar!4v1763251016647!5m2!1ses-419!2sar"
                 width="100%"
                 height="500"
-                style="border: 0"
+                class="map-iframe"
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
@@ -483,9 +463,7 @@
       </section>
     </main>
 
-    <!-- ═══════════════════════════════════════════ -->
-    <!-- FOOTER                                      -->
-    <!-- ═══════════════════════════════════════════ -->
+    <!-- Footer -->
     <footer class="main-footer pt-5 pb-4">
       <div class="container">
         <div class="row g-4">
@@ -577,7 +555,7 @@
       aria-label="Volver al inicio de la página"
       title="Volver arriba"
     >
-      <span class="material-symbols-outlined">keyboard_arrow_up</span>
+      <span class="material-symbols-outlined" aria-hidden="true">keyboard_arrow_up</span>
     </button>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

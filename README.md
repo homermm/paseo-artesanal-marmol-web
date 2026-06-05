@@ -1,74 +1,79 @@
-# Paseo Artesanal Mármol
+# Paseo Artesanal Marmol
 
-Sitio web oficial del Paseo Artesanal Mármol, una feria autogestiva de producción artesanal ubicada en José Mármol, Almirante Brown, Buenos Aires.
+Sitio web oficial del Paseo Artesanal Marmol, una feria autogestiva de produccion artesanal ubicada en Jose Marmol, Almirante Brown, Buenos Aires.
 
-## 🦋 Sobre el Proyecto
+## Sobre el proyecto
 
-Este es un sitio web estático que presenta la feria artesanal, sus artesanos y rubros. Desarrollado con HTML5 semántico, CSS3 con variables personalizadas, y Bootstrap 5.
+Este es un sitio web estatico de una sola pagina. Presenta la feria, su identidad, rubros, formulario de postulacion, ubicacion y canales de contacto.
 
-## 📁 Estructura del Proyecto
+## Estructura real del proyecto
 
-```
+```text
 paseo-artesanal-marmol-web/
-├── index.html              # Página principal
-├── pages/
-│   ├── sobre.html          # Filosofía y pilares
-│   ├── artesanos.html      # Rubros y categorías
-│   ├── participar.html     # Formulario de postulación
-│   └── contacto.html       # Ubicación y contacto
-├── styles/
-│   └── style.css           # Estilos personalizados
-├── assets/
-│   └── images/             # Imágenes del sitio
-├── CNAME                   # Dominio personalizado
-└── .gitignore
+|-- index.html
+|-- styles/
+|   |-- tokens.css
+|   |-- base.css
+|   |-- layout.css
+|   |-- components.css
+|   `-- landing.css
+|-- assets/
+|   |-- images/
+|   |   |-- about/
+|   |   |-- brand/
+|   |   |-- categories/
+|   |   `-- hero/
+|   `-- js/
+|       |-- navigation.js
+|       `-- ui.js
+|-- CNAME
+|-- sitemap.xml
+`-- README.md
 ```
 
-## 🛠️ Tecnologías
+## Tecnologias
 
-- **HTML5** - Estructura semántica
-- **CSS3** - Variables CSS, Flexbox, Grid
-- **Bootstrap 5.3** - Sistema de grillas y componentes
-- **Google Fonts** - Montserrat y Lora
-- **Material Symbols** - Iconografía
+- HTML5 semantico
+- CSS3 con custom properties
+- Bootstrap 5.3 para grilla y utilidades
+- JavaScript vanilla
+- Google Fonts: Bricolage Grotesque, Outfit e Instrument Serif
+- Material Symbols para iconografia
 
-## 🎨 Paleta de Colores
+## Sistema visual
 
-| Variable                | Color   | Uso                          |
-| ----------------------- | ------- | ---------------------------- |
-| `--color-primary`       | #B55D30 | Color principal (terracotta) |
-| `--color-primary-light` | #D97F52 | Acentos                      |
-| `--color-header-bg`     | #FAE5D3 | Fondo del header             |
-| `--color-footer-bg`     | #2C2A29 | Fondo del footer             |
+Los tokens principales viven en `styles/tokens.css`.
 
-## 🚀 Uso Local
+| Token | Valor actual | Uso |
+| --- | --- | --- |
+| `--color-primary` | `#FF7043` | Acciones y acentos principales |
+| `--color-primary-light` | `#FFB74D` | Acentos secundarios |
+| `--color-terracota` | `#B55D30` | Titulos y marca visual |
+| `--color-header-bg` | `#fdebd5` | Fondo del header y bloques calidos |
+| `--color-bg` | `#f4eee8` | Fondo de secciones |
+| `--color-footer-bg` | `#2D3436` | Fondo oscuro auxiliar |
 
-1. Clonar el repositorio:
+## Uso local
 
-   ```bash
-   git clone https://github.com/[usuario]/paseo-artesanal-marmol-web.git
-   ```
+Abrir `index.html` directamente en el navegador o servir la carpeta con un servidor estatico:
 
-2. Abrir `index.html` en el navegador, o usar un servidor local:
-   ```bash
-   npx serve .
-   ```
+```bash
+npx serve .
+```
 
-## 📅 Información de la Feria
+## Informacion de la feria
 
-- **Ubicación**: Plaza Nuestra Señora de Luján (Plaza de Mármol), Bynnón 2932, José Mármol
-- **Fechas**: Segundo y tercer domingo de cada mes
-- **Horario**: 15:30 a 19:30 hs (varía según estación)
+- Ubicacion: Plaza Nuestra Senora de Lujan (Plaza de Marmol), Bynnon 2932, Jose Marmol.
+- Fechas: se confirman por Instagram para cada edicion.
+- Horario habitual: 15:30 a 19:30 hs, con variaciones segun estacion.
 
-## 📬 Contacto
+## Contacto
 
-- 📧 Email: paseo.artesanal.marmol@gmail.com
-- 📷 Instagram: [@paseo_artesanal_marmol](https://www.instagram.com/paseo_artesanal_marmol/)
+- Email: paseo.artesanal.marmol@gmail.com
+- Instagram: [@paseo_artesanal_marmol](https://www.instagram.com/paseo_artesanal_marmol/)
 
-## 📄 Licencia
+## Licencia
 
-Este proyecto es propiedad del Paseo Artesanal Mármol. Todos los derechos reservados.
+Este proyecto es propiedad del Paseo Artesanal Marmol. Todos los derechos reservados.
 
----
-
-_Con el apoyo del Municipio de Almirante Brown_
+Con el apoyo del Municipio de Almirante Brown.

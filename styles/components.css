@@ -1,6 +1,4 @@
-/* ═══════════════════════════════════════════
-   SCROLL REVEAL (BASE UTILITY)
-   ═══════════════════════════════════════════ */
+/* Scroll reveal base utility */
 
 .reveal {
   opacity: 0;
@@ -32,75 +30,74 @@
 .reveal-d1 { transition-delay: 0.08s; }
 .reveal-d2 { transition-delay: 0.18s; }
 .reveal-d3 { transition-delay: 0.28s; }
-.reveal-d4 { transition-delay: 0.38s; }
-.reveal-d5 { transition-delay: 0.48s; }
-.reveal-d6 { transition-delay: 0.58s; }
-.reveal-d7 { transition-delay: 0.68s; }
-.reveal-d8 { transition-delay: 0.78s; }
 
-/* ═══════════════════════════════════════════
-   STICKERS (INFO BAR V2)
-   ═══════════════════════════════════════════ */
+/* Button variants */
 
-.floating-info {
-  position: relative;
-  z-index: 10;
-  margin-top: -50px;
-  padding-bottom: 2rem;
-}
-
-.sticker-group {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-.sticker {
-  background: white;
-  padding: 1.25rem 2rem;
-  border-radius: 100px;
-  display: flex;
+.btn-paseo {
+  display: inline-flex;
   align-items: center;
-  gap: 1rem;
-  box-shadow: var(--shadow-vibrant);
-  border: 2px solid var(--color-text-dark);
-  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  cursor: default;
+  justify-content: center;
+  text-decoration: none;
+  transition: var(--transition-base);
 }
 
-.sticker:hover {
-  transform: scale(1.1) rotate(0deg) !important;
-  z-index: 5;
-}
-
-.sticker span.material-symbols-outlined {
-  font-size: 2.5rem;
-  color: var(--color-text-dark);
-}
-
-.sticker-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.sticker-text strong {
+.btn-paseo--hero {
+  padding: var(--button-padding-y) var(--button-padding-x);
+  border-radius: var(--radius-sm);
   font-family: var(--font-heading);
-  font-size: 1.1rem;
-  color: var(--color-text-dark);
-  line-height: 1.1;
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+  font-weight: 700;
 }
 
-.sticker-text span {
-  font-family: var(--font-body);
-  font-size: 0.85rem;
-  color: #555;
+.btn-paseo--dark {
+  background-color: var(--color-text-dark);
+  color: var(--color-text-light);
+  box-shadow: var(--shadow-hero-button);
+}
+
+.btn-paseo--dark:hover {
+  color: var(--color-text-light);
+  transform: translate(2px, 2px);
+  box-shadow: var(--shadow-hero-button-flat);
+}
+
+.btn-paseo--outline-dark {
+  background-color: transparent;
+  color: var(--color-text-dark);
+  border: 2px solid var(--color-text-dark);
+}
+
+.btn-paseo--outline-dark:hover {
+  color: var(--color-text-dark);
+  background-color: var(--color-header-bg);
+}
+
+.btn-paseo--accent {
+  background-color: var(--color-primary-light);
+  border: none;
+  color: var(--color-text-light);
+  font-weight: 600;
+}
+
+.btn-paseo--accent:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+  transform: translateY(-2px);
+}
+
+.btn-paseo--contact {
+  border: 2px solid var(--color-primary-light);
+  color: var(--color-primary-light);
+  background-color: transparent;
   font-weight: 500;
 }
 
-/* ═══════════════════════════════════════════
-   STAMPED LABELS (IDENTIDAD FINAL)
-   ═══════════════════════════════════════════ */
+.btn-paseo--contact:hover {
+  background-color: var(--color-primary-light);
+  color: var(--color-text-light);
+}
+
+/* Stamped labels */
 
 .identity-labels-container {
   display: flex;
@@ -117,7 +114,7 @@
   text-align: center;
   border: 1px solid #ddd;
   position: relative;
-  box-shadow: 8px 8px 0px #eee;
+  box-shadow: var(--shadow-label);
   --rotation: 0deg;
   transform: rotate(var(--rotation)) translateY(0);
   transition: transform 0.4s cubic-bezier(0.2, 0, 0.2, 1);
@@ -136,10 +133,10 @@
   width: 15px;
   height: 15px;
   background: var(--color-bg);
-  border-radius: 50%;
+  border-radius: var(--radius-circle);
   transform: translateX(-50%);
   border: 1px solid #ccc;
-  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: var(--shadow-inset-subtle);
 }
 
 .label-emoji {
@@ -162,36 +159,24 @@
   .label-emoji { font-size: 3.5rem; }
 }
 
-/* ═══════════════════════════════════════════
-   GLASS CARDS
-   ═══════════════════════════════════════════ */
+/* Glass cards */
 
 .glass-card {
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(12px) saturate(180%);
   -webkit-backdrop-filter: blur(12px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 14px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.06);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-glass);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .glass-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+  box-shadow: var(--shadow-glass-hover);
 }
 
-.glass-card--dark {
-  background: rgba(30, 20, 15, 0.6);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(181, 93, 48, 0.2);
-  border-radius: 14px;
-}
-
-/* ═══════════════════════════════════════════
-   SECTION TYPOGRAPHY
-   ═══════════════════════════════════════════ */
+/* Section typography */
 
 .section-eyebrow {
   display: inline-block;
@@ -204,7 +189,7 @@
   margin-bottom: 1rem;
   padding: 4px 16px;
   background-color: rgba(181, 93, 48, 0.1);
-  border-radius: 100px;
+  border-radius: var(--radius-pill);
   opacity: 0.8;
 }
 
@@ -236,9 +221,7 @@
   font-weight: 500;
 }
 
-/* ═══════════════════════════════════════════
-   STEP CARDS
-   ═══════════════════════════════════════════ */
+/* Step cards */
 
 .step-card {
   position: relative;
@@ -248,7 +231,7 @@
 
 .step-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(181, 93, 48, 0.13) !important;
+  box-shadow: var(--shadow-step-hover) !important;
 }
 
 .step-number {
@@ -260,7 +243,7 @@
   height: 28px;
   background: var(--color-primary);
   color: #fff;
-  border-radius: 50%;
+  border-radius: var(--radius-circle);
   font-family: var(--font-heading);
   font-size: 0.8rem;
   font-weight: 700;
@@ -293,9 +276,7 @@
   line-height: 1.5;
 }
 
-/* ═══════════════════════════════════════════
-   BACK TO TOP
-   ═══════════════════════════════════════════ */
+/* Back to top */
 
 #back-to-top {
   position: fixed;
@@ -304,7 +285,7 @@
   z-index: 999;
   width: 48px;
   height: 48px;
-  border-radius: 50%;
+  border-radius: var(--radius-circle);
   background-color: var(--color-primary);
   color: #ffffff;
   border: none;
@@ -312,7 +293,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(181, 93, 48, 0.35);
+  box-shadow: var(--shadow-button-hover);
   opacity: 0;
   visibility: hidden;
   transform: translateY(12px);
@@ -334,86 +315,24 @@
   font-size: 24px;
   pointer-events: none;
 }
-er {
-  position: absolute;
-  top: -14px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 28px;
-  height: 28px;
-  background: var(--color-primary);
-  color: #fff;
-  border-radius: 50%;
-  font-family: var(--font-heading);
-  font-size: 0.8rem;
-  font-weight: 700;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+.note-separator {
+  margin: var(--space-2) 0;
+  opacity: 0.1;
 }
 
-.step-icon {
-  font-size: 40px;
-  color: var(--color-primary);
-  margin-top: 0.5rem;
-  margin-bottom: 0.75rem;
-  display: block;
+.rotation-neg-1 {
+  --rotation: -1deg;
 }
 
-.step-title {
-  font-family: var(--font-heading);
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: var(--color-text-dark);
-  margin: 0 0 0.4rem;
+.rotation-pos-2 {
+  --rotation: 2deg;
 }
 
-.step-desc {
-  font-family: var(--font-body);
-  font-size: 0.85rem;
-  color: #666;
-  margin: 0;
-  line-height: 1.5;
+.rotation-neg-1-5 {
+  --rotation: -1.5deg;
 }
 
-/* ═══════════════════════════════════════════
-   BACK TO TOP
-   ═══════════════════════════════════════════ */
-
-#back-to-top {
-  position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  z-index: 999;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background-color: var(--color-primary);
-  color: #ffffff;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 12px rgba(181, 93, 48, 0.35);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(12px);
-  transition: opacity 0.3s ease, transform 0.3s ease,
-    background-color 0.2s ease;
-}
-
-#back-to-top.visible {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-#back-to-top:hover {
-  background-color: var(--color-primary-dark);
-}
-
-#back-to-top .material-symbols-outlined {
-  font-size: 24px;
-  pointer-events: none;
+.icon-inline-sm {
+  font-size: 1rem;
 }

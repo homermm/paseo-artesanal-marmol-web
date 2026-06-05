@@ -1,11 +1,16 @@
 :root {
   --color-primary: #FF7043;
   --color-primary-light: #FFB74D;
+  --color-primary-dark: #E85D32;
   --color-terracota: #B55D30;
   --color-terracota-dark: #8E4926;
   --color-header-bg: #fdebd5;
   --color-bg: #f4eee8; /* Tono más oscuro y cálido */
+  --color-section-alt: #f8e9dd;
   --color-text-dark: #2D3436;
+  --color-text-light: #ffffff;
+  --color-border: rgba(181, 93, 48, 0.18);
+  --color-footer-bg: #2D3436;
   --color-accent-yellow: #FFD54F;
   --color-accent-blue: #4FC3F7;
   --color-accent-green: #81C784;
@@ -13,9 +18,38 @@
   --font-body: 'Outfit', sans-serif;
   --font-serif: 'Instrument Serif', serif;
   --transition-base: all 0.3s ease;
+  --radius-sm: 4px;
+  --radius-xs: 2px;
+  --radius-pill: 100px;
+  --radius-circle: 50%;
   --border-radius-lg: clamp(20px, 5vw, 40px);
   --border-radius-md: clamp(12px, 3vw, 20px);
+  --header-height: 110px;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --button-padding-y: clamp(12px, 3vw, 18px);
+  --button-padding-x: clamp(25px, 6vw, 45px);
+  --shadow-sm: 0 4px 12px rgba(45, 52, 54, 0.12);
+  --shadow-md: 0 8px 30px rgba(181, 93, 48, 0.15);
+  --shadow-lg: 0 20px 50px rgba(0,0,0,0.1);
+  --shadow-glass: 0 20px 50px rgba(0,0,0,0.06);
+  --shadow-glass-hover: 0 30px 60px rgba(0,0,0,0.1);
+  --shadow-focus: 0 0 0 8px rgba(181, 93, 48, 0.1);
+  --shadow-focus-sm: 0 0 0 0.25rem rgba(255, 112, 67, 0.2);
   --shadow-hand: 8px 8px 25px rgba(0,0,0,0.1);
+  --shadow-vibrant: 8px 8px 0 rgba(45, 52, 54, 0.12);
+  --shadow-label: 8px 8px 0 #eee;
+  --shadow-inset-subtle: inset 0 2px 4px rgba(0,0,0,0.1);
+  --shadow-inset-soft: inset 0 0 10px rgba(0,0,0,0.05);
+  --shadow-button: 0 4px 6px rgba(181, 93, 48, 0.2);
+  --shadow-button-hover: 0 6px 12px rgba(181, 93, 48, 0.3);
+  --shadow-hero-button: 6px 6px 0 var(--color-primary);
+  --shadow-hero-button-flat: 0 0 0 var(--color-primary);
+  --shadow-step-hover: 0 12px 28px rgba(181, 93, 48, 0.13);
   --section-spacing: clamp(3rem, 8vw, 8rem);
   --card-padding: clamp(1.5rem, 4vw, 3rem);
 }

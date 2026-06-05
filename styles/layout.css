@@ -1,17 +1,15 @@
-/* ═══════════════════════════════════════════
-   HEADER
-   ═══════════════════════════════════════════ */
+/* Header */
 
 header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-sm);
 }
 
 .navbar-custom {
   background-color: var(--color-header-bg) !important;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--shadow-sm);
   padding: 0.5rem 1.5rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
@@ -51,7 +49,7 @@ header .nav-link::after {
   width: 0;
   height: 3px;
   background-color: var(--color-primary);
-  border-radius: 10px;
+  border-radius: var(--radius-pill);
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -67,12 +65,10 @@ header .navbar-toggler {
 }
 
 header .navbar-toggler:focus {
-  box-shadow: 0 0 0 0.25rem rgba(255, 112, 67, 0.2);
+  box-shadow: var(--shadow-focus-sm);
 }
 
-/* ═══════════════════════════════════════════
-   HERO V2 — MERCADO VIVO
-   ═══════════════════════════════════════════ */
+/* Hero */
 
 .hero-v2 {
   position: relative;
@@ -106,7 +102,7 @@ header .navbar-toggler:focus {
   height: 100%;
   overflow: hidden;
   border-radius: var(--border-radius-md);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: var(--shadow-lg);
 }
 
 .collage-item img {
@@ -131,9 +127,9 @@ header .navbar-toggler:focus {
   font-family: var(--font-heading);
   font-size: clamp(3rem, 12vw, 9rem);
   font-weight: 800;
-  line-height: clamp(0.9, 1.1vw, 0.8);
+  line-height: 0.9;
   color: var(--color-text-dark);
-  letter-spacing: clamp(-2px, -0.5vw, -5px);
+  letter-spacing: -0.03em;
   margin-bottom: 2rem;
   text-transform: none;
 }
@@ -157,7 +153,7 @@ header .navbar-toggler:focus {
   padding: 1.5rem;
   width: 100%;
   max-width: 320px;
-  box-shadow: 10px 10px 0px rgba(0,0,0,0.05);
+  box-shadow: var(--shadow-vibrant);
   border: 1px solid #eee;
   transform: rotate(4deg);
   z-index: 10;
@@ -185,7 +181,7 @@ header .navbar-toggler:focus {
   width: 120px;
   height: 40px;
   background: rgba(255, 112, 67, 0.4);
-  box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+  box-shadow: var(--shadow-inset-soft);
   z-index: 1;
 }
 
@@ -214,41 +210,7 @@ header .navbar-toggler:focus {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
-}
-
-.btn-handcrafted {
-  padding: clamp(12px, 3vw, 18px) clamp(25px, 6vw, 45px);
-  background-color: var(--color-text-dark);
-  color: white;
-  border-radius: 4px;
-  font-family: var(--font-heading);
-  font-weight: 700;
-  text-decoration: none;
-  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
-  box-shadow: 6px 6px 0px var(--color-primary);
-  transition: all 0.2s ease;
-}
-
-.btn-handcrafted:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 0px 0px 0px var(--color-primary);
-}
-
-.btn-handcrafted-alt {
-  padding: clamp(12px, 3vw, 18px) clamp(25px, 6vw, 45px);
-  background-color: transparent;
-  color: var(--color-text-dark);
-  border: 2px solid var(--color-text-dark);
-  border-radius: 4px;
-  font-family: var(--font-heading);
-  font-weight: 700;
-  text-decoration: none;
-  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
-  transition: all 0.3s ease;
-}
-
-.btn-handcrafted-alt:hover {
-  background-color: var(--color-header-bg);
+  align-items: center;
 }
 
 @media (max-width: 1200px) {
@@ -258,138 +220,33 @@ header .navbar-toggler:focus {
   }
 }
 
-/* ═══════════════════════════════════════════
-   INFO BAR
-   ═══════════════════════════════════════════ */
-
-.info-bar {
-  background-color: var(--color-footer-bg);
-  border-top: 3px solid var(--color-primary);
-  padding: 0;
-}
-
-.info-bar__item {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1.5rem 1.5rem;
-  border-right: 1px solid rgba(255, 255, 255, 0.07);
-  color: #ffffff;
-  transition: background-color 0.2s ease;
-  height: 100%;
-}
-
-@media (max-width: 991px) {
-  .info-bar__item {
-    border-right: none;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
-    padding: 1.25rem 1.5rem;
-  }
-  
-  .info-bar .col-md-4:last-child .info-bar__item {
-    border-bottom: none;
-  }
-}
-
-@media (max-width: 575px) {
-  .info-bar__item {
-    flex-direction: column;
-    text-align: center;
-    gap: 0.5rem;
-    padding: 1.5rem 1rem;
-  }
-}
-
-.info-bar__item:last-child {
-  border-right: none;
-}
-
-.info-bar__item:hover {
-  background-color: rgba(255, 255, 255, 0.04);
-}
-
-.info-bar__icon {
-  font-size: 32px;
-  color: var(--color-primary-light);
-  flex-shrink: 0;
-}
-
-.info-bar__label {
-  font-family: var(--font-heading);
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: var(--color-primary-light);
-  margin: 0 0 0.2rem;
-  opacity: 0.9;
-}
-
-.info-bar__value {
-  font-family: var(--font-body);
-  font-size: 0.95rem;
-  color: #ffffff;
-  margin: 0 0 0.2rem;
-  line-height: 1.4;
-}
-
-.info-bar__note {
-  font-family: var(--font-body);
-  font-size: 0.78rem;
-  color: rgba(255, 255, 255, 0.5);
-  margin: 0;
-  font-style: italic;
-}
-
-.info-bar__link {
-  color: var(--color-primary-light);
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  transition: color 0.2s ease;
-}
-
-.info-bar__link:hover {
-  color: #ffffff;
-}
-
-/* ═══════════════════════════════════════════
-   MAPA V2 — CONTACTO
-   ═══════════════════════════════════════════ */
+/* Map */
 
 .map-wrapper-v2 {
   position: relative;
   width: 100%;
   border-radius: var(--border-radius-lg);
   overflow: hidden;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+  box-shadow: var(--shadow-lg);
 }
 
 .map-container-v2 {
   width: 100%;
   height: 500px;
+  background-color: var(--color-header-bg);
 }
 
-.map-info-v2 {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  max-width: 320px;
-  z-index: 5;
+.map-container-v2 iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
-@media (max-width: 991px) {
-  .map-info-v2 {
-    position: relative;
-    top: auto;
-    right: auto;
-    max-width: 100%;
-    margin-top: -40px;
-    padding: 0 20px 20px;
-  }
+.map-iframe {
+  border: 0;
 }
 
-/* ═══════════════════════════════════════════
-   FOOTER
-   ═══════════════════════════════════════════ */
+/* Footer */
 
 footer.main-footer {
   background-color: var(--color-text-dark);
@@ -459,15 +316,51 @@ footer.main-footer {
   color: rgba(255, 255, 255, 0.4);
 }
 
-/* ═══════════════════════════════════════════
-   RESPONSIVE
-   ═══════════════════════════════════════════ */
+/* Responsive */
 
 @media (max-width: 576px) {
-  .hero-content {
+  .hero-v2 {
+    min-height: auto;
+    padding: 4rem 0 3rem;
+  }
+
+  .hero-collage {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    transform: rotate(-1deg);
+    opacity: 0.24;
+  }
+
+  .item-1 { grid-column: 1 / span 1; grid-row: 1 / span 2; }
+  .item-2 { grid-column: 2 / span 1; grid-row: 1 / span 2; }
+  .item-3 { grid-column: 1 / span 1; grid-row: 3 / span 2; }
+  .item-4 { grid-column: 2 / span 1; grid-row: 3 / span 2; }
+
+  .hero-title-main {
+    font-size: clamp(3.1rem, 18vw, 5.4rem);
+    letter-spacing: -0.015em;
+    margin-bottom: 0;
+  }
+
+  .hero-main-flex {
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .note-paper-hero.integrated {
+    padding: 1.25rem;
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+  }
+
+  .hero-actions a {
+    justify-content: center;
+    width: 100%;
     text-align: center;
-    max-width: 100%;
-    padding: 3rem 1rem;
   }
 }
 

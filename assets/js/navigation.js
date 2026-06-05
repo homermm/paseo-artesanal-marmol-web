@@ -5,10 +5,20 @@
   window[STATE_KEY] = true;
 
   var SECTIONS = ["inicio", "sobre", "artesanos", "participar", "contacto"];
-  var HEADER_OFFSET = 110;
+  var HEADER_OFFSET_FALLBACK = 110;
+
+  function getHeaderOffset() {
+    var rawValue = window
+      .getComputedStyle(document.documentElement)
+      .getPropertyValue("--header-height");
+    var parsedValue = parseFloat(rawValue);
+
+    return isNaN(parsedValue) ? HEADER_OFFSET_FALLBACK : parsedValue;
+  }
 
   function markActiveSection() {
-    var scrollY = window.scrollY + HEADER_OFFSET + 1;
+    var headerOffset = getHeaderOffset();
+    var scrollY = window.scrollY + headerOffset + 1;
     var currentSection = "inicio";
 
     for (var i = SECTIONS.length - 1; i >= 0; i--) {
@@ -41,7 +51,8 @@
 
       event.preventDefault();
 
-      var targetPos = target.offsetTop - HEADER_OFFSET + 1;
+      var headerOffset = getHeaderOffset();
+      var targetPos = target.offsetTop - headerOffset + 1;
       window.scrollTo({ top: targetPos, behavior: "smooth" });
 
       // Close mobile menu if open
