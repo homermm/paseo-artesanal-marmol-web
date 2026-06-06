@@ -1,10 +1,10 @@
-# Paseo Artesanal Marmol
+# Paseo Artesanal Mármol
 
-Sitio web oficial del Paseo Artesanal Marmol, una feria autogestiva de produccion artesanal ubicada en Jose Marmol, Almirante Brown, Buenos Aires.
+Sitio web oficial del Paseo Artesanal Mármol, una feria autogestiva de producción artesanal ubicada en José Mármol, Almirante Brown, Buenos Aires.
 
 ## Sobre el proyecto
 
-Este es un sitio web estatico de una sola pagina. Presenta la feria, su identidad, rubros, formulario de postulacion, ubicacion y canales de contacto.
+Este es un sitio web estático de una sola página. Presenta la feria, su identidad, rubros, formulario de postulación, ubicación y canales de contacto.
 
 ## Estructura real del proyecto
 
@@ -31,14 +31,22 @@ paseo-artesanal-marmol-web/
 `-- README.md
 ```
 
-## Tecnologias
+## Tecnologías
 
-- HTML5 semantico
+- HTML5 semántico
 - CSS3 con custom properties
-- Bootstrap 5.3 para grilla y utilidades
+- Bootstrap 5.3 desde CDN para grilla y utilidades
 - JavaScript vanilla
 - Google Fonts: Bricolage Grotesque, Outfit e Instrument Serif
-- Material Symbols para iconografia
+- Material Symbols para iconografía
+
+## Arquitectura CSS
+
+- `styles/tokens.css`: colores, tipografías, radios, sombras, espaciados y tokens compartidos.
+- `styles/base.css`: reset base, estilos globales, foco, scroll y overlay de textura.
+- `styles/layout.css`: header, hero, mapa, footer y estructura mayor de página.
+- `styles/components.css`: utilidades y componentes reutilizables como reveals, botones, glass cards, tipografía de sección, step cards y back-to-top.
+- `styles/landing.css`: estilos específicos de secciones de la landing: Sobre, Identidad, Rubros, Participar y Contacto.
 
 ## Sistema visual
 
@@ -48,24 +56,53 @@ Los tokens principales viven en `styles/tokens.css`.
 | --- | --- | --- |
 | `--color-primary` | `#FF7043` | Acciones y acentos principales |
 | `--color-primary-light` | `#FFB74D` | Acentos secundarios |
-| `--color-terracota` | `#B55D30` | Titulos y marca visual |
-| `--color-header-bg` | `#fdebd5` | Fondo del header y bloques calidos |
+| `--color-terracota` | `#B55D30` | Títulos y marca visual |
+| `--color-header-bg` | `#fdebd5` | Fondo del header y bloques cálidos |
+| `--color-hero-bg-start` | `#fdfaf6` | Inicio del fondo del hero |
 | `--color-bg` | `#f4eee8` | Fondo de secciones |
-| `--color-footer-bg` | `#2D3436` | Fondo oscuro auxiliar |
+| `--color-section-alt` | `#f8e9dd` | Fondo alternativo de sección |
+| `--color-footer-bg` | `#2D3436` | Fondo del footer |
+| `--header-height` | `110px` | Offset compartido entre CSS y navegación |
+
+## SEO y dominio
+
+- Dominio configurado: `www.paseoartesanalmarmol.com`
+- `CNAME`, `sitemap.xml`, canonical, Open Graph y JSON-LD usan el dominio con `www`.
+- Los datos estructurados viven en `index.html` como `LocalBusiness`.
 
 ## Uso local
 
-Abrir `index.html` directamente en el navegador o servir la carpeta con un servidor estatico:
+Abrir `index.html` directamente en el navegador o servir la carpeta con un servidor estático:
 
 ```bash
-npx serve .
+python -m http.server 4173 --bind 127.0.0.1
 ```
 
-## Informacion de la feria
+Luego abrir:
 
-- Ubicacion: Plaza Nuestra Senora de Lujan (Plaza de Marmol), Bynnon 2932, Jose Marmol.
-- Fechas: se confirman por Instagram para cada edicion.
-- Horario habitual: 15:30 a 19:30 hs, con variaciones segun estacion.
+```text
+http://127.0.0.1:4173/
+```
+
+## Validación
+
+El repo no incluye `package.json`, lint, typecheck ni tests automatizados versionados.
+
+Validaciones estáticas recomendadas:
+
+```bash
+git diff --check
+rg "var\\(--" styles
+rg "style=" index.html
+```
+
+Durante la auditoría se usaron specs temporales de Playwright fuera del repo para validar responsive, navegación por anchors, lazy map, metadata SEO y smoke de accesibilidad.
+
+## Información de la feria
+
+- Ubicación: Plaza Nuestra Señora de Luján (Plaza de Mármol), Bynnón 2932, José Mármol.
+- Fechas: se confirman por Instagram para cada edición.
+- Horario habitual: 15:30 a 19:30 hs, con variaciones según estación.
 
 ## Contacto
 
@@ -74,6 +111,6 @@ npx serve .
 
 ## Licencia
 
-Este proyecto es propiedad del Paseo Artesanal Marmol. Todos los derechos reservados.
+Este proyecto es propiedad del Paseo Artesanal Mármol. Todos los derechos reservados.
 
 Con el apoyo del Municipio de Almirante Brown.

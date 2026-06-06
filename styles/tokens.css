@@ -4,6 +4,8 @@
   --color-primary-dark: #E85D32;
   --color-terracota: #B55D30;
   --color-header-bg: #fdebd5;
+  --color-hero-bg-start: #fdfaf6;
+  --color-hero-bg-end: var(--color-header-bg);
   --color-bg: #f4eee8; /* Tono más oscuro y cálido */
   --color-section-alt: #f8e9dd;
   --color-text-dark: #2D3436;
@@ -44,7 +46,7 @@
   --font-heading: 'Bricolage Grotesque', sans-serif;
   --font-body: 'Outfit', sans-serif;
   --font-serif: 'Instrument Serif', serif;
-  --transition-base: all 0.3s ease;
+  --transition-base: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
   --radius-sm: 4px;
   --radius-xs: 2px;
   --radius-pill: 100px;
