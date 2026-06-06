@@ -62,7 +62,7 @@
 }
 
 .btn-paseo--outline-dark {
-  background-color: transparent;
+  background-color: var(--color-surface-elevated);
   color: var(--color-text-dark);
   border: 2px solid var(--color-text-dark);
 }
@@ -226,6 +226,8 @@
 .step-card {
   position: relative;
   text-align: center;
+  min-height: 160px;
+  border: 1px solid var(--color-glass-border);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 

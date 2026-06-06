@@ -82,6 +82,16 @@ header .navbar-toggler:focus {
   min-height: clamp(70vh, 90vh, 90vh);
 }
 
+.hero-v2::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 28% 42%, transparent 0 32%, var(--color-hero-scrim) 58%),
+    linear-gradient(90deg, var(--color-hero-scrim), transparent 58%);
+  pointer-events: none;
+  z-index: 1;
+}
+
 .hero-collage {
   position: absolute;
   top: 0;
@@ -93,7 +103,7 @@ header .navbar-toggler:focus {
   grid-template-rows: repeat(4, 1fr);
   gap: clamp(5px, 1.5vw, 15px);
   transform: scale(1.1) rotate(-2deg);
-  opacity: 0.35;
+  opacity: 0.28;
   pointer-events: none;
   z-index: 0;
 }
@@ -150,11 +160,11 @@ header .navbar-toggler:focus {
 /* NOTA DE PAPEL INTEGRADA */
 .note-paper-hero.integrated {
   position: relative;
-  background: var(--color-surface);
+  background: var(--color-surface-elevated);
   padding: 1.5rem;
   width: 100%;
   max-width: 320px;
-  box-shadow: var(--shadow-vibrant);
+  box-shadow: var(--shadow-paper);
   border: 1px solid var(--color-border-soft);
   transform: rotate(4deg);
   z-index: 10;
@@ -229,6 +239,7 @@ header .navbar-toggler:focus {
   border-radius: var(--border-radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-lg);
+  border: 1px solid var(--color-border-soft);
 }
 
 .map-container-v2 {
@@ -252,7 +263,7 @@ header .navbar-toggler:focus {
 footer.main-footer {
   background-color: var(--color-footer-bg);
   margin-top: 0;
-  padding-top: 5rem !important;
+  padding-top: clamp(3.5rem, 6vw, 5rem) !important;
   padding-bottom: 3rem !important;
   border-top: 6px solid var(--color-primary);
   color: var(--color-text-light);
@@ -329,7 +340,7 @@ footer.main-footer {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
     transform: rotate(-1deg);
-    opacity: 0.24;
+    opacity: 0.18;
   }
 
   .item-1 { grid-column: 1 / span 1; grid-row: 1 / span 2; }
@@ -350,6 +361,7 @@ footer.main-footer {
 
   .note-paper-hero.integrated {
     padding: 1.25rem;
+    box-shadow: var(--shadow-paper);
   }
 
   .hero-actions {
@@ -362,6 +374,15 @@ footer.main-footer {
     justify-content: center;
     width: 100%;
     text-align: center;
+  }
+
+  .map-container-v2 {
+    height: 420px;
+  }
+
+  #back-to-top {
+    bottom: 3.25rem;
+    right: 1.25rem;
   }
 }
 
