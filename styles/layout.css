@@ -11,7 +11,7 @@ header {
   background-color: var(--color-header-bg) !important;
   box-shadow: var(--shadow-sm);
   padding: 0.5rem 1.5rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid var(--color-border-header);
 }
 
 .navbar-logo {
@@ -50,7 +50,8 @@ header .nav-link::after {
   height: 3px;
   background-color: var(--color-primary);
   border-radius: var(--radius-pill);
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: width 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 header .nav-link:hover::after,
@@ -129,7 +130,7 @@ header .navbar-toggler:focus {
   font-weight: 800;
   line-height: 0.9;
   color: var(--color-text-dark);
-  letter-spacing: -0.03em;
+  letter-spacing: 0;
   margin-bottom: 2rem;
   text-transform: none;
 }
@@ -149,12 +150,12 @@ header .navbar-toggler:focus {
 /* NOTA DE PAPEL INTEGRADA */
 .note-paper-hero.integrated {
   position: relative;
-  background: white;
+  background: var(--color-surface);
   padding: 1.5rem;
   width: 100%;
   max-width: 320px;
   box-shadow: var(--shadow-vibrant);
-  border: 1px solid #eee;
+  border: 1px solid var(--color-border-soft);
   transform: rotate(4deg);
   z-index: 10;
 }
@@ -180,7 +181,7 @@ header .navbar-toggler:focus {
   transform: translateX(-50%) rotate(-2deg);
   width: 120px;
   height: 40px;
-  background: rgba(255, 112, 67, 0.4);
+  background: var(--color-tape-bg);
   box-shadow: var(--shadow-inset-soft);
   z-index: 1;
 }
@@ -203,7 +204,7 @@ header .navbar-toggler:focus {
   font-family: var(--font-body);
   font-size: 1rem;
   margin-bottom: 0.5rem;
-  color: #555;
+  color: var(--color-text-soft);
 }
 
 .hero-actions {
@@ -249,12 +250,12 @@ header .navbar-toggler:focus {
 /* Footer */
 
 footer.main-footer {
-  background-color: var(--color-text-dark);
+  background-color: var(--color-footer-bg);
   margin-top: 0;
   padding-top: 5rem !important;
   padding-bottom: 3rem !important;
   border-top: 6px solid var(--color-primary);
-  color: #fff;
+  color: var(--color-text-light);
 }
 
 .footer-title {
@@ -263,17 +264,17 @@ footer.main-footer {
   margin-bottom: 2rem;
   font-size: 1.4rem;
   font-weight: 800;
-  letter-spacing: -1px;
+  letter-spacing: 0;
 }
 
 .footer-link,
 .footer-nav a,
 .contact-item a {
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--color-footer-text);
   font-family: var(--font-body);
   font-weight: 500;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .footer-link:hover,
@@ -298,7 +299,7 @@ footer.main-footer {
 .footer-tagline {
   font-family: var(--font-body);
   font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--color-footer-muted);
   margin-bottom: 2rem;
 }
 
@@ -309,11 +310,11 @@ footer.main-footer {
 }
 
 .footer-credits {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--color-footer-border);
   margin-top: 4rem;
   padding-top: 2rem;
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--color-footer-subtle);
 }
 
 /* Responsive */
@@ -338,7 +339,7 @@ footer.main-footer {
 
   .hero-title-main {
     font-size: clamp(3.1rem, 18vw, 5.4rem);
-    letter-spacing: -0.015em;
+    letter-spacing: 0;
     margin-bottom: 0;
   }
 
@@ -380,7 +381,7 @@ footer.main-footer {
     text-align: center;
     margin-bottom: 3rem;
     padding-bottom: 2rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--color-footer-border);
   }
 
   .main-footer .col-lg-4:not(:first-child) {

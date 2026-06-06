@@ -37,13 +37,13 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  border-radius: var(--radius-sm);
   text-decoration: none;
   transition: var(--transition-base);
 }
 
 .btn-paseo--hero {
   padding: var(--button-padding-y) var(--button-padding-x);
-  border-radius: var(--radius-sm);
   font-family: var(--font-heading);
   font-size: clamp(0.9rem, 2.5vw, 1.1rem);
   font-weight: 700;
@@ -108,11 +108,11 @@
 }
 
 .stamped-label {
-  background: white;
+  background: var(--color-surface);
   width: 240px;
   padding: 50px 20px 30px;
   text-align: center;
-  border: 1px solid #ddd;
+  border: 1px solid var(--color-border-muted);
   position: relative;
   box-shadow: var(--shadow-label);
   --rotation: 0deg;
@@ -135,7 +135,7 @@
   background: var(--color-bg);
   border-radius: var(--radius-circle);
   transform: translateX(-50%);
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-border-strong);
   box-shadow: var(--shadow-inset-subtle);
 }
 
@@ -162,10 +162,10 @@
 /* Glass cards */
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.7);
+  background: var(--color-glass-bg);
   backdrop-filter: blur(12px) saturate(180%);
   -webkit-backdrop-filter: blur(12px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--color-glass-border);
   border-radius: var(--border-radius-md);
   box-shadow: var(--shadow-glass);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -188,13 +188,13 @@
   color: var(--color-terracota);
   margin-bottom: 1rem;
   padding: 4px 16px;
-  background-color: rgba(181, 93, 48, 0.1);
+  background-color: var(--color-brand-tint);
   border-radius: var(--radius-pill);
   opacity: 0.8;
 }
 
 .section-title {
-  font-family: 'Instrument Serif', serif;
+  font-family: var(--font-serif);
   font-style: italic;
   font-weight: 400;
   color: var(--color-terracota);
@@ -208,7 +208,7 @@
   font-family: var(--font-body);
   font-size: clamp(1rem, 2vw, 1.25rem);
   line-height: 1.7;
-  color: #444;
+  color: var(--color-text-body);
   margin-bottom: 1.5rem;
   font-weight: 500;
 }
@@ -217,7 +217,7 @@
   max-width: 700px;
   margin: 0 auto 1rem;
   font-size: 1.1rem;
-  color: #666;
+  color: var(--color-text-muted);
   font-weight: 500;
 }
 
@@ -242,7 +242,7 @@
   width: 28px;
   height: 28px;
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-text-light);
   border-radius: var(--radius-circle);
   font-family: var(--font-heading);
   font-size: 0.8rem;
@@ -271,7 +271,7 @@
 .step-desc {
   font-family: var(--font-body);
   font-size: 0.85rem;
-  color: #666;
+  color: var(--color-text-muted);
   margin: 0;
   line-height: 1.5;
 }
@@ -287,7 +287,7 @@
   height: 48px;
   border-radius: var(--radius-circle);
   background-color: var(--color-primary);
-  color: #ffffff;
+  color: var(--color-text-light);
   border: none;
   cursor: pointer;
   display: flex;
